@@ -233,6 +233,7 @@ function App() {
     <span>Arlington</span>
   </div>
 </section>
+
 <section className="homeValue">
   <div>
     <p className="eyebrow">Home Value</p>
