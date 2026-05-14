@@ -215,6 +215,24 @@ function App() {
     </div>
   </div>
 </section>
+<section className="areasServed">
+  <p className="eyebrow dark">Areas Served</p>
+  <h2>Helping Clients Across North Texas</h2>
+
+  <div className="areaGrid">
+    <span>Frisco</span>
+    <span>Plano</span>
+    <span>McKinney</span>
+    <span>Little Elm</span>
+    <span>Aubrey</span>
+    <span>Melissa</span>
+    <span>Prosper</span>
+    <span>Celina</span>
+    <span>Allen</span>
+    <span>Arlington</span>
+  </div>
+</section>
+
 
       <section id="about" className="about">
         <div className="aboutPhotoWrap"><img src="/harish-patel.png" alt="Harish Patel" /></div>

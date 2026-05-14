@@ -83,4 +83,35 @@
   .testimonialGrid {
     grid-template-columns: 1fr;
   }
+.areasServed {
+  padding: 90px 7%;
+  background: linear-gradient(135deg, #fbfaf7, #ffffff);
+  text-align: center;
+}
+
+.areasServed h2 {
+  font-size: clamp(36px, 5vw, 58px);
+  margin: 12px auto 45px;
+}
+
+.areaGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.areaGrid span {
+  background: white;
+  border: 1px solid rgba(212,175,55,.35);
+  border-radius: 999px;
+  padding: 18px;
+  font-weight: bold;
+  box-shadow: 0 14px 35px rgba(0,0,0,.07);
+}
+
+@media (max-width: 900px) {
+  .areaGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 }
