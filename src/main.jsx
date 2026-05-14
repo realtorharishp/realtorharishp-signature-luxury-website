@@ -3,44 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './style.css'
 
 function App() {
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbybgh4DLQ9URUdMp2Q-33uP5a2f0g7JGOUhW6eXdqOIGzOZIOWQDpqmrcEArqo98Wh9/exec";
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  const form = e.target;
-
-  const formData = {
-    name: form.name.value,
-    phone: form.phone.value,
-    email: form.email.value,
-    interest: form.interest.value,
-    message: form.message.value,
-  };
-
-try {
-    await fetch(SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "text/plain",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    alert("Thank you! Your message has been sent.");
-    form.reset();
-  } catch (error) {
-    alert("Something went wrong. Please call Harish at 972-552-0158.");
-  }
-  await fetch(SCRIPT_URL, {
-    method: "POST",
-    body: JSON.stringify(formData),
-  });
-
-  alert("Thank you! Your message has been sent.");
-  form.reset();
-};
 
   const properties = [
     {
@@ -211,23 +174,38 @@ try {
         <h2>Ready To Make Your Next Move?</h2>
         <p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p>
 
-       <form onSubmit={handleSubmit}>
-  	<input name="name" placeholder="Your Name" required />
+      <form
+  action="https://formsubmit.co/realtor.harishp@gmail.com"
+  method="POST"
+>
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+  />
 
-  	<input name="phone" placeholder="Phone Number" required />
+  <input
+    type="text"
+    name="phone"
+    placeholder="Phone Number"
+    required
+  />
 
-  	<input name="email" placeholder="Email Address" required />
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required
+  />
 
-  	<select name="interest" defaultValue="" required>
-    	<option value="" disabled>
-      	I am interested in...
-    	</option>
-
-    	<option>Buying</option>
-    	<option>Selling</option>
-    	<option>Leasing</option>
-   	 <option>Investing</option>
-   	 <option>Commercial</option>
+  <select name="interest" required>
+    <option value="">I am interested in...</option>
+    <option>Buying</option>
+    <option>Selling</option>
+    <option>Leasing</option>
+    <option>Investing</option>
+    <option>Commercial</option>
   </select>
 
   <textarea
@@ -236,9 +214,22 @@ try {
     required
   ></textarea>
 
-  <button type="submit">Send Message</button>
-</form>
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Website Lead - REKonnection"
+  />
 
+  <input
+    type="hidden"
+    name="_captcha"
+    value="false"
+  />
+
+  <button type="submit">
+    Send Message
+  </button>
+</form>
       </section>
 
       <footer>
