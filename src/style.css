@@ -83,6 +83,7 @@
   .testimonialGrid {
     grid-template-columns: 1fr;
   }
+
 .areasServed {
   padding: 90px 7%;
   background: linear-gradient(135deg, #fbfaf7, #ffffff);
@@ -115,6 +116,8 @@
   }
 }
 }
+
+
 .homeValue {
   padding: 80px 7%;
   background: linear-gradient(135deg, #050505, #1a1a1a);
