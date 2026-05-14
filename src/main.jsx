@@ -18,6 +18,21 @@ const handleSubmit = async (e) => {
     message: form.message.value,
   };
 
+try {
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    alert("Thank you! Your message has been sent.");
+    form.reset();
+  } catch (error) {
+    alert("Something went wrong. Please call Harish at 972-552-0158.");
+  }
   await fetch(SCRIPT_URL, {
     method: "POST",
     body: JSON.stringify(formData),
@@ -26,6 +41,7 @@ const handleSubmit = async (e) => {
   alert("Thank you! Your message has been sent.");
   form.reset();
 };
+
   const properties = [
     {
       number: 1,
