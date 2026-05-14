@@ -194,6 +194,27 @@ function App() {
     </div>
   </div>
 </section>
+<section className="testimonials">
+  <p className="eyebrow dark">Client Testimonials</p>
+  <h2>Trusted By North Texas Families & Investors</h2>
+
+  <div className="testimonialGrid">
+    <div>
+      <p>“We are truly grateful for Harish Patel’s exceptional support and guidance throughout our home search journey. His calm approach and thoughtful advice helped us navigate every stage with confidence and ease. He felt more like an elder brother walking alongside us.”</p>
+      <h4>— Happy Homeowners</h4>
+    </div>
+
+    <div>
+      <p>“Mr. Patel is truly excellent to work with. He represented us both as renters and later as homebuyers, making every step smooth and stress-free. He is kind, patient, and very knowledgeable.”</p>
+      <h4>— Happy Clients</h4>
+    </div>
+
+    <div>
+      <p>“Mr. Harish is an exceptional real estate professional with deep market knowledge. He was prompt, data-driven, and always guided us while keeping our needs at the center.”</p>
+      <h4>— Satisfied Clients</h4>
+    </div>
+  </div>
+</section>
 
       <section id="about" className="about">
         <div className="aboutPhotoWrap"><img src="/harish-patel.png" alt="Harish Patel" /></div>
