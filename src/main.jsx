@@ -121,26 +121,21 @@ function App() {
       <section id="listings" className="section light">
         <p className="eyebrow dark">Featured Listings</p>
         <h2>Premium North Texas Properties</h2>
-        <p className="sectionIntro">Explore residential sales, lease homes, commercial space, and investor-ready opportunities represented by Harish Patel.</p>
-
         <div className="propertyGrid">
           {properties.map((p) => (
             <article className="propertyCard" key={p.number}>
               <div className="imageWrap">
-                <img src={p.image} alt={`${p.title}, ${p.city}`} />
+                <img src={p.image} alt={p.title} />
                 <div className="numberBadge">{p.number}</div>
                 <div className="statusBadge">{p.status}</div>
               </div>
-
               <div className="propertyBody">
                 <p className="propertyPrice">{p.price}</p>
                 <h3>{p.title}</h3>
                 <p className="propertyCity">{p.city}</p>
-
                 <div className="facts">
                   {p.facts.map((fact) => <span key={fact}>{fact}</span>)}
                 </div>
-
                 <a className="propertyButton" href="#contact">Schedule Showing</a>
               </div>
             </article>
@@ -150,51 +145,71 @@ function App() {
 
       <section id="services" className="section">
         <p className="eyebrow dark">Services</p>
-        <h2>Real Estate Services Built Around Your Goals</h2>
+        <h2>Expertise Built Around Your Goals</h2>
         <div className="services">
           {[
-            ['Buy', 'Find the right home with expert local guidance.'],
-            ['Sell', 'Premium listing presentation, pricing strategy, and negotiation.'],
-            ['Lease', 'Lease homes faster with polished marketing and clear communication.'],
-            ['Invest', 'Identify income-producing and long-term real estate opportunities.'],
-            ['Commercial', 'Support for office and commercial real estate transactions.']
+            ['Buy', 'Find the right home with expert guidance.'],
+            ['Sell', 'Premium marketing and pricing strategy.'],
+            ['Lease', 'Lease homes faster with polished presentation.'],
+            ['Invest', 'Identify income-producing opportunities.'],
+            ['Commercial', 'Support for commercial transactions.']
           ].map(([s, d]) => (
             <div className="service" key={s}><div className="icon"></div><h3>{s}</h3><p>{d}</p></div>
           ))}
         </div>
       </section>
 
-      <section className="whyWork">
-        <p className="eyebrow dark">Why Work With Harish</p>
-        <h2>Local Expertise. Premium Marketing. Client-First Service.</h2>
-        <div className="whyGrid">
-          <div><h3>Market Expertise</h3><p>Guidance backed by North Texas market knowledge.</p></div>
-          <div><h3>Data-Driven Advice</h3><p>Smart decisions supported by real market numbers.</p></div>
-          <div><h3>Residential & Leasing</h3><p>Experience helping buyers, sellers, and landlords.</p></div>
-          <div><h3>Premium Marketing</h3><p>Luxury flyers and social media campaigns.</p></div>
-          <div><h3>Investor Guidance</h3><p>Support for rental income and lease strategy.</p></div>
-          <div><h3>Relationship First</h3><p>Responsive and personal guidance from start to closing.</p></div>
-        </div>
-      </section>
-
-      <section className="testimonials">
-        <p className="eyebrow dark">Client Testimonials</p>
-        <h2>Trusted By North Texas Families</h2>
-        <div className="testimonialGrid">
-          <div><p>“Exceptional support and guidance throughout our journey.”</p><h4>— Happy Homeowners</h4></div>
-          <div><p>“Represented us both as renters and homebuyers. Stress-free!”</p><h4>— Happy Clients</h4></div>
-          <div><p>“Data-driven and always guided us while keeping our needs central.”</p><h4>— Satisfied Clients</h4></div>
-        </div>
-      </section>
-
       <section className="areasServed">
         <p className="eyebrow dark">Areas Served</p>
         <h2>Helping Clients Across North Texas</h2>
-        <div className="areaGridV2">
-  {["Frisco", "Plano", "McKinney", "Little Elm", "Aubrey", "Melissa", "Prosper", "Celina", "Allen", "Arlington"].map((city) => (
-    <div className="areaPill" key={city}>
-      {city}
+        <div className="area-container-final">
+          {["Frisco", "Plano", "McKinney", "Little Elm", "Aubrey", "Melissa", "Prosper", "Celina", "Allen", "Arlington"].map((city) => (
+            <div className="area-item-final" key={city}>{city}</div>
+          ))}
+        </div>
+      </section>
+
+      <section className="homeValue">
+        <div>
+          <h2>Curious What Your Home Is Worth?</h2>
+          <p>Get a personalized valuation from Harish Patel.</p>
+        </div>
+        <div className="buttons">
+          <a href="#contact" className="btnGold">Request Valuation</a>
+          <a href="https://calendly.com/realtor-harishp/30min" target="_blank" className="btnGold">Book Consultation</a>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Ready To Make Your Next Move?</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="f4aedf9e-e6a7-4792-aa46-6783dd738aa8" />
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="text" name="phone" placeholder="Phone" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Real Estate Goals" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158</p>
+      </footer>
+
+      <div className="floatingButtons">
+        <a href="tel:9725520158">📞</a>
+        <a href="sms:9725520158">💬</a>
+        <a href="mailto:realtor.harishp@gmail.com">📧</a>
+      </div>
+
+      <div className="mobileSticky">
+        <a href="tel:9725520158">Call</a>
+        <a href="mailto:realtor.harishp@gmail.com">Email</a>
+      </div>
     </div>
-  ))}
-</div>
-      </
+  )
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />)
