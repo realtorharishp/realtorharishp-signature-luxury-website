@@ -191,8 +191,10 @@ function App() {
         <p className="eyebrow dark">Areas Served</p>
         <h2>Helping Clients Across North Texas</h2>
         <div className="areaGrid">
-          {["Frisco", "Plano", "McKinney", "Little Elm", "Aubrey", "Melissa", "Prosper", "Celina", "Allen", "Arlington"].map((city) => (
-            <div className="areaPill" key={city}>{city}</div>
-          ))}
-        </div>
+  {["Frisco", "Plano", "McKinney", "Little Elm", "Aubrey", "Melissa", "Prosper", "Celina", "Allen", "Arlington"].map((city) => (
+    <div className="areaPill" key={city}>
+      {city}
+    </div>
+  ))}
+</div>
       </
