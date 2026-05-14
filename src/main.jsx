@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client'
 import './style.css'
 
 function App() {
-
-
   const properties = [
     {
       number: 1,
@@ -87,7 +85,11 @@ function App() {
           <img src="/rek-logo.png" alt="REKonnection Real Estate Logo" />
         </a>
         <nav>
-          <a href="#home">Home</a><a href="#listings">Listings</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#listings">Listings</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
         <a href="tel:9725520158" className="callButton">Call Harish</a>
       </header>
@@ -104,7 +106,10 @@ function App() {
           <div className="agent">
             <img className="agentImage" src="/harish-patel.png" alt="Harish Patel Realtor" />
             <div>
-              <h3>Harish Patel</h3><p>Realtor®</p><p>972-552-0158</p><p>realtor.harishp@gmail.com</p>
+              <h3>Harish Patel</h3>
+              <p>Realtor®</p>
+              <p>972-552-0158</p>
+              <p>realtor.harishp@gmail.com</p>
             </div>
           </div>
         </div>
@@ -158,165 +163,36 @@ function App() {
           ))}
         </div>
       </section>
-<section className="whyWork">
-  <p className="eyebrow dark">Why Work With Harish</p>
-  <h2>Local Expertise. Premium Marketing. Client-First Service.</h2>
 
-  <div className="whyGrid">
-    <div>
-      <h3>Market Expertise</h3>
-      <p>Guidance backed by North Texas market knowledge and pricing strategy.</p>
-    </div>
-
-    <div>
-      <h3>Data-Driven Advice</h3>
-      <p>Smart decisions supported by real market numbers and analysis.</p>
-    </div>
-
-    <div>
-      <h3>Residential & Leasing</h3>
-      <p>Experience helping buyers, sellers, landlords, tenants, and investors.</p>
-    </div>
-
-    <div>
-      <h3>Premium Marketing</h3>
-      <p>Luxury flyers, social media campaigns, listing exposure, and branded presentation.</p>
-    </div>
-
-    <div>
-      <h3>Investor Guidance</h3>
-      <p>Support for rental income, lease strategy, and long-term investment goals.</p>
-    </div>
-
-    <div>
-      <h3>Relationship First</h3>
-      <p>Patient, responsive, and personal guidance from start to closing.</p>
-    </div>
-  </div>
-</section>
-<section className="testimonials">
-  <p className="eyebrow dark">Client Testimonials</p>
-  <h2>Trusted By North Texas Families & Investors</h2>
-
-  <div className="testimonialGrid">
-    <div>
-      <p>“We are truly grateful for Harish Patel’s exceptional support and guidance throughout our home search journey. His calm approach and thoughtful advice helped us navigate every stage with confidence and ease. He felt more like an elder brother walking alongside us.”</p>
-      <h4>— Happy Homeowners</h4>
-    </div>
-
-    <div>
-      <p>“Mr. Patel is truly excellent to work with. He represented us both as renters and later as homebuyers, making every step smooth and stress-free. He is kind, patient, and very knowledgeable.”</p>
-      <h4>— Happy Clients</h4>
-    </div>
-
-    <div>
-      <p>“Mr. Harish is an exceptional real estate professional with deep market knowledge. He was prompt, data-driven, and always guided us while keeping our needs at the center.”</p>
-      <h4>— Satisfied Clients</h4>
-    </div>
-  </div>
-</section>
-
-<section className="areasServed">
-  <p className="eyebrow dark">Areas Served</p>
-  <h2>Helping Clients Across North Texas</h2>
-
-  <div className="areaGrid">
-    {[
-      "Frisco",
-      "Plano",
-      "McKinney",
-      "Little Elm",
-      "Aubrey",
-      "Melissa",
-      "Prosper",
-      "Celina",
-      "Allen",
-      "Arlington",
-    ].map((city) => (
-      <div className="areaPill" key={city}>
-        {city}
-      </div>
-    ))}
-  </div>
-</section>
-
-<section className="homeValue">
-  <div>
-    <p className="eyebrow">Home Value</p>
-    <h2>Curious What Your Home Is Worth?</h2>
-    <p>
-      Get a personalized North Texas home value estimate and selling strategy from Harish Patel.
-    </p>
-  </div>
-
-  <a href="#contact" className="btnGold">
-    Request Home Valuation
-  </a>
-<a
-  href="https://calendly.com/realtor-harishp/30min"
-  target="_blank"
-  className="btnGold"
->
-  Book a Consultation
-</a>
-</section>
-
-
-      <section id="about" className="about">
-        <div className="aboutPhotoWrap"><img src="/harish-patel.png" alt="Harish Patel" /></div>
-        <div>
-          <p className="eyebrow dark">Meet Your Realtor</p>
-          <h2>Harish Patel</h2>
-          <p>Harish helps North Texas clients buy, sell, lease, and invest with confidence through premium marketing, strong communication, and relationship-first service.</p>
-          <a href="tel:9725520158" className="btnGold inlineButton">Call 972-552-0158</a>
+      <section className="whyWork">
+        <p className="eyebrow dark">Why Work With Harish</p>
+        <h2>Local Expertise. Premium Marketing. Client-First Service.</h2>
+        <div className="whyGrid">
+          <div><h3>Market Expertise</h3><p>Guidance backed by North Texas market knowledge.</p></div>
+          <div><h3>Data-Driven Advice</h3><p>Smart decisions supported by real market numbers.</p></div>
+          <div><h3>Residential & Leasing</h3><p>Experience helping buyers, sellers, and landlords.</p></div>
+          <div><h3>Premium Marketing</h3><p>Luxury flyers and social media campaigns.</p></div>
+          <div><h3>Investor Guidance</h3><p>Support for rental income and lease strategy.</p></div>
+          <div><h3>Relationship First</h3><p>Responsive and personal guidance from start to closing.</p></div>
         </div>
       </section>
 
-      <section id="contact" className="contact">
-        <p className="eyebrow">Contact Harish Patel</p>
-        <h2>Ready To Make Your Next Move?</h2>
-        <p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p>
-
-     <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="f4aedf9e-e6a7-4792-aa46-6783dd738aa8" />
-
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="text" name="phone" placeholder="Phone Number" required />
-  <input type="email" name="email" placeholder="Email Address" required />
-
-  <select name="interest" required>
-    <option value="">I am interested in...</option>
-    <option>Buying</option>
-    <option>Selling</option>
-    <option>Leasing</option>
-    <option>Investing</option>
-    <option>Commercial</option>
-  </select>
-
-  <textarea name="message" placeholder="Tell me about your real estate goals" required></textarea>
-
-  <input type="hidden" name="subject" value="New Website Lead - REKonnection" />
-
-  <button type="submit">Send Message</button>
-</form>
+      <section className="testimonials">
+        <p className="eyebrow dark">Client Testimonials</p>
+        <h2>Trusted By North Texas Families</h2>
+        <div className="testimonialGrid">
+          <div><p>“Exceptional support and guidance throughout our journey.”</p><h4>— Happy Homeowners</h4></div>
+          <div><p>“Represented us both as renters and homebuyers. Stress-free!”</p><h4>— Happy Clients</h4></div>
+          <div><p>“Data-driven and always guided us while keeping our needs central.”</p><h4>— Satisfied Clients</h4></div>
+        </div>
       </section>
 
-      <footer>
-        <img src="/rek-logo.png" alt="REKonnection Logo" />
-        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
-        <p>Residential | Commercial | Leasing | Investment</p>
-      </footer>
-
-      <div className="mobileSticky"><a href="tel:9725520158">Call</a><a href="mailto:realtor.harishp@gmail.com">Email</a></div>
-    </div>
-  )
-}
-ReactDOM.createRoot(document.getElementById('root')).render(<App />)
-
-<div className="floatingButtons">
-  <a href="tel:9725520158">📞</a>
-
-  <a href="sms:9725520158">💬</a>
-
-  <a href="mailto:realtor.harishp@gmail.com">📧</a>
-</div>
+      <section className="areasServed">
+        <p className="eyebrow dark">Areas Served</p>
+        <h2>Helping Clients Across North Texas</h2>
+        <div className="areaGrid">
+          {["Frisco", "Plano", "McKinney", "Little Elm", "Aubrey", "Melissa", "Prosper", "Celina", "Allen", "Arlington"].map((city) => (
+            <div className="areaPill" key={city}>{city}</div>
+          ))}
+        </div>
+      </
