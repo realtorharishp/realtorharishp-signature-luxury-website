@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
 
-const storyImages = Array.from({ length: 20 }, (_, i) => `/listings/14839-story-lane/story-${i + 1}.jpg`)
+const storyImages = Array.from({ length: 20 }, (_, i) => `/listings/14839-story-lane/Images/story-${i + 1}.jpg`)
 
 function Header() {
   return (
@@ -178,7 +178,7 @@ function HomePage() {
 
       <section className="featuredListing">
         <div className="featuredListingInner">
-          <img src="/listings/14839-story-lane/story-1.jpg" alt="14839 Story Lane Frisco TX" />
+          <img src="/listings/14839-story-lane/Images/story-1.jpg" alt="14839 Story Lane Frisco TX" />
           <div className="featuredCopy">
             <p className="eyebrow dark">Featured Listing</p>
             <h2>14839 Story Lane, Frisco</h2>

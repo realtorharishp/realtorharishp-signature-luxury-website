@@ -194,7 +194,7 @@
 .featuredCopy h2{font-size:clamp(36px,5vw,62px);margin:12px 0}
 .featuredCopy p{color:#555;font-size:18px;line-height:1.7}
 .incentiveBanner{display:inline-block;background:#050505;color:#fff;border:1px solid rgba(212,175,55,.55);border-radius:999px;padding:12px 18px;font-weight:800;margin:10px 0 20px}
-.listingPageHero{min-height:88vh;display:grid;align-items:end;padding:120px 7% 70px;color:white;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)),url('/listings/14839-story-lane/story-1.jpg') center/cover no-repeat}
+.listingPageHero{min-height:88vh;display:grid;align-items:end;padding:120px 7% 70px;color:white;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)),url('/listings/14839-story-lane/Images/story-1.jpg') center/cover no-repeat}
 .listingHeroContent{max-width:980px}.listingPageHero h1{font-size:clamp(46px,7vw,88px);line-height:.95;margin:12px 0}.listingPageHero p{font-size:20px;color:#f0f0f0}.listingPrice{color:#d4af37!important;font-weight:800;font-size:30px!important}
 .statsBar{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;padding:24px 7%;background:#050505;color:white;border-top:1px solid rgba(212,175,55,.3);border-bottom:1px solid rgba(212,175,55,.3)}
 .statsBar div{text-align:center;padding:18px 10px;border:1px solid rgba(212,175,55,.28);border-radius:18px}.statsBar strong{color:#d4af37;display:block;font-size:22px;margin-bottom:5px}
