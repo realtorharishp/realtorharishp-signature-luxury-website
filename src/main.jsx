@@ -215,6 +215,7 @@ function App() {
     </div>
   </div>
 </section>
+
 <section className="areasServed">
   <p className="eyebrow dark">Areas Served</p>
   <h2>Helping Clients Across North Texas</h2>
@@ -244,6 +245,13 @@ function App() {
   <a href="#contact" className="btnGold">
     Request Home Valuation
   </a>
+<a
+  href="https://calendly.com/realtor-harishp/30min"
+  target="_blank"
+  className="btnGold"
+>
+  Book a Consultation
+</a>
 </section>
 
 
