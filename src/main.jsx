@@ -3,6 +3,29 @@ import ReactDOM from 'react-dom/client'
 import './style.css'
 
 function App() {
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyFOVyNq_KJgygdPlnvSiuvFfvKZ8Tyf2HVFyLVTtpasiEkKiXcmOJqTJckW9E5cpdq/exec";
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const formData = {
+    name: form.name.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    interest: form.interest.value,
+    message: form.message.value,
+  };
+
+  await fetch(SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify(formData),
+  });
+
+  alert("Thank you! Your message has been sent.");
+  form.reset();
+};
   const properties = [
     {
       number: 1,
@@ -171,17 +194,35 @@ function App() {
         <p className="eyebrow">Contact Harish Patel</p>
         <h2>Ready To Make Your Next Move?</h2>
         <p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p>
-        <form>
-          <input placeholder="Your Name" />
-          <input placeholder="Phone Number" />
-          <input placeholder="Email Address" />
-          <select defaultValue="">
-            <option value="" disabled>I am interested in...</option>
-            <option>Buying</option><option>Selling</option><option>Leasing</option><option>Investing</option><option>Commercial</option>
-          </select>
-          <textarea placeholder="Tell me about your real estate goals"></textarea>
-          <button type="button">Send Message</button>
-        </form>
+
+       <form onSubmit={handleSubmit}>
+  	<input name="name" placeholder="Your Name" required />
+
+  	<input name="phone" placeholder="Phone Number" required />
+
+  	<input name="email" placeholder="Email Address" required />
+
+  	<select name="interest" defaultValue="" required>
+    	<option value="" disabled>
+      	I am interested in...
+    	</option>
+
+    	<option>Buying</option>
+    	<option>Selling</option>
+    	<option>Leasing</option>
+   	 <option>Investing</option>
+   	 <option>Commercial</option>
+  </select>
+
+  <textarea
+    name="message"
+    placeholder="Tell me about your real estate goals"
+    required
+  ></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
       </section>
 
       <footer>
