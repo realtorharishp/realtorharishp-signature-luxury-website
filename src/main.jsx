@@ -174,30 +174,12 @@ function App() {
         <h2>Ready To Make Your Next Move?</h2>
         <p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p>
 
-      <form
-  action="https://formsubmit.co/realtor.harishp@gmail.com"
-  method="POST"
->
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-  />
+     <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="f4aedf9e-e6a7-4792-aa46-6783dd738aa8" />
 
-  <input
-    type="text"
-    name="phone"
-    placeholder="Phone Number"
-    required
-  />
-
-  <input
-    type="email"
-    name="email"
-    placeholder="Email Address"
-    required
-  />
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="text" name="phone" placeholder="Phone Number" required />
+  <input type="email" name="email" placeholder="Email Address" required />
 
   <select name="interest" required>
     <option value="">I am interested in...</option>
@@ -208,27 +190,11 @@ function App() {
     <option>Commercial</option>
   </select>
 
-  <textarea
-    name="message"
-    placeholder="Tell me about your real estate goals"
-    required
-  ></textarea>
+  <textarea name="message" placeholder="Tell me about your real estate goals" required></textarea>
 
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Website Lead - REKonnection"
-  />
+  <input type="hidden" name="subject" value="New Website Lead - REKonnection" />
 
-  <input
-    type="hidden"
-    name="_captcha"
-    value="false"
-  />
-
-  <button type="submit">
-    Send Message
-  </button>
+  <button type="submit">Send Message</button>
 </form>
       </section>
 
