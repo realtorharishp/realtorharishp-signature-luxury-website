@@ -63,7 +63,7 @@ body { margin: 0; font-family: Arial, sans-serif; color: #111; background: #fff;
   display: block; /* Ensures section is a block container */
 }
 
-.areaGrid {
+.areaGridV2 {
   /* Using !important to force the grid even if Vercel is holding onto old styles */
   display: grid !important;
   /* Creates a responsive grid that wraps automatically */
