@@ -101,15 +101,6 @@
   margin: 12px auto 50px;
 }
 
-.areaGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 
 .homeValue {
   padding: 80px 7%;
@@ -165,4 +156,32 @@
 
 .floatingButtons a:hover {
   transform: scale(1.08);
+}
+
+.areasServed {
+  padding: 90px 7%;
+  background: linear-gradient(135deg, #fbfaf7, #ffffff);
+  text-align: center;
+}
+
+.areaGrid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px;
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+
+.areaPill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 22px;
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 999px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.07);
+  font-weight: 700;
+  color: #222;
+  text-align: center;
 }
