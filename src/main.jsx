@@ -232,6 +232,19 @@ function App() {
     <span>Arlington</span>
   </div>
 </section>
+<section className="homeValue">
+  <div>
+    <p className="eyebrow">Home Value</p>
+    <h2>Curious What Your Home Is Worth?</h2>
+    <p>
+      Get a personalized North Texas home value estimate and selling strategy from Harish Patel.
+    </p>
+  </div>
+
+  <a href="#contact" className="btnGold">
+    Request Home Valuation
+  </a>
+</section>
 
 
       <section id="about" className="about">
