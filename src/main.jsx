@@ -50,7 +50,7 @@ function App() {
         <p className="eyebrow dark">Areas Served</p>
         <h2>Helping Clients Across North Texas</h2>
         <div className="area-grid-fix">
-          {["Frisco", "Plano", "McKinney", "Little Elm", "Aubrey", "Melissa", "Prosper", "Celina", "Allen", "Arlington"].map((city) => (
+          {["Frisco", "Plano", "McKinney", "Little Elm", "Aubrey", "Melissa", "Prosper", "Celina", "Allen", "Arlington","Dallas". "Van Alystne", "Sherman","Crowley", "Fort Worth", "Haslet", "North Lake"].map((city) => (
             <div className="area-pill-fix" key={city}>{city}</div>
           ))}
         </div>
