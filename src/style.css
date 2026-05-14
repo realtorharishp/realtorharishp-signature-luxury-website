@@ -83,6 +83,9 @@
   .testimonialGrid {
     grid-template-columns: 1fr;
   }
+}
+
+.areasServed {
 
 .areasServed {
   padding: 90px 7%;
