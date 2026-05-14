@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './style.css'
 
 function App() {
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyFOVyNq_KJgygdPlnvSiuvFfvKZ8Tyf2HVFyLVTtpasiEkKiXcmOJqTJckW9E5cpdq/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbybgh4DLQ9URUdMp2Q-33uP5a2f0g7JGOUhW6eXdqOIGzOZIOWQDpqmrcEArqo98Wh9/exec";
 
 const handleSubmit = async (e) => {
   e.preventDefault();
