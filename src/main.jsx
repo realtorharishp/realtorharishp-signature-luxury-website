@@ -2,7 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
 
-const storyImages = Array.from({ length: 20 }, (_, i) => `/listings/14839-story-lane/Images/story-${i + 1}.jpg`)
+const storyImages = Array.from(
+  { length: 20 },
+  (_, i) => `/listings/14839-story-lane/story-${i + 1}.jpg`
+)
 
 function Header() {
   return (
