@@ -297,3 +297,11 @@ function App() {
   )
 }
 ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+
+<div className="floatingButtons">
+  <a href="tel:9725520158">📞</a>
+
+  <a href="sms:9725520158">💬</a>
+
+  <a href="mailto:realtor.harishp@gmail.com">📧</a>
+</div>

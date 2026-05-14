@@ -145,3 +145,31 @@
     text-align: center;
   }
 }
+
+.floatingButtons {
+  position: fixed;
+  right: 20px;
+  bottom: 95px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 999;
+}
+
+.floatingButtons a {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37, #b89022);
+  color: white;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 26px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.25);
+  transition: .25s ease;
+}
+
+.floatingButtons a:hover {
+  transform: scale(1.08);
+}
