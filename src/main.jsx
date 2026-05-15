@@ -809,8 +809,8 @@ function App() {
    if (window.location.pathname === '/listings/1009-village-wood-ct') {
     return <VillageWoodPage />
   }
-   if (window.location.pathname === '/listings/615-hemmingway-lane') {
-    return <HemmingWayPage />
+  if (window.location.pathname === '/listings/615-hemmingway-lane') {
+    return <HemmingwayPage />
   }
    if (window.location.pathname === '/listings/4414-silverweed-lane') {
     return <SilverWeedPage />
