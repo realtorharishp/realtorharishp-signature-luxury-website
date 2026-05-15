@@ -249,12 +249,109 @@ function AmberwoodsPage() {
     </div>
   )
 }
+function ShetlandPage() {
+  const shetlandImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/2935-shetland-drive/shetland-${i + 1}.jpg`
+  )
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/2935-shetland-drive/shetland-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">
+            ← Back to Listings
+          </a>
+
+          <p className="eyebrow">Featured Listing</p>
+
+          <h1>2935 Shetland Drive</h1>
+
+          <p>Aubrey, TX • Park Facing Home</p>
+
+          <p className="listingPrice">$318,000</p>
+
+          <div className="buttons">
+            <a href="#contact" className="btnGold">
+              Schedule Private Tour
+            </a>
+
+            <a href="tel:9725520158" className="btnOutline">
+              Call Harish
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>3</strong>Bedrooms</div>
+        <div><strong>2</strong>Bathrooms</div>
+        <div><strong>1,792</strong>Sq Ft</div>
+        <div><strong>2023</strong>Built</div>
+        <div><strong>2</strong>Car Garage</div>
+        <div><strong>Huge</strong>Backyard</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Modern Living in Aubrey</h2>
+
+        <p className="listingDescription">
+          Beautiful park-facing home featuring modern finishes, spacious living
+          areas, natural light, open-concept design, and a huge backyard perfect
+          for entertaining and family living.
+        </p>
+
+        <div className="photoGallery">
+          {shetlandImages.map((src, index) => (
+            <img
+              src={src}
+              alt={`Shetland photo ${index + 1}`}
+              key={src}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+
+        <h2>Interested in 2935 Shetland Drive?</h2>
+
+        <p>
+          Contact Harish Patel for private showings and additional property
+          information.
+        </p>
+
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+
+        <p>
+          Harish Patel • Realtor® • 972-552-0158 •
+          realtor.harishp@gmail.com
+        </p>
+      </footer>
+
+      <FloatingButtons />
+    </div>
+  )
+}
 
 function HomePage() {
   const properties = [
     { number: 1, status: 'Residential Sale', title: '9650 Amberwoods Lane', city: 'Frisco, TX', price: '$549,999', image: '/property-1.jpg', facts: ['3 Bed', '2.5 Bath', '2,593 Sq Ft', 'Built 2013', '2 Car Garage', 'Dedicated Office', 'Dining Room', 'Media Room'],link: '/listings/9650-amberwoods-lane' },
     { number: 2, status: 'Residential Sale', title: '14839 Story Lane', city: 'Frisco, TX 75035', price: '$923,631', image: '/property-2.jpg', facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011', '3 Car Garage', 'Dedicated Office', 'Dining Room', 'Media & Game Room'], link: '/listings/14839-story-lane' },
-    { number: 3, status: 'Residential Sale', title: '2935 Shetland Drive', city: 'Aubrey, TX', price: '$318,000', image: '/property-3.jpg', facts: ['3 Bed', '2 Bath', '1,792 Sq Ft', 'Built 2023', '2 Car Garage', 'Park Facing', 'Huge Backyard'],link: '/listings/2935-shetland-lane' },
+    { number: 3, status: 'Residential Sale', title: '2935 Shetland Drive', city: 'Aubrey, TX', price: '$318,000', image: '/property-3.jpg', facts: ['3 Bed', '2 Bath', '1,792 Sq Ft', 'Built 2023', '2 Car Garage', 'Park Facing', 'Huge Backyard'],link: '/listings/2935-shetland-drive' },
     { number: 4, status: 'Commercial Property', title: '400 Stonebrook Pkwy #303', city: 'Frisco, TX', price: '$429,999', image: '/property-4.jpg', facts: ['4 Offices', '1 Restroom', '1,225 Sq Ft', 'Dedicated Reception'],link: '/listings/400-stonebrook' },
     { number: 5, status: 'Residential Lease', title: '2900 Galveston Street', city: 'Plano, TX 75075', price: '$2,799 / Month', image: '/property-5.jpg', facts: ['3 Bed', '2.5 Bath', '1,870 Sq Ft', 'Built 2018'],link: '/listings/14839-story-lane' },
     { number: 6, status: 'Residential Lease', title: '1009 Village Wood Ct', city: 'Arlington, TX', price: '$3,249 / Month', image: '/property-6.jpg', facts: ['4 Bed', '2.5 Bath', '2,336 Sq Ft', 'Built 1987'],link: '/listings/14839-story-lane'},
@@ -335,6 +432,12 @@ function App() {
 
   if (window.location.pathname === '/listings/9650-amberwoods-lane') {
     return <AmberwoodsPage />
+  }
+   if (window.location.pathname === '/listings/2935-shetland-drive') {
+    return <ShetlandPage />
+  }
+   if (window.location.pathname === '/listings/400-stonebrook') {
+    return <ShetlandPage />
   }
 
   return <HomePage />
