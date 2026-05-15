@@ -349,7 +349,7 @@ function ShetlandPage() {
 function StonebrookPage() {
   const stonebrookImages = Array.from(
     { length: 15 },
-    (_, i) => `/listings/400-stonebrook-303-303/stonebrook-${i + 1}.jpg`
+    (_, i) => `/listings/400-stonebrook-303/stonebrook-${i + 1}.jpg`
   )
 
   return (
