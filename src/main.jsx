@@ -152,6 +152,103 @@ function ListingPage() {
     </div>
   )
 }
+function AmberwoodsPage() {
+  const amberImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/9650-amberwoods-lane/amber-${i + 1}.jpg`
+  )
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/9650-amberwoods-lane/amber-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">
+            ← Back to Listings
+          </a>
+
+          <p className="eyebrow">Featured Listing</p>
+
+          <h1>9650 Amberwoods Lane</h1>
+
+          <p>Frisco, TX • Luxury Residential Listing</p>
+
+          <p className="listingPrice">$549,999</p>
+
+          <div className="buttons">
+            <a href="#contact" className="btnGold">
+              Schedule Private Tour
+            </a>
+
+            <a href="tel:9725520158" className="btnOutline">
+              Call Harish
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>3</strong>Bedrooms</div>
+        <div><strong>2.5</strong>Bathrooms</div>
+        <div><strong>2,593</strong>Sq Ft</div>
+        <div><strong>2013</strong>Built</div>
+        <div><strong>2</strong>Car Garage</div>
+        <div><strong>Office</strong>+ Media</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Luxury Living in Frisco</h2>
+
+        <p className="listingDescription">
+          Beautifully maintained Frisco home featuring an open-concept layout,
+          spacious living areas, dedicated office, media room, dining space,
+          and premium finishes throughout.
+        </p>
+
+        <div className="photoGallery">
+          {amberImages.map((src, index) => (
+            <img
+              src={src}
+              alt={`Amberwoods photo ${index + 1}`}
+              key={src}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+
+        <h2>Interested in 9650 Amberwoods Lane?</h2>
+
+        <p>
+          Contact Harish Patel for private showings and additional property
+          information.
+        </p>
+
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+
+        <p>
+          Harish Patel • Realtor® • 972-552-0158 •
+          realtor.harishp@gmail.com
+        </p>
+      </footer>
+
+      <FloatingButtons />
+    </div>
+  )
+}
 
 function HomePage() {
   const properties = [
@@ -232,7 +329,15 @@ function HomePage() {
 }
 
 function App() {
-  return window.location.pathname === '/listings/14839-story-lane' ? <ListingPage /> : <HomePage />
+  if (window.location.pathname === '/listings/14839-story-lane') {
+    return <ListingPage />
+  }
+
+  if (window.location.pathname === '/listings/9650-amberwoods-lane') {
+    return <AmberwoodsPage />
+  }
+
+  return <HomePage />
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />)
