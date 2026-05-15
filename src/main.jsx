@@ -615,7 +615,102 @@ function VillageWoodPage() {
     </div>
   )
 }
+function HemmingwayPage() {
+  const hemmingImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/615-hemmingway-lane/hemmingway-${i + 1}.jpg`
+  )
 
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/615-hemmingway-lane/hemmingway-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">
+            ← Back to Listings
+          </a>
+
+          <p className="eyebrow">Residential Lease</p>
+
+          <h1>615 Hemmingway Lane</h1>
+
+          <p>McKinney, TX 75069 • Modern Lease Home</p>
+
+          <p className="listingPrice">$2,239 / Month</p>
+
+          <div className="buttons">
+            <a href="#contact" className="btnGold">
+              Schedule Private Tour
+            </a>
+
+            <a href="tel:9725520158" className="btnOutline">
+              Call Harish
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>4</strong>Bedrooms</div>
+        <div><strong>2</strong>Bathrooms</div>
+        <div><strong>1,605</strong>Sq Ft</div>
+        <div><strong>2024</strong>Built</div>
+        <div><strong>Modern</strong>Design</div>
+        <div><strong>Lease</strong>Home</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Modern Living in McKinney</h2>
+
+        <p className="listingDescription">
+          Beautiful newer-construction lease property located in McKinney,
+          featuring modern finishes, open-concept living, spacious bedrooms,
+          and comfortable North Texas living.
+        </p>
+
+        <div className="photoGallery">
+          {hemmingImages.map((src, index) => (
+            <img
+              src={src}
+              alt={`Hemmingway property photo ${index + 1}`}
+              key={src}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+
+        <h2>Interested in 615 Hemmingway Lane?</h2>
+
+        <p>
+          Contact Harish Patel for private tours and lease information.
+        </p>
+
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+
+        <p>
+          Harish Patel • Realtor® • 972-552-0158 •
+          realtor.harishp@gmail.com
+        </p>
+      </footer>
+
+      <FloatingButtons />
+    </div>
+  )
+}
 function HomePage() {
   const properties = [
     { number: 1, status: 'Residential Sale', title: '9650 Amberwoods Lane', city: 'Frisco, TX', price: '$549,999', image: '/property-1.jpg', facts: ['3 Bed', '2.5 Bath', '2,593 Sq Ft', 'Built 2013', '2 Car Garage', 'Dedicated Office', 'Dining Room', 'Media Room'],link: '/listings/9650-amberwoods-lane' },
@@ -624,8 +719,8 @@ function HomePage() {
     { number: 4, status: 'Commercial Property', title: '400 Stonebrook Pkwy #303', city: 'Frisco, TX', price: '$429,999', image: '/property-4.jpg', facts: ['4 Offices', '1 Restroom', '1,225 Sq Ft', 'Dedicated Reception'],link: '/listings/400-stonebrook-303' },
     { number: 5, status: 'Residential Lease', title: '2900 Galveston Street', city: 'Plano, TX 75075', price: '$2,799 / Month', image: '/property-5.jpg', facts: ['3 Bed', '2.5 Bath', '1,870 Sq Ft', 'Built 2018'],link: '/listings/2900-galveston' },
     { number: 6, status: 'Residential Lease', title: '1009 Village Wood Ct', city: 'Arlington, TX', price: '$2,850 / Month', image: '/property-6.jpg', facts: ['4 Bed', '2.5 Bath', '2,336 Sq Ft', 'Built 1987'],link: '/listings/1009-village-wood-ct'},
-    { number: 7, status: 'Residential Lease', title: '615 Hemming Way', city: 'McKinney, TX 75069', price: '$2,239 / Month', image: '/property-7.jpg', facts: ['4 Bed', '2 Bath', '1,605 Sq Ft', 'Built 2024'],link: '/listings/14839-story-lane' },
-    { number: 8, status: 'Investor Opportunity', title: '4414 Silverweed', city: 'Melissa, TX 75454', price: '$379,999', image: '/property-8.jpg', facts: ['3 Bed', '2.5 Bath', '1,862 Sq Ft', 'Built 2024', 'Leased at $2,676 / Month', 'Huge Backyard', 'Perfect for Investors'],link: '/listings/14839-story-lane' }
+    { number: 7, status: 'Residential Lease', title: '615 Hemming Way', city: 'McKinney, TX 75069', price: '$2,239 / Month', image: '/property-7.jpg', facts: ['4 Bed', '2 Bath', '1,605 Sq Ft', 'Built 2024'],link: '/listings/615-hemmingway-lane' },
+    { number: 8, status: 'Investor Opportunity', title: '4414 Silverweed', city: 'Melissa, TX 75454', price: '$379,999', image: '/property-8.jpg', facts: ['3 Bed', '2.5 Bath', '1,862 Sq Ft', 'Built 2024', 'Leased at $2,676 / Month', 'Huge Backyard', 'Perfect for Investors'],link: '/listings/4414-silverweed-lane' }
   ]
 
   return (
@@ -713,6 +808,12 @@ function App() {
   }
    if (window.location.pathname === '/listings/1009-village-wood-ct') {
     return <VillageWoodPage />
+  }
+  if (window.location.pathname === '/listings/615-hemmingway-lane') {
+    return <HemmingwayPage />
+  }
+   if (window.location.pathname === '/listings/4414-silverweed-lane') {
+    return <SilverWeedPage />
   }
 
   return <HomePage />
