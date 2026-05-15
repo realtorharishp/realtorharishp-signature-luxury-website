@@ -618,7 +618,7 @@ function VillageWoodPage() {
 function HemmingwayPage() {
   const hemmingImages = Array.from(
     { length: 15 },
-    (_, i) => `/listings/615-hemmingway-lane/hemming-${i + 1}.jpg`
+    (_, i) => `/listings/615-hemmingway-lane/hemmingway-${i + 1}.jpg`
   )
 
   return (
@@ -629,7 +629,7 @@ function HemmingwayPage() {
         className="listingPageHero"
         style={{
           background:
-            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/615-hemmingway-lane/hemming-1.jpg') center/cover no-repeat"
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/615-hemmingway-lane/hemmingway-1.jpg') center/cover no-repeat"
         }}
       >
         <div className="listingHeroContent">
