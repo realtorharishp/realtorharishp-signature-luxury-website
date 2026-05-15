@@ -1,0 +1,1203 @@
+/* ------------------------------
+ * -- Main Global Styling -------
+ * ------------------------------ */
+
+.\_pendo-guide\_ {
+  /* -- Overarching settings for all guides -- */
+}
+
+.\_pendo-guide-container\_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+
+/* ------------------------------
+ * -- Lightbox Specific Styling -
+ * ------------------------------ */
+
+.\_pendo-guide-lb\_ {
+  /* -- Overarching settings for Lightbox -- */
+}
+
+.\_pendo-guide-lb\_ .\_pendo-guide-container\_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-lb\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+.\_pendo-backdrop\_ {
+  /* The backdrop displayed behind lightboxes */
+}
+
+
+/* ------------------------------
+ * -- Tooltip Specific Styling --
+ * ------------------------------ */
+
+.\_pendo-guide-tt\_ {
+  /* Overarching settings for tooltip */
+}
+
+.\_pendo-guide-tt\_ .\_pendo-guide-container\_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-tt\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+/* -- Pointer on the edge of the tooltip -- */
+.\_pendo-guide-arrow\_ {
+}
+
+.\_pendo-guide-arrow-top\_ {
+}
+
+.\_pendo-guide-arrow-left\_ {
+}
+
+.\_pendo-guide-arrow-right\_ {
+}
+
+.\_pendo-guide-arrow-bottom\_ {
+}
+
+.\_pendo-guide-arrow-border-top\_ {
+}
+
+.\_pendo-guide-arrow-border-left\_ {
+}
+
+.\_pendo-guide-arrow-border-right\_ {
+}
+
+.\_pendo-guide-arrow-border-bottom\_ {
+}
+
+
+/* ------------------------------
+ * -- Mobile Lightbox Styling ---
+ * ------------------------------ */
+
+.\_pendo-guide-mobile-lb\_ {
+  /* Overarching settings for Mobile Lightbox */
+}
+
+.\_pendo-guide-mobile-lb\_ .\_pendo-guide-container\_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-mobile-lb\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+/* ------------------------------
+ * -- Mobile Tooltip Styling ---
+ * ------------------------------ */
+ .\_pendo-guide-mobile-tt\_ {
+  /* Overarching settings for mobile tooltip */
+}
+
+.\_pendo-guide-mobile-tt\_ .\_pendo-guide-container\_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-mobile-tt\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+
+/* ------------------------------
+ * -- Launcher Styling ----------
+ * ------------------------------ */
+
+.\_pendo-launcher\_ {
+  /* Overarching settings for Launcher */
+}
+
+.\_pendo-launcher\_ .\_pendo-guide-container\_ {
+  /* -- Launcher border, shadow, background, etc. -- */
+  /* -- (uses tooltip styles by default) -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-content\_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ {
+  /* -- Launcher header area -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ img {
+  /* -- Launcher header area image styles -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ .\_pendo-launcher-title\_ {
+  /* -- Launcher header area text styles -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ .\_pendo-launcher-search-box\_ {
+  /* -- Launcher search area (if enabled) -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ .\_pendo-launcher-search-box\_ input[type='text'] {
+  /* -- Launcher search area text box -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-guide-listing\_ {
+  /* -- Launcher guide listing area -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-guide-listing\_ .\_pendo-launcher-item\_ {
+  /* -- An individual item in the launcher guide listing -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-footer\_ {
+  /* -- Launcher footer area -- */
+}
+
+.\_pendo-launcher-badge\_ {
+  /* -- Styles for the launcher badge -- */
+}
+
+/* -- Styles for launcher badge orientations -- */
+.\_pendo-launcher-badge-bottom-right\_ {
+}
+
+.\_pendo-launcher-badge-bottom-left\_ {
+}
+
+.\_pendo-launcher-badge-top-right\_ {
+}
+
+.\_pendo-launcher-badge-top-left\_ {
+}
+
+/* -- Styles for launcher orientations -- */
+.\_pendo-launcher-bottom-right\_ {
+}
+
+.\_pendo-launcher-bottom-left\_ {
+}
+
+.\_pendo-launcher-top-right\_ {
+}
+
+.\_pendo-launcher-top-left\_ {
+}
+
+/* ------------------------------
+ * -- Poll Styling --------------
+ * ------------------------------ */
+ 
+.\_pendo-guide-container\_ .\_pendo-poll\_ {
+ /* -- Poll container -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ {
+ /* -- Question and answer container (everything but the submit button) -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question-prompt\_ {
+ /* -- Question text -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ label {
+ /* -- Number Scale Poll positioning and styles for radio button text and inputs -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ select {
+ /* -- Dropdown styling -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ {
+ /* -- NPS Poll ratings container -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ label {
+ /* -- NPS Poll individual rating - the number scale items -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ label span {
+  /* -- NPS Poll individual rating - accompanying text for number scale items -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-npsreason\_ {
+ /* -- NPS Poll optional user-provided explanation container -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-npsreason\_ .\_pendo-poll-question-prompt\_ {
+ /* -- NPS Poll optional user-provided explanation text -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ button {
+  /* -- Yes/No Poll buttons styles -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-submit\_ {
+ /* -- Submit button styles -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-message\_ {
+ /* -- "Success message" styles -- */
+}
+
+
+/* ------------------------------
+ * -- Additional Global Styling -
+ * ------------------------------ */
+
+.\_pendo-close-guide\_ {
+  /* -- The dismiss guide button displayed in the corner of every guide -- */
+}
+
+.\_pendo-badge\_ {
+  /* -- Styles for badges -- */
+}
+
+
+
+
+/* ----------------------------------
+ * -- COTALITY Custom Classes/IDs ---
+ * ---------------------------------- */
+
+:root {
+    --pendo-font-family: Inter; /* var(--bs-font-sans-serif) */
+}
+
+
+
+/* ---------- LIGHTBOX ---------- */
+
+.p\_lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  overflow: auto;
+}
+
+.p\_lightbox-modal-content {
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.p\_lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #f1f1f1;
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* ------ GUIDE STEP STYLES -------- */
+
+.\_pendo-step-container-styles {
+    border-radius: .35rem !important;
+}
+
+
+/* ------- GUIDE STEP COUNT -------- */
+
+.p\_step-wrapper .p\_step-count {
+    color: #999;
+    padding: 0 0 10px 0; 
+    font-weight: 500; 
+    font-size: 13px;
+}
+
+/* ------- GUIDE STEP TEXT --------- */
+
+.p\_step-wrapper h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    font-family: inherit; 
+}
+
+.p\_step-wrapper .p\_step-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    font-family: inherit; 
+}
+
+.p\_step-wrapper {
+    font-size: 14px;
+    font-weight: 400;
+    /* margin: 0 0 10px 0;*/
+    font-family: inherit; 
+}
+
+.p\_step-meta {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0;
+    margin-top: -7px;
+    opacity: .5;
+    text-transform: uppercase;
+}
+
+/* --------- ALERTS START ---------- */
+
+.p\_alert {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 20px;
+    border-radius: 3px;
+    border: 1px solid; 
+    margin-bottom: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.p\_alert i {
+    font-size: 20px;
+    display: block; /* Ensures clean alignment inside the span */
+}
+
+.p\_alert p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.p\_alert a {
+    color: inherit !important;
+}
+
+.p\_alert b, .p\_alert strong {
+    font-weight: 500;
+}
+
+
+
+
+/* ------- TOOLTIP LOGIC  -------- */
+
+.p\_tooltip-trigger {
+    position: relative;
+    cursor: help;
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+/* The Black Bubble */
+.p\_tooltip-trigger::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 160%; /* Positioned above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background-color: #1a1a1a; /* Dark UI charcoal from screenshot */
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 1000;
+    
+    /* Hiding / Anti-Flicker */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; 
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* The Pointer (The Triangle) */
+.p\_tooltip-trigger::before {
+    content: "";
+    position: absolute;
+    bottom: 130%; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #1a1a1a; /* Matches bubble color */
+    
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* Hover States */
+.p\_tooltip-trigger:hover::after,
+.p\_tooltip-trigger:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* NOTE */
+.p\_alert-note { background: #fffbe6; border-color: #f1eec9; color: #413a26; }
+.p\_alert-note i { color: #857437; }
+
+/* TIP */
+.p\_alert-tip { background: #f3f0ff; border-color: #d6bcfa; color: #2d3748; }
+.p\_alert-tip i { color: #553c9a; }
+
+/* SETTINGS */
+.p\_alert-settings { background: #f7fafc; border-color: #e2e8f0; color: #1a202c; }
+.p\_alert-settings i { color: #4a5568; }
+
+/* ATTENTION */
+.p\_alert-attention { background: #fffaf0; border-color: #fbd38d; color: #4a2c2a; }
+.p\_alert-attention i { color: #9c4221; }
+
+/* SUCCESS */
+.p\_alert-success { background: #f0fff4; border-color: #c6f6d5; color: #22543d; }
+.p\_alert-success i { color: #276749; }
+
+/* REFERENCE */
+.p\_alert-reference { background: #e6fffa; border-color: #b2f5ea; color: #234e52; }
+.p\_alert-reference i { color: #2c7a7b; }
+
+/* CRITICAL */
+.p\_alert-critical { background: #fff5f5; border-color: #feb2b2; color: #63171b; }
+.p\_alert-critical i { color: #c53030; 
+}
+
+/* VIDEO */
+.p\_alert-video { background: #ebf4ff; border-color: #bee3f8; color: #2a4365; }
+.p\_alert-video i { color: #434190; 
+}
+
+
+.p\_mandatory { /* display as mandatory */
+    color: #ad1f2d; 
+}
+
+
+.p\_icon-inline { /* applied to inline alert icons */
+    display: inline-block !important; 
+    font-size: 14px !important; 
+    margin: 0 4px;
+    vertical-align: baseline;
+    color: inherit !important; 
+    width: auto !important;
+    height: auto !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------- Guide Close Button Tooltip START ---------- */
+
+/* 1. Style the Close Button & Red Hover */
+#pendo-guide-container [class*="close-guide"] {
+    background-color: #fff !important; 
+    border-radius: 50% !important;
+    width: 32px !important; 
+    height: 32px !important;
+    display: flex !important; 
+    align-items: center !important; 
+    justify-content: center !important;
+    z-index: 50 !important;
+
+    border: 0px solid transparent !important;
+    outline: none !important;
+    
+    /* Transition & Positioning */
+    transition: all 0.2s ease !important;
+    /* position: absolute !important;*/
+}
+
+#pendo-guide-container [class*="close-guide"]:hover {
+    background-color: #d5172f !important; 
+    color: #ffffff !important;
+    border: none !important;
+}
+
+/* 2. Create the Tooltip Bubble */
+#pendo-guide-container [class*="close-guide"]::after {
+    content: "Exit Tour"; 
+    position: absolute;
+    top: 50%;
+    right: 128%; /* Pushes it to the left of the button */
+    transform: translateY(-50%);
+    
+    /* Styling */
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: sans-serif;
+    white-space: nowrap;
+    
+    /* Hidden State */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* 3. Create the Little Pointer Triangle */
+#pendo-guide-container [class*="close-guide"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 110%;
+    transform: translateY(-50%);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #1a1a1a; /* Matches bubble color */
+    
+    /* Hidden State */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* 4. The Hover Reveal */
+#pendo-guide-container [class*="close-guide"]:hover::after,
+#pendo-guide-container [class*="close-guide"]:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* --------- Guide Close Button Tooltip END ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------- Badges Configuration START ---------- */
+
+/* ---- 1. THE GLOBAL BADGE UI ---- */
+/* Targets ONLY custom uploaded images AND excludes these IDs */
+button[id^="\_pendo-badge\_"].\_pendo-badge:has(img[src*="storage.googleapis.com"]):not(
+  #\_pendo-badge\_m2x9coG5312JW0rBVexvw2RnNXs,
+  #\_pendo-badge\__tvJ49uDbj-OI\_XC7wLXUqg4edA,
+  #\_pendo-badge\_dKJu63z00iU-Z6L7NCqIiyOcGWc, /* CATRS DEMO */
+  #\_pendo-badge\_JYR9bDbYw3zb4HzYDLRgONckxdA /* VIRTUAL STAGING */
+) {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #ba2c73 !important; 
+    height: 38px !important;
+    width: 38px !important;
+    min-width: 38px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    position: absolute !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 0 !important; /* Fixed: Tucked behind modals */
+}
+
+/* THE ICON (Graduation Cap) */
+button[id^="\_pendo-badge\_"].\_pendo-badge:has(img[src*="storage.googleapis.com"]):not(
+  #\_pendo-badge\_m2x9coG5312JW0rBVexvw2RnNXs,
+  #\_pendo-badge\__tvJ49uDbj-OI\_XC7wLXUqg4edA,
+  #\_pendo-badge\_dKJu63z00iU-Z6L7NCqIiyOcGWc, /* CATRS DEMO */
+  #\_pendo-badge\_JYR9bDbYw3zb4HzYDLRgONckxdA /* VIRTUAL STAGING */
+)::before {
+    content: "\f19d" !important;
+    font-family: "Font Awesome 5 Pro" !important;
+    font-weight: 900 !important;
+    color: white !important;
+    font-size: 18px !important;
+    z-index: 5 !important;
+}
+
+/* THE BUBBLE (Default: Start Tour) */
+button[id^="\_pendo-badge\_"].\_pendo-badge:has(img[src*="storage.googleapis.com"]):not(
+  #\_pendo-badge\_m2x9coG5312JW0rBVexvw2RnNXs,
+  #\_pendo-badge\__tvJ49uDbj-OI\_XC7wLXUqg4edA,
+  #\_pendo-badge\_dKJu63z00iU-Z6L7NCqIiyOcGWc, /* CATRS DEMO */
+  #\_pendo-badge\_JYR9bDbYw3zb4HzYDLRgONckxdA /* VIRTUAL STAGING */
+)::after {
+    content: "Start Tour" !important;
+    position: absolute !important;
+    bottom: 150% !important; 
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    padding: 8px 12px !important;
+    border-radius: 5px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    font-family: sans-serif !important;
+    z-index: 10000 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.1s ease !important;
+    pointer-events: none !important;
+    white-space: pre !important; 
+    text-align: center !important;
+    line-height: 1.4 !important;
+}
+
+/* THE POINTER (The Triangle) */
+button[id^="\_pendo-badge\_"].\_pendo-badge:has(img[src*="storage.googleapis.com"]):not(
+  #\_pendo-badge\_m2x9coG5312JW0rBVexvw2RnNXs,
+  #\_pendo-badge\__tvJ49uDbj-OI\_XC7wLXUqg4edA,
+  #\_pendo-badge\_dKJu63z00iU-Z6L7NCqIiyOcGWc, /* CATRS DEMO */
+  #\_pendo-badge\_JYR9bDbYw3zb4HzYDLRgONckxdA /* VIRTUAL STAGING */
+) img {
+    display: block !important;
+    position: absolute !important;
+    bottom: 150% !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(100%) !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    border-top: 6px solid #1a1a1a !important;
+    content: "" !important;
+    z-index: 9999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.1s ease !important;
+}
+
+/* SHOW BUBBLE & POINTER ON HOVER */
+button[id^="\_pendo-badge\_"].\_pendo-badge:has(img[src*="storage.googleapis.com"]):not(
+  #\_pendo-badge\_m2x9coG5312JW0rBVexvw2RnNXs
+):hover::after,
+button[id^="\_pendo-badge\_"].\_pendo-badge:has(img[src*="storage.googleapis.com"]):not(
+  #\_pendo-badge\_m2x9coG5312JW0rBVexvw2RnNXs
+):hover img {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+
+/* Solves overflow issue for tooltip if badge is in page command area (ie on Dashboard heading) */
+.mtrx-pageContainer:has(button[id^="\_pendo-badge\_"]) {
+    overflow: visible !important;
+}
+
+
+
+
+/* ----- 2. TEXT OVERRIDES (AT THE END) ------ */
+
+/* Listing Manager */
+button[id^="\_pendo-badge\_"].\_pendo-badge:has(img[src*="storage.googleapis.com"])#\_pendo-badge\_pN3xeE74wrtqE72btN8t1J7BlMk::after {
+    content: "Tour the Listing\a Manager" !important;
+}
+
+/* New Experience - Legacy Dashboard */
+button[id^="\_pendo-badge\_"].\_pendo-badge:has(img[src*="storage.googleapis.com"])#\_pendo-badge\_N7NY21rwfYRvpzme-Y5yINv9Vfc::after {
+    content: "Switch to NEW\a Experience" !important;
+}
+
+
+/* Try CoreAI Prototype 2 - Dashboard */
+button[id^="\_pendo-badge\_"].\_pendo-badge:has(img[src*="storage.googleapis.com"])#\_pendo-badge\_rYJdGWaTE3wsDMIZKqe-XGAunB8::after {
+    content: "Ask CoreAI\a Prototype" !important;
+}
+
+
+     /* ---- SPECIAL CONSIDERATIONS ----- */
+
+
+
+
+/* --------- END BADGES UI CONFIGURATION ---------- */
+
+
+
+
+
+
+
+
+/* ----- 3. BADGE ADAPTIVE SIZING -------- */
+
+/* --- 1. THE TRIGGERS --- */
+html:is(:has(a[data-mtx-track-prop-from="Small"]), .mtrx-font-small) {
+    --pendo-target: 25px !important;
+    --pendo-font: 13px !important;
+}
+
+html:is(:has(a[data-mtx-track-prop-from="Medium"]), .mtrx-font-medium) {
+    --pendo-target: 30px !important;
+    --pendo-font: 16px !important;
+}
+
+/* --- 2. THE EXECUTION (Universal Resize) --- */
+/* Targets: Pink Squares (Type 1) and Excluded Custom Badge (Type 2).
+   Excludes: Resource Center (#...NXs) and any tiny default badges (<= 15px). */
+
+html:is(:has(a[data-mtx-track-prop-from="Small"]), :has(a[data-mtx-track-prop-from="Medium"]), .mtrx-font-small, .mtrx-font-medium) 
+button[id^="\_pendo-badge\_"].\_pendo-badge:not(
+    #\_pendo-badge\_m2x9coG5312JW0rBVexvw2RnNXs, /* RC EXEMPTED */
+    [style*="height: 1px"], [style*="height: 2px"], [style*="height: 3px"], [style*="height: 4px"], [style*="height: 5px"],
+    [style*="height: 6px"], [style*="height: 7px"], [style*="height: 8px"], [style*="height: 9px"], [style*="height: 10px"],
+    [style*="height: 11px"], [style*="height: 12px"], [style*="height: 13px"], [style*="height: 14px"], [style*="height: 15px"]
+) {
+    width: var(--pendo-target) !important;
+    height: var(--pendo-target) !important;
+    min-width: var(--pendo-target) !important;
+    max-width: var(--pendo-target) !important;
+    min-height: var(--pendo-target) !important;
+    max-height: var(--pendo-target) !important;
+    flex-shrink: 0 !important;
+}
+
+/* --- 3. INTERNAL CONTENT (Icons & Images) --- */
+
+/* A. Custom Pink Badge Icons (::before) - Exclude (not) RC Badge */
+html:is(:has(a[data-mtx-track-prop-from="Small"]), :has(a[data-mtx-track-prop-from="Medium"]), .mtrx-font-small, .mtrx-font-medium) 
+button[id^="\_pendo-badge\_"].\_pendo-badge:not(
+    #\_pendo-badge\_m2x9coG5312JW0rBVexvw2RnNXs,
+    [style*="height: 14px"], [style*="height: 15px"]
+)::before {
+    font-size: var(--pendo-font) !important;
+    line-height: var(--pendo-target) !important;
+}
+
+/* B. Excluded Custom Badge Image (img) - Keeping this for Type 2 badges */
+html:is(:has(a[data-mtx-track-prop-from="Small"]), :has(a[data-mtx-track-prop-from="Medium"]), .mtrx-font-small, .mtrx-font-medium) 
+#\_pendo-badge\__tvJ49uDbj-OI\_XC7wLXUqg4edA img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- Accordion START --------- */
+
+
+/* Outer Wrap */
+.p\_accordion {
+    margin: 15px 0;
+    border-top: 1px solid #eee;
+}
+
+/* Individual Rows */
+.p\_accordion .p\_accordion-item {
+    border-bottom: 1px solid #eee;
+}
+
+/* The Header Button */
+.p\_accordion .p\_accordion-header {
+    width: 100%;
+    padding: 12px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-weight: 600;
+    color: #555; 
+    transition: color 0.2s ease;
+}
+
+.p\_accordion .p\_accordion-header:hover {
+    color: #0056b3;
+}
+
+
+.p\_accordion .p\_accordion-icon-main {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    
+    width: 32px;   
+    height: 32px;  
+    
+    background-color: #F4F4F4 !important;
+    border-radius: 4px;
+    margin-right: 12px;
+    
+    font-size: 1.0rem !important; 
+    color: #555 !important;  
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+/* The Chevron Arrow (Right Side) */
+.p\_accordion .p\_accordion-header i:last-child {
+    margin-left: auto;
+    font-size: 10px;
+    color: #999;      
+    transition: transform 0.3s ease;
+}
+
+/* Content Area */
+.p\_accordion .p\_accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.2s ease;
+    opacity: 0;
+}
+
+/* Inner Body Text */
+.p\_accordion .p\_inner-content {
+    padding: 0 0 12px 44px;    
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- Open State Toggles --- */
+.p\_accordion .p\_accordion-item[data-state="open"] .p\_accordion-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.p\_accordion .p\_accordion-item[data-state="open"] .p\_accordion-header {
+    color: #333;
+}
+
+.p\_accordion .p\_accordion-item[data-state="open"] .p\_accordion-header i:last-child {
+    transform: rotate(180deg);
+}
+
+/* ------- Accordion END --------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- Icon Bullet List START --------- */
+
+.p\_icon-bullet-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #eee; 
+    margin: 15px 0; 
+}
+
+.p\_icon-bullet-list .p\_list-card {
+    display: flex;
+    align-items: center !important; 
+    border-bottom: 1px solid #eee; 
+    padding: 12px 0;
+    min-height: 56px; 
+}
+
+/* --- Icon Styling --- */
+.p\_icon-bullet-list .p\_list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    
+    background-color: #F4F4F4 !important;
+    border-radius: 4px;
+    margin-right: 12px; 
+}
+
+.p\_icon-bullet-list .p\_list-icon i {
+    font-size: 1.0rem !important;
+    color: #555 !important; 
+    line-height: 1 !important; 
+}
+
+/* --- Text Content Styling --- */
+.p\_icon-bullet-list .p\_list-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.p\_icon-bullet-list .p\_list-content strong {
+    font-size: 13px !important;
+    color: #333 !important; 
+    font-weight: 600;
+    line-height: 1.2 !important; 
+}
+
+.p\_icon-bullet-list .p\_list-content p {
+    font-size: 13px !important;
+    color: #555 !important; 
+    line-height: 1.5 !important;
+    margin: 0 !important;
+}
+
+/* ------- Icon Bullet List END --------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- CoreAI Prototype Panel START ---------- */
+
+/* 1. THE CHATBOT DRAWER: Full Height Sidebar */
+#widget\_IFrame\_88 {
+    position: fixed !important;
+    top: 80px !important;
+    right: 0 !important;
+    width: 400px !important;
+    height: calc(100vh - 80px) !important;
+    max-height: calc(100vh - 80px) !important;
+    
+    display: none !important; 
+    z-index: 2147483647 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important; /* Kept white for the full-height look */
+    border-left: 1px solid #ddd !important;
+    
+    transform: none !important;
+    transition: none !important;
+    overflow: visible !important;
+}
+
+/* 2. THE OPEN STATE */
+body.chat-drawer-open #widget\_IFrame\_88 {
+    display: block !important;
+}
+
+#widget\_IFrame\_88 .mtrx-card {
+    box-shadow: none;
+}
+
+
+
+/* 3. THE SQUISH (Dashboard Resize) */
+body.chat-drawer-open .mtrx-pageContainer {
+    position: fixed !important;
+    left: 0 !important;
+    top: 80px !important;
+    width: calc(100% - 400px) !important;
+    height: calc(100vh - 80px - 0.1em) !important;
+    margin-top: 0.1em !important;
+    overflow-y: auto !important;
+    z-index: 1 !important;
+    transition: none !important;
+}
+
+/* 4. THE MATRIX CARD: Set to 90% */
+/* This keeps the iframe area truncated while the drawer stays full height */
+body.chat-drawer-open #widget\_IFrame\_88 .mtrx-card,
+body.chat-drawer-open #widget\_IFrame\_88 .card {
+    height: 90% !important;
+    max-height: 90% !important;
+    min-height: 90% !important;
+    border: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: transparent !important; /* Let the drawer white show through */
+}
+
+/* 5. THE IFRAME CONTAINER & IFRAME */
+body.chat-drawer-open #widget\_IFrame\_88 .card-header {
+    display: none !important;
+}
+
+body.chat-drawer-open #widget\_IFrame\_88 .card-body,
+body.chat-drawer-open #widget\_IFrame\_88 .p-0 {
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    flex: 1 1 auto !important;
+    position: relative !important;
+}
+
+body.chat-drawer-open #widget\_IFrame\_88 iframe {
+    height: 100% !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Delete START ---------- */
+.p\_step-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    font-family: inherit; 
+}
+
+.p\_step-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    font-family: inherit; 
+}
+
+.p\_step-paragraph {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    font-family: inherit; 
+    /* font-family: var(--pendo-font-family); */
+}
+
+
+.p\_step-count {
+    color: #999;
+    padding: 0 0 10px 0; 
+    font-weight: 500; 
+    font-size: 13px;
+}
+
+/* ---------- Delete END ---------- */
+
+

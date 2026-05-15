@@ -1,0 +1,777 @@
+/* ====== WORKAROUND TO AVOID ATMS-498 - REMOVE AFTER 12.4.3 ====== */
+#m_sendConciergeUpdates {display:none;}
+/* ============ END WORKAROUND TO AVOID ATMS-498  ============ */
+
+
+.printToPDF .tabBar { /* hide tab bar when printing to pdf */
+    display:none;
+}
+.NewsPostedBy { display:none; }
+/*
+.Status_A { color: #228B22; }
+.Status_X { color: #000000; }
+.Status_P { color: #E17B2B; }
+.Status_L { color: #009cfd; }
+.Status_S { color: #009cfd; }
+.Status_W {color: #57007F; }
+*/
+
+.Status_Active { color: #228B22; }
+.Status_Active Contingent { color: #379EEC; }
+.Status_Active KO { color: #379EEC; }
+.Status_Active Option Contract { color: #379EEC; }
+.Status_Cancelled { color: #D89239; }
+.Status_Expired { color: #D89239; }
+.Status_Temp Off Market { color: #D89239; }
+.Status_Pending { color: #4D446F; }
+.Status_Closed { color: #CC203A; }
+.Status_Withdrawn { color: #D89239; }
+.Status_Coming Soon {color: #daa520; }
+
+
+.Status_ACT { color: #228B22; }
+.Status_AC { color: #379EEC; }
+.Status_AKO { color: #379EEC; }
+.Status_AOC { color: #379EEC; }
+.Status_CAN { color: #D89239; }
+.Status_EXP { color: #D89239; }
+.Status_HOLD { color: #D89239; }
+.Status_PND { color: #4D446F; }
+.Status_SLD { color: #CC203A; }
+.Status_WTH { color: #D89239; }
+.Status_CSN {color: #daa520; }
+
+
+.Status_A{ color: #228B22; }
+.Status_AC { color: #379EEC; }
+.Status_AKO { color: #379EEC; }
+.Status_AOC { color: #379EEC; }
+.Status_K { color: #D89239; }
+.Status_X { color: #D89239; }
+.Status_T { color: #D89239; }
+.Status_P { color: #4D446F; }
+.Status_C { color: #CC203A; }
+.Status_W { color: #D89239; }
+.Status_CS {color: #daa520; }
+
+.arial-font .label, .large-font .field, .large-font .wrapped-field {font-size:10pt; font-family:Arial;}
+
+.PublicOpenhouse { color: #D17C00; }
+.BrokerOpenhouse { color: #6900FF; }
+
+/* Print START */
+
+@media print {
+.tabSelected {
+    display:none;}
+}
+
+
+BODY.printToPDF .tabSelected {
+    display:none;
+}
+
+/* Print END */
+
+/* Page breaks before every tab */
+.tabBar {
+    page-break-before:always;
+}
+
+
+.tabBar:first-of-type {
+    page-break-before:auto;
+}
+
+/* displays START */
+.multiLineDisplay .label, .singleLineDisplay .label { /* the Display field labels */
+
+}
+
+.multiLineDisplay .label { /* the Display labels */
+    white-space:nowrap;
+    font-weight:bold;
+
+}
+
+.multiLineDisplay .field {  /* the Display data fields */
+    font-weight:normal;
+    line-height: 15px;
+
+}
+
+.multiLineDisplay .wrapped-field { /* the Display data (wrapping) fields */
+    font-weight:normal;
+    line-height: 15px;
+
+}
+
+.multiLineDisplay .formula { /* the Display data fields */
+    font-weight:normal;
+    line-height: 15px;
+
+}
+
+.multiLineDisplay.nonresponsive {
+    /*font-size: 12px;  increase font size on multiline displays */
+}
+
+.multiLineDisplay hr { /* reduce top/bottom margin on hr in multiLineDisplays */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* =========== PLEASE DO NOT ADD BELOW THIS LINE =========== */
+
+
+
+
+/* =========== DEFAULT CSS UPDATE START=========== */
+
+/* ---------- Global START ---------- */
+
+:root {
+    --mtrx-primary: #2471a8;
+    --mtrx-primary-dark: #003c66;
+
+    --mtrx-primary-two: var(--mtrx-secondary); /* Speed Bar */
+    --mtrx-primary-two-text: var(--mtrx-dark);  /* Speed Bar Text*/
+
+    --mtrx-primary-three: var(--mtrx-secondary); /* Widgets */
+    --mtrx-primary-three-text: var(--mtrx-dark);  /* Widget Text */
+
+    --mtrx-secondary: #e6e6e6;
+
+    --mtrx-primary-four: #2471a8; /* Buttons */
+    --mtrx-primary-four-text: var(--mtrx-light); /* Button Text */
+
+    --mtrx-primary-five: var(--mtrx-primary);  /* Navbar */
+    --mtrx-primary-five-text: var(--mtrx-light);   /* Navbar Text */
+
+    --mtrx-light: #fff;
+    --mtrx-dark: #000;
+
+    --mtrx-info: #0d3759; /* info */
+    --mtrx-danger: #ad1f2d; /* danger  */
+
+    --mtrx-primary-gradient: linear-gradient(90deg, var(--mtrx-primary-dark) 0%, var(--mtrx-primary) 100%);
+    --mtrx-primary-gradient--vertical: linear-gradient(180deg, var(--mtrx-primary-dark) 0%, var(--mtrx-primary) 100%);
+}
+
+
+
+    #m_uc_m_lblAdditionError { /* Additional Fields Duplication Info Message */
+        color: #fff !important;
+        font-weight: normal !important;
+        padding: 10px;
+        border: 1px #0b3252 solid;
+        display: block;
+        margin: 10px 0px;
+        background: var(--mtrx-info);
+        line-height: 18px;
+    }
+
+
+
+    /* Help Popup START */
+
+    #helpHeader { 
+        height: 56px !important;
+        padding: 1rem 1rem !important;
+        background: var(--mtrx-primary-gradient) !important;
+    }
+
+    #helpContentWrapper {
+        top: 56px !important;
+    }
+
+    /* Help Popup END */
+
+
+/* ---------- Global END ---------- */
+
+
+
+
+/* ---------- Navbar START ---------- */
+
+
+.TopMenuInner {
+    background: var(--mtrx-primary-gradient--vertical);
+}
+
+
+    .TopMenuLeft {
+        width: 1px;
+        position: relative;
+        top: 3px;
+    }
+
+    .TopMenuLeft img{ /* adjust size and position of logo */
+        margin-left:12px;
+    }
+
+    td.TopMenuLeft ~ td { /* adjust vertical position of sibling cells */
+        position:relative;
+        top:3px;
+    }
+
+    td.TopMenuLeft + td { /* adjust position of TopMenuLeft sibling cell */
+        padding-left: 2.2rem;
+    }
+
+
+
+
+    /* Menu START */
+
+    .sf-menu ul li:active { /* highlight sub menu item when clicked */
+        background: var(--mtrx-primary-four);
+        color: var(--mtrx-primary-four-text); /* used when item is not a link (ie selected language */
+    }
+
+    .sf-menu ul li:active > a { /* sub menu item link color when clicked */
+        color: var(--mtrx-primary-four-text);
+    }
+
+    /* Menu END*/
+
+
+
+    /* Notification START */
+
+    .mtx-dropdown--withHeader .dropdown-header {
+        background-color: var(--mtrx-primary);
+    }
+
+    .mtx-dropdown--withHeader .dropdown-item:hover,     .mtx-dropdown--withHeader .dropdown-item:active { /* highlight notification item on hover and selected */
+        background: #e6e6e6; 
+    }
+
+    /* Notification END */
+
+
+
+
+/* ---------- Navbar END ---------- */
+
+
+
+
+/* ---------- Speed Bar START ---------- */
+
+
+.mtx-speedbar .input-group-addon { /* remove background under Other Criteria */
+    background-color: transparent; 
+}
+
+
+.mtx-speedbar-search .fa-search:before {  /* speed bar search icon */
+    font-weight: normal;
+}
+
+
+/* ---------- Speed Bar END ---------- */
+
+
+
+
+/* ---------- Recent Search START ---------- */
+
+        /* recent search slideout START */
+
+        .mtx-blade .modal-header { /* recent search header */
+            background-image: var(--mtrx-primary-gradient);
+            color: var(--mtrx-light);
+        }
+
+
+        .modal-header .close {
+            color: var(--mtrx-light);
+            text-shadow: 0 0px 0 #fff;
+            filter: alpha(opacity=30);
+            opacity: .3;
+        }
+
+        .recentSearchRow {
+            border-color: var(--mtrx-primary) !important;
+        }
+
+        .recentSearchRow:hover, .recentSearchRow:hover .text-muted {
+            background: var(--mtrx-primary) !important;
+            color: var(--mtrx-light) !important;
+        }
+
+        .recentSearchRow:hover .recentSearchCountType {
+            color: var(--mtrx-light) !important;
+        }
+
+        /* recent search slideout END */
+
+
+/* ---------- Recent Search END ---------- */
+
+
+
+
+
+/* ---------- Widgets START ---------- */
+
+
+
+/* News Widget START */
+
+.mtx-btn-confirm, .mtx-btn-confirm:hover, .mtx-btn-confirm:focus, .mtx-btn-confirm:active, .open>.dropdown-toggle.mtx-btn-confirm {
+    background-color: var(--mtrx-primary-four);
+    border-color: var(--mtrx-primary-four);
+}
+
+/* News Widget END */
+
+
+
+
+.css_container .wgt_heading {
+    background: var(--mtrx-secondary);
+    border-bottom: 1px solid #fcfcfc;
+    padding-left:2px;
+    color: var(--mtrx-dark);
+}
+
+
+.css_container .wgt_heading:hover {
+    background: var(--mtrx-secondary);
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--mtrx-dark);
+}
+
+
+.css_container .wgt_heading a, .css_container .wgt_heading:hover a, .css_container .wgt_heading:hover a:hover, .wgt_manager .css_container:hover .wgt_heading a {
+    color: var(--mtrx-dark); /* link in heading - my listings - */
+}
+
+
+/* ---------- Widgets END ---------- */
+
+
+
+
+/* ---------- Page Buttons START ---------- */
+
+
+.adminButtonCritical {
+    background: var(--mtrx-danger);
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    padding: 4px 9px 4px 9px;
+    margin-top: 5px;
+}
+
+
+
+.adminButton, .adminButton2 {
+    background: var(--mtrx-primary-four);
+    border-color: var(--mtrx-primary-four);
+    color: var(--mtrx-primary-four-text);
+    border: none;
+    padding: 4px 10px;
+    margin-top: 5px;
+}
+
+
+.adminButton:hover, .adminButton2:hover {
+    background-color: var(--mtrx-primary-four);
+    color: var(--mtrx-primary-four-text);
+}
+
+
+
+    /* New Search Button START */
+
+    .switchTo3PanelSearch { /* v11 */
+        padding: 10px;
+        border-radius: 3px;
+        line-height: 34px;
+    }
+
+    a.switchTo3PanelSearch { /* v11 */
+        text-decoration: none;
+    }
+
+    /* New Search Button END */
+
+
+/* ---------- Page Buttons END ---------- */
+
+
+
+
+/* ---------- Button Bar START ---------- */
+
+
+
+.btn-primary { /* primary button color */
+    background-color: var(--mtrx-primary-four);
+    border-color: var(--mtrx-primary-four);
+}
+
+
+.btn-primary:hover {
+    background-color: var(--mtrx-primary-four);
+    border-color: var(--mtrx-primary-four);
+    color: var(--mtrx-primary-four-text);
+}
+
+
+.btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary { 
+    background-color: var(--mtrx-primary-four) !important;
+    border-color: var(--mtrx-primary-four) !important;
+}
+
+
+.btn-primary:focus, .btn-primary.focus {
+    background-color: var(--mtrx-primary-four) !important;
+    border-color: var(--mtrx-primary-four) !important;
+}
+
+
+    /* BB Main Menu START */
+
+    div.tabbedMenu ul.mainmenu li.selected, div.tabbedMenu ul.mainmenu li.selected:hover {
+        background-color: var(--mtrx-primary-four);
+        border: solid 1px var(--mtrx-primary-four);
+    }
+
+
+    /* BB Main Menu END */
+
+
+
+    /* Important START */
+
+    .buttonBar TD.leftImportant.leftedge { /* Button Bar with main menu */
+        background: var(--mtrx-primary-four);
+    }
+
+    .buttonBar TD.important {
+        background: var(--mtrx-primary-four) !important;
+    }
+
+    .buttonBar TD.rightImportant {
+        background: var(--mtrx-primary-four) !important;
+    }
+
+
+    .buttonBar TD.leftImportant { /* Button Bar without main menu */
+        background: var(--mtrx-primary-four) !important;
+    }
+
+
+    /* Important END */
+
+
+
+    /* Disabled START */
+
+    .buttonBar TD.disabled { 
+        background-color: var(--mtrx-primary-four) !important; /* disabled button color adjust */
+        opacity: .5;
+    }
+    /* Disabled END */
+
+
+/* ---------- Button Bar END ---------- */
+
+
+
+
+
+/* ---------- Paging START ---------- */
+
+
+div.tabbedMenu .pagingLinks .active a, table.tabbedMenu .pagingLinks .active a {
+    background-color: var(--mtrx-primary-four);
+    color: var(--mtrx-primary-four-text);
+}
+
+
+/* ---------- Paging END ---------- */
+
+
+
+
+
+/* ---------- Calendar START ---------- */
+
+
+
+.cal_btn { /* calendar buttons */
+    background-color: var(--mtrx-primary-four);
+    color: var(--mtrx-primary-four-text);
+}
+
+.cal_btnhov { /* calendar hovered buttons */
+    background-color: var(--mtrx-primary-four);
+    color: var(--mtrx-primary-four-text);
+}
+
+
+/* ---------- Calendar END ---------- */
+
+
+
+
+/* ---------- (Search) Roll-out control START (Same as Calendar) ---------- */
+
+
+.S_ListBox_Rollout .lbx_ro_btn input { /* cal_btn */
+    background: var(--mtrx-primary-four); /* For browsers that do not support gradients */
+    color: var(--mtrx-primary-four-text);
+    border: solid 1px var(--mtrx-primary-four);
+}
+
+.S_ListBox_Rollout .lbx_ro_btn input:hover { /* cal_btn */
+    background: var(--mtrx-primary-four); /* For browsers that do not support gradients */
+    border: solid 1px var(--mtrx-primary-four);
+}
+
+
+/* ---------- (Search) Roll-out control END ---------- */
+
+
+
+
+/* ---------- Wizard Step Button Bar START ---------- */
+
+
+.stepButtonBar TD.selected {
+    background-color: var(--mtrx-primary-four);
+}
+
+
+.stepButtonBar TD.left, .stepButtonBar TD.right {  /* remove border from end caps */
+    border-top: none;
+    border-bottom: none;
+}
+
+
+
+/* ---------- Wizard Step Button Bar END ---------- */
+
+
+
+
+
+
+
+/* ---------- Public Records Export START ---------- */
+
+#mDiv_Exportlimits table tbody tr td {
+    padding: 5px 5px 5px 10px;
+}
+
+#mDiv_Exportlimits .heading {
+    background: #f3f3f3;
+    font-weight: bold;
+}
+
+#mDiv_Exportlimits .heading span {
+    font-style: normal !important;
+}
+
+#mDiv_Exportlimits .heading td {
+    padding-left:5px;
+}
+
+#mDiv_Exportlimits table tbody tr:nth-last-child(3) td {
+    border-color:#d1cfcf  !important;
+    padding-top:0px;
+}
+
+#mDiv_Exportlimits table tbody tr:nth-last-child(2) td {
+    background: var(--mtrx-secondary);
+    color: var(--mtrx-dark);
+}
+
+#mDiv_Exportlimits table tbody tr:last-of-type td {
+    padding-bottom:15px;
+}
+
+
+/* ---------- Public Records Export END ---------- */
+
+
+
+
+
+/* ---------- Help Topic START ---------- */
+
+
+#helpContent p ~ br { /* Speed Bar Help remove wysiwyg line breaks */
+    display: none; 
+}
+
+
+
+
+.helpTopic_sub1 { /* indent sub topic 1 */
+    padding-left:15px !important;
+}
+
+.helpTopic_sub2 { /* indent sub topic 2 */
+    padding-left:30px !important;
+}
+
+.helpTopic_sub3 { /* indent sub topic 2 */
+    padding-left:45px !important;
+}
+
+.help_content .helpTopic_sub1, .help_content .helpTopic_sub2, .help_content .helpTopic_sub3  { /* title in help header */
+    padding-left: 0px !important;
+}
+
+
+
+
+.helpTopic_clearfix:after {/* clear floats */
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
+.helpTopic_resource { /*video content area */
+    float: left;
+    margin: 0px 10px 10px 0px;
+    width:300px;
+}
+
+
+.helpTopic_media { /*video content area */
+    width:300px;
+}
+
+
+
+.helpTopic_youTube iframe { /* embedded video iframe */
+    margin-bottom:5px;
+    background: #dcdcdc;
+    border: 1px solid #dcdcdc;
+}
+
+
+
+.helpTopic_resource table { /* video information */
+    color: #868686;
+    width:100%;
+    line-height:20px;
+}
+
+.helpTopic_resource table tr td {
+    padding-bottom: 10px;
+}
+
+.helpTopic_resource table p {
+    margin-bottom: 0px;
+    line-height: normal;
+}
+
+
+.helpTopic_resource .helpTopic_info .icon.youtube { /* youtube icon */
+    width: 16px;
+    height: 16px;
+    background-image: url(/matrix/images/icons/youtube.png);
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    padding-right: 2px;
+}
+
+
+
+.helpTopic_info {
+    float:left; 
+    width:400px;
+}
+
+.helpTopic_info .helpTopic_heading {
+    background: var(--mtrx-primary);
+    padding:5px 5px 5px 10px; 
+    margin-bottom:10px; 
+    color:#fff;
+    font-size:16px;
+}
+
+.helpTopic_content table {
+    width:400px;
+}
+
+.helpTopic_content table tr td {
+    padding: 3px 10px;
+}
+
+.helpTopic_content table tr:hover {
+    background: #f6f6f6;
+}
+
+
+
+
+
+
+/* Format Whats New Help Item Content START */
+
+@font-face { /* ensemble font */
+  font-family: 'opensans-light';
+  src:  url('/matrix/Custom/Fonts/OpenSans-Light.woff2') format('woff2'),
+        url('/matrix/Custom/Fonts/OpenSans-Light.woff') format('woff');
+}
+
+
+.helpTopic { /* content */
+    font-family: opensans-light,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+    font-size: 1.56rem;
+    line-height: 2.55rem;
+}
+
+.helpTopic .page-title .headings h1{ /* headings */
+    font-family: opensans-light,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+    font-size: 2.75rem;
+    font-weight: 400;
+    line-height: 2.125rem;
+}
+
+
+.helpTopic  .page-title .headings .sub-heading {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    font-family: opensans-light,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1.35rem;
+    font-weight: 400;
+    list-style: none;
+}
+
+
+/* Format Whats New Help Item Content END 
+
+/* ---------- Help Topic  END ---------- */
+
+
+/* =========== DEFAULT CSS UPDATE END =========== */
+
+
+
