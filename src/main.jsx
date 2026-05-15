@@ -711,6 +711,102 @@ function HemmingwayPage() {
     </div>
   )
 }
+function SilverweedPage() {
+  const silverweedImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/4414-silverweed-lane/silverweed-${i + 1}.jpg`
+  )
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/4414-silverweed-lane/silverweed-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">
+            ← Back to Listings
+          </a>
+
+          <p className="eyebrow">Investor Opportunity</p>
+
+          <h1>4414 Silverweed Lane</h1>
+
+          <p>Melissa, TX 75454 • Investment Property</p>
+
+          <p className="listingPrice">$379,999</p>
+
+          <div className="buttons">
+            <a href="#contact" className="btnGold">
+              Schedule Private Tour
+            </a>
+
+            <a href="tel:9725520158" className="btnOutline">
+              Call Harish
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>3</strong>Bedrooms</div>
+        <div><strong>2.5</strong>Bathrooms</div>
+        <div><strong>1,862</strong>Sq Ft</div>
+        <div><strong>2024</strong>Built</div>
+        <div><strong>$2,676</strong>Monthly Lease</div>
+        <div><strong>Investor</strong>Ready</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Investor Opportunity in Melissa</h2>
+
+        <p className="listingDescription">
+          Excellent investor-ready property located in Melissa, TX featuring
+          modern finishes, strong rental potential, huge backyard, and currently
+          leased at approximately $2,676 per month.
+        </p>
+
+        <div className="photoGallery">
+          {silverweedImages.map((src, index) => (
+            <img
+              src={src}
+              alt={`Silverweed property photo ${index + 1}`}
+              key={src}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+
+        <h2>Interested in 4414 Silverweed Lane?</h2>
+
+        <p>
+          Contact Harish Patel for investment details and private tours.
+        </p>
+
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+
+        <p>
+          Harish Patel • Realtor® • 972-552-0158 •
+          realtor.harishp@gmail.com
+        </p>
+      </footer>
+
+      <FloatingButtons />
+    </div>
+  )
+}
 function HomePage() {
   const properties = [
     { number: 1, status: 'Residential Sale', title: '9650 Amberwoods Lane', city: 'Frisco, TX', price: '$549,999', image: '/property-1.jpg', facts: ['3 Bed', '2.5 Bath', '2,593 Sq Ft', 'Built 2013', '2 Car Garage', 'Dedicated Office', 'Dining Room', 'Media Room'],link: '/listings/9650-amberwoods-lane' },
@@ -812,9 +908,9 @@ function App() {
   if (window.location.pathname === '/listings/615-hemmingway-lane') {
     return <HemmingwayPage />
   }
-   if (window.location.pathname === '/listings/4414-silverweed-lane') {
-    return <SilverWeedPage />
-  }
+  if (window.location.pathname === '/listings/4414-silverweed-lane') {
+  return <SilverweedPage />
+}
 
   return <HomePage />
 }
