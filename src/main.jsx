@@ -181,7 +181,10 @@ function HomePage() {
 
       <section className="featuredListing">
         <div className="featuredListingInner">
-          <img src="/listings/14839-story-lane/Images/story-1.jpg" alt="14839 Story Lane Frisco TX" />
+           <img
+            src="/listings/14839-story-lane/story-1.jpg"
+              alt="14839 Story Lane Frisco TX"
+            />
           <div className="featuredCopy">
             <p className="eyebrow dark">Featured Listing</p>
             <h2>14839 Story Lane, Frisco</h2>
