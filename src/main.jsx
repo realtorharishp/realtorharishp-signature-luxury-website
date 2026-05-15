@@ -346,6 +346,83 @@ function ShetlandPage() {
     </div>
   )
 }
+function StonebrookPage() {
+  const stonebrookImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/400-stonebrook/stonebrook-${i + 1}.jpg`
+  )
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/400-stonebrook/stonebrook-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+
+          <p className="eyebrow">Commercial Property</p>
+          <h1>400 Stonebrook Pkwy #303</h1>
+          <p>Frisco, TX • Office Suite</p>
+          <p className="listingPrice">$429,999</p>
+
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>4</strong>Offices</div>
+        <div><strong>1</strong>Restroom</div>
+        <div><strong>1,225</strong>Sq Ft</div>
+        <div><strong>Suite</strong>#303</div>
+        <div><strong>Frisco</strong>Location</div>
+        <div><strong>Reception</strong>Area</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Commercial Office Opportunity in Frisco</h2>
+
+        <p className="listingDescription">
+          Professional commercial office suite located at 400 Stonebrook Pkwy,
+          Suite #303 in Frisco, TX. This space features 4 private offices,
+          1 restroom, 1,225 square feet, and a dedicated reception area.
+        </p>
+
+        <div className="photoGallery">
+          {stonebrookImages.map((src, index) => (
+            <img
+              src={src}
+              alt={`Stonebrook commercial suite photo ${index + 1}`}
+              key={src}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in 400 Stonebrook Pkwy #303?</h2>
+        <p>Contact Harish Patel for private tours and commercial property details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+      </footer>
+
+      <FloatingButtons />
+    </div>
+  )
+}
 
 function HomePage() {
   const properties = [
@@ -437,7 +514,7 @@ function App() {
     return <ShetlandPage />
   }
    if (window.location.pathname === '/listings/400-stonebrook') {
-    return <ShetlandPage />
+    return <StonebrookPage />
   }
 
   return <HomePage />
