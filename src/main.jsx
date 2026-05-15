@@ -329,7 +329,15 @@ function HomePage() {
 }
 
 function App() {
-  return window.location.pathname === '/listings/14839-story-lane' ? <ListingPage /> : <HomePage />
+  if (window.location.pathname === '/listings/14839-story-lane') {
+    return <ListingPage />
+  }
+
+  if (window.location.pathname === '/listings/9650-amberwoods-lane') {
+    return <AmberwoodsPage />
+  }
+
+  return <HomePage />
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />)
