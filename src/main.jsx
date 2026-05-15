@@ -809,7 +809,7 @@ function SilverweedPage() {
 }
 function PurtisCreekPage() {
   const purtisImages = Array.from(
-    { length: 15 },
+    { length: 11 },
     (_, i) => `/listings/1874-purtis-creek/purtis-${i + 1}.jpg`
   )
 
@@ -967,27 +967,34 @@ function App() {
   if (window.location.pathname === '/listings/9650-amberwoods-lane') {
     return <AmberwoodsPage />
   }
-   if (window.location.pathname === '/listings/2935-shetland-drive') {
+
+  if (window.location.pathname === '/listings/2935-shetland-drive') {
     return <ShetlandPage />
   }
-   if (window.location.pathname === '/listings/400-stonebrook-303') {
+
+  if (window.location.pathname === '/listings/400-stonebrook') {
     return <StonebrookPage />
   }
+
   if (window.location.pathname === '/listings/2900-galveston') {
     return <GalvestonPage />
   }
-   if (window.location.pathname === '/listings/1009-village-wood-ct') {
+
+  if (window.location.pathname === '/listings/1009-village-wood-ct') {
     return <VillageWoodPage />
   }
+
   if (window.location.pathname === '/listings/615-hemmingway-lane') {
     return <HemmingwayPage />
   }
+
   if (window.location.pathname === '/listings/4414-silverweed-lane') {
-  return <SilverweedPage />
-    
+    return <SilverweedPage />
+  }
+
   if (window.location.pathname === '/listings/1874-purtis-creek') {
     return <PurtisCreekPage />
-}
+  }
 
   return <HomePage />
 }
