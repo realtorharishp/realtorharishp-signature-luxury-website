@@ -154,7 +154,7 @@ function ListingPage() {
 }
 function AmberwoodsPage() {
   const amberImages = Array.from(
-    { length: 6 },
+    { length: 15 },
     (_, i) => `/listings/9650-amberwoods-lane/amber-${i + 1}.jpg`
   )
 
