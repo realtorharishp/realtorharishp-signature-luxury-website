@@ -858,14 +858,21 @@ const featuredListings = [
     link: '/listings/14839-story-lane'
   },
   {
+    title: '9650 Amberwoods Lane',
+    location: 'Frisco, TX',
+    image: '/listings/9650-amberwoods-lane/amber-1.jpg',
+    link: '/listings/9650-amberwoods-lane'
+  },
+  
+  {
     title: '615 Hemmingway Lane',
-    location: 'Wylie, TX',
+    location: 'Mckinney, TX',
     image: '/listings/615-hemmingway-lane/hemmingway-1.jpg',
     link: '/listings/615-hemmingway-lane'
   },
   {
     title: '4414 Silverweed Lane',
-    location: 'Prosper, TX',
+    location: 'Melissa, TX',
     image: '/listings/4414-silverweed-lane/silverweed-1.jpg',
     link: '/listings/4414-silverweed-lane'
   },
