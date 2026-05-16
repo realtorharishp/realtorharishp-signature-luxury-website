@@ -20,7 +20,12 @@ function Header() {
         <a href="/#about">About</a>
         <a href="/#contact">Contact</a>
       </nav>
-      <a href="tel:9725520158" className="callButton">Call Harish</a>
+     <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+      <SocialLinks />
+      <a href="tel:9725520158" className="callButton">
+        Call Harish
+      </a>
+    </div>
     </header>
   )
 }
@@ -74,59 +79,12 @@ function FooterLinks() {
 
 function SocialLinks() {
   return (
-    <div
-      style={{
-        marginTop: '18px',
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '18px',
-        flexWrap: 'wrap'
-      }}
-    >
-      <a
-        href="https://www.instagram.com/realtorharish"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: '#d4af37', textDecoration: 'none' }}
-      >
-        Instagram
-      </a>
-
-      <a
-        href="https://www.facebook.com/p/Realtor-Harish-at-REKonnection-61565769466996/"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: '#d4af37', textDecoration: 'none' }}
-      >
-        Facebook
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/patelharishn"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: '#d4af37', textDecoration: 'none' }}
-      >
-        LinkedIn
-      </a>
-
-      <a
-        href="https://www.tiktok.com/@realtor.harish"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: '#d4af37', textDecoration: 'none' }}
-      >
-        TikTok
-      </a>
-
-      <a
-        href="https://www.realtor.com/realestateagents/66bcfbc76e0cc7bd9220513c"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: '#d4af37', textDecoration: 'none' }}
-      >
-        Realtor.com
-      </a>
+    <div className="socialIcons">
+      <a href="https://www.instagram.com/realtorharish" target="_blank" rel="noopener noreferrer">IG</a>
+      <a href="https://www.facebook.com/p/Realtor-Harish-at-REKonnection-61565769466996/" target="_blank" rel="noopener noreferrer">FB</a>
+      <a href="https://www.linkedin.com/in/patelharishn" target="_blank" rel="noopener noreferrer">IN</a>
+      <a href="https://www.tiktok.com/@realtor.harish" target="_blank" rel="noopener noreferrer">TT</a>
+      <a href="https://www.realtor.com/realestateagents/66bcfbc76e0cc7bd9220513c" target="_blank" rel="noopener noreferrer">R</a>
     </div>
   )
 }
