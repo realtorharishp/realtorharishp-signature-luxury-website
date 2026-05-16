@@ -1244,7 +1244,7 @@ function HomePage() {
       <Header />
       <section id="home" className="hero">
         <div>
-          <p className="eyebrow">REKonnection Real Estate</p>
+          <p className="eyebrow">Harish Patel</p>
           <h1>Reconnecting You <span>To Your Future</span></h1>
           <p className="subtitle">Luxury real estate representation for buying, selling, leasing, commercial opportunities, and investment properties across North Texas.</p>
          <div className="buttons">
