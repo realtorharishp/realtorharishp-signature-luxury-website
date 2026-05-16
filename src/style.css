@@ -34,6 +34,11 @@ body {
   height: 56px;
   object-fit: contain;
 }
+.footerAddress {
+  margin-top: 10px;
+  color: #777;
+  font-size: 15px;
+}
 
 .navbar nav {
   display: flex;
@@ -1431,4 +1436,86 @@ footer .socialIcons {
   object-fit: contain;
   margin: 10px auto 20px;
   display: block;
+}
+
+.marketActivity {
+  padding: 90px 7%;
+  background: #fff;
+}
+
+.marketActivity h2 {
+  text-align: center;
+  font-size: clamp(38px, 5vw, 58px);
+  margin-bottom: 60px;
+}
+
+.activitySection {
+  margin-bottom: 70px;
+}
+
+.activitySection h3 {
+  font-size: 34px;
+  margin-bottom: 26px;
+}
+
+.activityGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.activityCard {
+  background: white;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(212,175,55,.25);
+  box-shadow: 0 18px 45px rgba(0,0,0,.08);
+}
+
+.activityCard img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.activityBody {
+  padding: 22px;
+}
+
+.activityBody span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #b89022;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.activityBody h4 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.activityBody p {
+  color: #666;
+}
+
+.activityBody strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 22px;
+  color: #111;
+}
+
+@media (max-width: 1000px) {
+  .activityGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .activityGrid {
+    grid-template-columns: 1fr;
+  }
 }
