@@ -947,8 +947,10 @@ footer p {
     font-weight: bold;
     border-right: 1px solid rgba(0,0,0,.2);
   }
+ 
+}
 
-  .socialIcons {
+ .socialIcons {
   display: flex !important;
   align-items: center;
   gap: 10px;
@@ -1002,5 +1004,4 @@ footer .socialIcons {
   font-weight: 800 !important;
   border: 1px solid rgba(212,175,55,.6) !important;
   line-height: 1 !important;
-}
 }
