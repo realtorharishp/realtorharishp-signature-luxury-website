@@ -274,6 +274,122 @@ function FeaturedListingsCarousel() {
   )
 }
 
+function MarketActivitySection() {
+  const sections = [
+    {
+      title: 'Upcoming Open Houses',
+      items: [
+        {
+          address: '14839 Story Lane',
+          city: 'Frisco, TX',
+          price: '$923,631',
+          image: '/listings/14839-story-lane/story-1.jpg',
+          status: 'Open House • Saturday 23rd May, 2026 between 2PM–5PM'
+        }
+        {
+          address: '9650 Amberwoods Lane',
+          city: 'Frisco, TX',
+          price: '$549,999',
+          image: '/listings/9650-amberwoods-lane/amber-1.jpg',
+          status: 'Open House • Saturday 24th May, 2026 between 2PM–5PM'
+        }
+      ]
+    },
+
+    {
+      title: 'Coming Soon',
+      items: [
+        {
+          address: 'Luxury Listing Coming Soon',
+          city: 'Midlothian, TX',
+          price: 'Contact Harish',
+          image: '/property-1.jpg',
+          status: 'Coming Soon'
+        }
+      ]
+    },
+
+    {
+      title: 'Under Contract',
+      items: [
+        {
+          address: '2761 Douglas Lane',
+          city: 'Prosper, TX',
+          price: '$1,041,000',
+          image: '/Douglas.jpg',
+          status: 'Under Contract'
+        }
+        {
+          address: '2661 Archgate CT',
+          city: 'Prosper, TX',
+          price: '$1,300,100',
+          image: '/Archgate.jpg',
+          status: 'Under Contract'
+        }
+        {
+          address: '4433 Ginger Road',
+          city: 'Prosper, TX',
+          price: '$670,000',
+          image: '/Ginger.jpg',
+          status: 'Under Contract'
+        }
+      ]
+    },
+
+    {
+      title: 'Recently Closed',
+      items: [
+        {
+          address: '5109 Fort Bucker Drive',
+          city: 'Mckinney, TX',
+          Sold price: '$605,000',
+          image: '/fort-buckner.jpg',
+          status: 'Sold'
+        }
+        {
+          address: '2560 Valley Glen Drive',
+          city: 'Little Elm, TX',
+          Sold price: '$3250',
+          image: '/valley-glen.jpg',
+          status: 'Sold'
+        }
+      ]
+    }
+  ]
+
+  return (
+    <section className="marketActivity">
+      <p className="eyebrow dark">Market Activity</p>
+
+      <h2>Active Real Estate Pipeline</h2>
+
+      {sections.map((section) => (
+        <div key={section.title} className="activitySection">
+          <h3>{section.title}</h3>
+
+          <div className="activityGrid">
+            {section.items.map((item) => (
+              <div className="activityCard" key={item.address}>
+                <img src={item.image} alt={item.address} />
+
+                <div className="activityBody">
+                  <span>{item.status}</span>
+
+                  <h4>{item.address}</h4>
+
+                  <p>{item.city}</p>
+
+                  <strong>{item.price}</strong>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+  )
+}
+
 
 function ListingPage() {
   const highlights = ['North Facing Lot','3 Car Garage','$15K Seller Incentive','Large Gourmet Kitchen','Hardwood Floors','New Tankless Water Heater','Pre-Inspected Home','Lightning Protection System','Shelfed Garage Storage','Fresh Paint','Upgraded Bathrooms','60ft Ceiling Height Cabinets']
@@ -1185,13 +1301,13 @@ function RecommendedBusinessesSection() {
   services: 'HVAC • AC Repair • Heating Services'
 },
       {
-  name: 'Isreal Handyman',
+  name: 'IG ONE CALL',
   logo: '/partners/isreal-handyman-logo.png',
   category: 'Preferred Handyman Partner',
-  contact: 'Isreal',
+  contact: 'Israel Gomez',
   phone: '(214) 316-3844',
   website: '#',
-  services: 'Painting • Cabinets • Flooring'
+  services: 'Home Renovation, Painting • Cabinets • Flooring'
 }
 
 
@@ -1266,6 +1382,7 @@ function HomePage() {
         <div className="heroCard"><div className="logoPanel"><img src="/rek-logo.png" alt="REKonnection Logo" /></div></div>
       </section>
       <FeaturedListingsCarousel />
+      <MarketActivitySection />
       <section className="featuredListing">
         <div className="featuredListingInner">
            <img
