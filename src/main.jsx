@@ -303,14 +303,14 @@ function MarketActivitySection() {
           address: 'Luxury Listing Coming Soon',
           city: 'Midlothian, TX',
           price: 'Contact Harish',
-          image: '/midlothian.jpg',
+          image: '/listings/midlothian.jpg',
           status: 'Coming Soon'
         },
         {
           address: 'Lease Listing Coming Soon',
           city: 'Frisco, TX',
           price: 'Contact Harish',
-          image: '/9929-gw.jpg',
+          image: '/listings/9929-gw.jpg',
           status: 'Coming Soon'
         }
       ]
@@ -323,21 +323,21 @@ function MarketActivitySection() {
           address: '2761 Douglas Lane',
           city: 'Prosper, TX',
           price: '$1,041,000',
-          image: '/douglas.jpg',
+          image: '/listings/douglas.jpg',
           status: 'Under Contract'
         },
         {
           address: '2661 Archgate CT',
           city: 'Prosper, TX',
           price: '$1,300,100',
-          image: '/Archgate.jpg',
+          image: '/listings/Archgate.jpg',
           status: 'Under Contract'
         },
         {
           address: '4433 Ginger Road',
           city: 'Prosper, TX',
           price: '$670,000',
-          image: '/ginger.jpg',
+          image: '/listings/ginger.jpg',
           status: 'Under Contract'
         }
       ]
@@ -350,14 +350,14 @@ function MarketActivitySection() {
           address: '5109 Fort Bucker Drive',
           city: 'Mckinney, TX',
           price: '$605,000',
-          image: '/fort-buckner.jpg',
+          image: '/listings/fort-buckner.jpg',
           status: 'Sold'
         },
         {
           address: '2560 Valley Glen Drive',
           city: 'Little Elm, TX',
           price: '$3250',
-          image: '/valley-glen.jpg',
+          image: '/listings/valley.jpg',
           status: 'Sold'
         }
       ]
