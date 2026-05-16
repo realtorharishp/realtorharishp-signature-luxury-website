@@ -1038,6 +1038,12 @@ const featuredListings = [
     location: 'Forney, TX',
     image: '/listings/1874-purtis-creek/purtis-1.jpg',
     link: '/listings/1874-purtis-creek'
+  },
+  {
+    title: '12820 Cooper River Trail',
+    location: 'Frisco, TX 75035-1713',
+    image: '/listings/cooper-river.jpg',
+    link: '/listings/12820-cooper-river'
   }
 ]
 
