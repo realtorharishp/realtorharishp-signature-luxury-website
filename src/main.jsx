@@ -1177,7 +1177,7 @@ function RecommendedBusinessesSection() {
 },
       {
   name: 'Peace Of Mind Air LLC',
-  logo: '/partners/peaceofmind-logo.png',
+  logo: '/partners/peace-logo.png',
   category: 'Preferred HVAC Partner',
   contact: 'CJ',
   phone: '(469) 432-1111',
