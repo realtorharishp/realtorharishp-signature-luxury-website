@@ -215,6 +215,66 @@ function ImageCarousel({ images, title }) {
   )
 }
 
+function FeaturedListingsCarousel() {
+  const [currentIndex, setCurrentIndex] = React.useState(0)
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) =>
+        (prev + 1) % featuredListings.length
+      )
+    }, 4500)
+
+    return () => clearInterval(timer)
+  }, [])
+
+  const listing = featuredListings[currentIndex]
+
+  return (
+    <section className="featuredCarousel">
+      <div className="featuredCard">
+        <img src={listing.image} alt={listing.title} />
+
+        <div className="featuredOverlay">
+          <p>{listing.location}</p>
+
+          <h2>{listing.title}</h2>
+
+          <a href={listing.link} className="btnGold">
+            View Property
+          </a>
+        </div>
+
+        <button
+          className="carouselBtn left"
+          onClick={() =>
+            setCurrentIndex(
+              (prev) =>
+                (prev - 1 + featuredListings.length) %
+                featuredListings.length
+            )
+          }
+        >
+          ‹
+        </button>
+
+        <button
+          className="carouselBtn right"
+          onClick={() =>
+            setCurrentIndex(
+              (prev) =>
+                (prev + 1) % featuredListings.length
+            )
+          }
+        >
+          ›
+        </button>
+      </div>
+    </section>
+  )
+}
+
+
 function ListingPage() {
   const highlights = ['North Facing Lot','3 Car Garage','$15K Seller Incentive','Large Gourmet Kitchen','Hardwood Floors','New Tankless Water Heater','Pre-Inspected Home','Lightning Protection System','Shelfed Garage Storage','Fresh Paint','Upgraded Bathrooms','60ft Ceiling Height Cabinets']
   const standouts = [
@@ -264,15 +324,7 @@ function ListingPage() {
 
       <section className="listingSection alt">
         <h2>Photo Gallery</h2>
-       <div className="photoGallery">
-          {storyImages.map((src, index) => (
-        <img
-          src={src}
-          alt={`14839 Story Lane photo ${index + 1}`}
-          key={src}
-        />
-  ))}
-</div>
+       <ImageCarousel images={storyImages} title="14839 Story Lane" />
       </section>
 
       <section className="listingSection">
@@ -797,6 +849,41 @@ function VillageWoodPage() {
     </div>
   )
 }
+
+const featuredListings = [
+  {
+    title: '14839 Story Lane',
+    location: 'Frisco, TX',
+    image: '/listings/14839-story-lane/story-1.jpg',
+    link: '/listings/14839-story-lane'
+  },
+  {
+    title: '9650 Amberwoods Lane',
+    location: 'Frisco, TX',
+    image: '/listings/9650-amberwoods-lane/amber-1.jpg',
+    link: '/listings/9650-amberwoods-lane'
+  },
+  
+  {
+    title: '615 Hemmingway Lane',
+    location: 'Mckinney, TX',
+    image: '/listings/615-hemmingway-lane/hemmingway-1.jpg',
+    link: '/listings/615-hemmingway-lane'
+  },
+  {
+    title: '4414 Silverweed Lane',
+    location: 'Melissa, TX',
+    image: '/listings/4414-silverweed-lane/silverweed-1.jpg',
+    link: '/listings/4414-silverweed-lane'
+  },
+  {
+    title: '1874 Purtis Creek',
+    location: 'Forney, TX',
+    image: '/listings/1874-purtis-creek/purtis-1.jpg',
+    link: '/listings/1874-purtis-creek'
+  }
+]
+
 function HemmingwayPage() {
   const hemmingImages = Array.from(
     { length: 15 },
@@ -1101,7 +1188,7 @@ function HomePage() {
         </div>
         <div className="heroCard"><div className="logoPanel"><img src="/rek-logo.png" alt="REKonnection Logo" /></div></div>
       </section>
-
+      <FeaturedListingsCarousel />
       <section className="featuredListing">
         <div className="featuredListingInner">
            <img
