@@ -153,11 +153,20 @@ function FloatingButtons() {
 }
 
 function ImageCarousel({ images, title }) {
-  const [currentIndex, setCurrentIndex] = React.useState(0)
+  React.useEffect(() => {
+  const nextIndex = (currentIndex + 1) % images.length
+
+  const img = new Image()
+  img.src = images[nextIndex]
+}, [currentIndex, images])
 
   return (
     <div className="carousel">
-      <img src={images[currentIndex]} alt={`${title} photo ${currentIndex + 1}`} />
+     <img
+      src={images[currentIndex]}
+      alt={`${title} photo ${currentIndex + 1}`}
+      loading="eager"
+    />
 
       <button
         type="button"
