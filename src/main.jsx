@@ -1149,98 +1149,38 @@ function PurtisCreekPage() {
   )
 }
 
-<section className="recommendedBusinesses">
-  <p className="eyebrow dark">Trusted Partners</p>
+function RecommendedBusinessesSection() {
+  return (
+    <section className="recommendedBusinesses">
+      <p className="eyebrow dark">Trusted Partners</p>
+      <h2>Preferred Local Partners</h2>
+      <p className="sectionIntro">
+        Trusted professionals and local businesses recommended by Harish Patel and REKonnection Real Estate.
+      </p>
 
-  <h2>Preferred Local Partners</h2>
-
-  <p className="sectionIntro">
-    Trusted professionals and local businesses recommended by
-    Harish Patel and REKonnection Real Estate.
-  </p>
-
-  <div className="businessGrid">
-    {[
-      {
-        name: 'Urban Country',
-        category: 'Preferred Lending Partner',
-        contact: 'Praveen Billa',
-        phone: '(972) 965-7751',
-        website: 'https://www.myaprloan.com'
-      },
-
-      {
-        name: 'Ensure Home Loans',
-        category: 'Preferred Lending Partner',
-        contact: 'Nizar Ali',
-        phone: '(817) 883-0986',
-        website: 'https://www.ensurehomeloans.com/'
-      },
-
-      {
-        name: 'Greenworks Inspection',
-        category: 'Preferred Home Inspection Partner',
-        contact: 'Harmony Brownwood',
-        phone: '(214) 537-6103',
-        website: 'https://greenworksinspections.com/'
-      },
-
-      {
-        name: 'Republic Title of Plano',
-        category: 'Preferred Title Company',
-        contact: 'Ryan Jeffery',
-        phone: '(972) 618-4711',
-        website: 'https://www.republictitle.com/'
-      },
-
-      {
-        name: 'Royal Crest General Contracting',
-        category: 'Preferred Construction Partner',
-        contact: 'Daniel Worshan',
-        phone: '(469) 432-0341',
-        website: 'https://www.royalcrestgc.com/',
-        services:
-          'Roofing • Home Remodeling • Plumbing • Electrical'
-      },
-
-      {
-        name: 'Duct Time',
-        category: 'Preferred Air Duct Cleaning Partner',
-        contact: 'Jeetu Patel',
-        phone: '(972) 877-2500',
-        website: 'https://callducttime.com/',
-        services:
-          'Air Duct Cleaning • Vent Cleaning • HVAC Airflow Services'
-      }
-    ].map((business) => (
-      <div className="businessCard" key={business.name}>
-        <p className="businessCategory">
-          {business.category}
-        </p>
-
-        <h3>{business.name}</h3>
-
-        <p>{business.contact}</p>
-
-        <p>{business.phone}</p>
-
-        {business.services && (
-          <p className="businessServices">
-            {business.services}
-          </p>
-        )}
-
-        <a
-          href={business.website}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit Website
-        </a>
+      <div className="businessGrid">
+        {[
+          { name: 'Urban Country', category: 'Preferred Lending Partner', contact: 'Praveen Billa', phone: '(972) 965-7751', website: 'https://www.myaprloan.com' },
+          { name: 'Ensure Home Loans', category: 'Preferred Lending Partner', contact: 'Nizar Ali', phone: '(817) 883-0986', website: 'https://www.ensurehomeloans.com/' },
+          { name: 'Greenworks Inspection', category: 'Preferred Home Inspection Partner', contact: 'Harmony Brownwood', phone: '(214) 537-6103', website: 'https://greenworksinspections.com/' },
+          { name: 'Republic Title of Plano', category: 'Preferred Title Company', contact: 'Ryan Jeffery', phone: '(972) 618-4711', website: 'https://www.republictitle.com/' },
+          { name: 'Royal Crest General Contracting', category: 'Preferred Construction Partner', contact: 'Daniel Worshan', phone: '(469) 432-0341', website: 'https://www.royalcrestgc.com/', services: 'Roofing • Home Remodeling • Plumbing • Electrical' },
+          { name: 'Duct Time', category: 'Preferred Air Duct Cleaning Partner', contact: 'Jeetu Patel', phone: '(972) 877-2500', website: 'https://callducttime.com/', services: 'Air Duct Cleaning • Vent Cleaning • HVAC Airflow Services' }
+        ].map((business) => (
+          <div className="businessCard" key={business.name}>
+            <p className="businessCategory">{business.category}</p>
+            <h3>{business.name}</h3>
+            <p>{business.contact}</p>
+            <p>{business.phone}</p>
+            {business.services && <p className="businessServices">{business.services}</p>}
+            <a href={business.website} target="_blank" rel="noopener noreferrer">Visit Website</a>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
+    </section>
+  )
+}
+
 
 
 function HomePage() {
@@ -1327,6 +1267,7 @@ function HomePage() {
       <section className="homeValue"><div><p className="eyebrow">Home Value</p><h2>Curious What Your Home Is Worth?</h2><p>Get a personalized North Texas home value estimate and selling strategy from Harish Patel.</p></div><a href="#contact" className="btnGold">Request Home Valuation</a><a href="https://calendly.com/realtor-harishp/30min" target="_blank" className="btnGold">Book a Consultation</a></section>
 
       <section id="about" className="about"><div className="aboutPhotoWrap"><img src="/harish-patel.png" alt="Harish Patel" /></div><div><p className="eyebrow dark">Meet Your Realtor</p><h2>Harish Patel</h2><p>Harish helps North Texas clients buy, sell, lease, and invest with confidence through premium marketing, strong communication, and relationship-first service.</p><a href="tel:9725520158" className="btnGold inlineButton">Call 972-552-0158</a></div></section>
+      <RecommendedBusinessesSection />
       <GoogleReviewsSection />
       <section id="contact" className="contact"><p className="eyebrow">Contact Harish Patel</p><h2>Ready To Make Your Next Move?</h2><p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p><ContactForm /></section>
      <footer>
