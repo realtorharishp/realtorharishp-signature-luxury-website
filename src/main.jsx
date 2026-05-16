@@ -89,6 +89,39 @@ function SocialLinks() {
   )
 }
 
+function GoogleReviewsSection() {
+  return (
+    <section className="googleReviews">
+      <p className="eyebrow dark">Google Reviews</p>
+      <h2>See What Clients Are Saying</h2>
+      <p>
+        Read verified Google reviews and share your experience working with
+        Harish Patel and REKonnection Real Estate.
+      </p>
+
+      <div className="reviewButtons">
+        <a
+          href="https://share.google/4FY1ESFb6aay18YdW"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btnGold"
+        >
+          View Google Profile
+        </a>
+
+        <a
+          href="https://share.google/4FY1ESFb6aay18YdW"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btnOutline"
+        >
+          Leave a Review
+        </a>
+      </div>
+    </section>
+  )
+}
+
 function FloatingSocialBar() {
   return (
     <div className="floatingSocialBar">
@@ -116,6 +149,69 @@ function FloatingButtons() {
         <a href="mailto:realtor.harishp@gmail.com">Email</a>
       </div>
     </>
+  )
+}
+
+function ImageCarousel({ images, title }) {
+  const [currentIndex, setCurrentIndex] = React.useState(0)
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length)
+    }, 4000)
+
+    return () => clearInterval(timer)
+  }, [images.length])
+
+  React.useEffect(() => {
+    const nextIndex = (currentIndex + 1) % images.length
+    const img = new Image()
+    img.src = images[nextIndex]
+  }, [currentIndex, images])
+
+  return (
+    <div className="carousel">
+      <img
+        key={currentIndex}
+        src={images[currentIndex]}
+        alt={`${title} photo ${currentIndex + 1}`}
+        loading="eager"
+        onError={(e) => {
+          e.currentTarget.src = images[0]
+        }}
+      />
+
+      <button
+        type="button"
+        className="carouselBtn left"
+        onClick={() =>
+          setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
+        }
+      >
+        ‹
+      </button>
+
+      <button
+        type="button"
+        className="carouselBtn right"
+        onClick={() =>
+          setCurrentIndex((prev) => (prev + 1) % images.length)
+        }
+      >
+        ›
+      </button>
+
+      <div className="carouselDots">
+        {images.map((_, index) => (
+          <button
+            type="button"
+            key={index}
+            className={index === currentIndex ? 'activeDot' : ''}
+            onClick={() => setCurrentIndex(index)}
+          />
+        ))}
+      </div>
+    </div>
   )
 }
 
@@ -168,9 +264,7 @@ function ListingPage() {
 
       <section className="listingSection alt">
         <h2>Photo Gallery</h2>
-        <div className="photoGallery">
-          {storyImages.map((src, index) => <img src={src} alt={`14839 Story Lane photo ${index + 1}`} key={src} />)}
-        </div>
+        <ImageCarousel images={storyImages} title="14839 Story Lane" />
       </section>
 
       <section className="listingSection">
@@ -981,7 +1075,20 @@ function HomePage() {
           <p className="eyebrow">REKonnection Real Estate</p>
           <h1>Reconnecting You <span>To Your Future</span></h1>
           <p className="subtitle">Luxury real estate representation for buying, selling, leasing, commercial opportunities, and investment properties across North Texas.</p>
-          <div className="buttons"><a href="#listings" className="btnGold">View Listings</a><a href="#contact" className="btnOutline">Schedule Consultation</a></div>
+         <div className="buttons">
+            <a href="#listings" className="btnGold">View Listings</a>
+            <a href="#contact" className="btnOutline">Schedule Consultation</a>
+        </div>
+
+<div className="googleMiniReview">
+  <a
+    href="https://share.google/4FY1ESFb6aay18YdW"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ⭐ 5.0 Google Reviews
+  </a>
+</div>
           <div className="agent"><img className="agentImage" src="/harish-patel.png" alt="Harish Patel Realtor" /><div><h3>Harish Patel</h3><p>Realtor®</p><p>972-552-0158</p><p>realtor.harishp@gmail.com</p></div></div>
         </div>
         <div className="heroCard"><div className="logoPanel"><img src="/rek-logo.png" alt="REKonnection Logo" /></div></div>
@@ -1031,7 +1138,7 @@ function HomePage() {
       <section className="homeValue"><div><p className="eyebrow">Home Value</p><h2>Curious What Your Home Is Worth?</h2><p>Get a personalized North Texas home value estimate and selling strategy from Harish Patel.</p></div><a href="#contact" className="btnGold">Request Home Valuation</a><a href="https://calendly.com/realtor-harishp/30min" target="_blank" className="btnGold">Book a Consultation</a></section>
 
       <section id="about" className="about"><div className="aboutPhotoWrap"><img src="/harish-patel.png" alt="Harish Patel" /></div><div><p className="eyebrow dark">Meet Your Realtor</p><h2>Harish Patel</h2><p>Harish helps North Texas clients buy, sell, lease, and invest with confidence through premium marketing, strong communication, and relationship-first service.</p><a href="tel:9725520158" className="btnGold inlineButton">Call 972-552-0158</a></div></section>
-
+      <GoogleReviewsSection />
       <section id="contact" className="contact"><p className="eyebrow">Contact Harish Patel</p><h2>Ready To Make Your Next Move?</h2><p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p><ContactForm /></section>
      <footer>
       <img src="/rek-logo.png" alt="REKonnection Logo" />
