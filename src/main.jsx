@@ -155,30 +155,29 @@ function FloatingButtons() {
 function ImageCarousel({ images, title }) {
   const [currentIndex, setCurrentIndex] = React.useState(0)
 
-  const nextImage = () => {
-    setCurrentIndex((currentIndex + 1) % images.length)
-  }
-
-  const prevImage = () => {
-    setCurrentIndex((currentIndex - 1 + images.length) % images.length)
-  }
-
   return (
     <div className="carousel">
       <img src={images[currentIndex]} alt={`${title} photo ${currentIndex + 1}`} />
 
-      <button className="carouselBtn left" onClick={prevImage}>‹</button>
-      <button className="carouselBtn right" onClick={nextImage}>›</button>
+      <button
+        type="button"
+        className="carouselBtn left"
+        onClick={() =>
+          setCurrentIndex((currentIndex - 1 + images.length) % images.length)
+        }
+      >
+        ‹
+      </button>
 
-      <div className="carouselDots">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            className={index === currentIndex ? 'activeDot' : ''}
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
-      </div>
+      <button
+        type="button"
+        className="carouselBtn right"
+        onClick={() =>
+          setCurrentIndex((currentIndex + 1) % images.length)
+        }
+      >
+        ›
+      </button>
     </div>
   )
 }
