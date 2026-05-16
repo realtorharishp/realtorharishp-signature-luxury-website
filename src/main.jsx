@@ -20,7 +20,12 @@ function Header() {
         <a href="/#about">About</a>
         <a href="/#contact">Contact</a>
       </nav>
-      <a href="tel:9725520158" className="callButton">Call Harish</a>
+     <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+      <SocialLinks />
+      <a href="tel:9725520158" className="callButton">
+        Call Harish
+      </a>
+    </div>
     </header>
   )
 }
@@ -46,7 +51,57 @@ function ContactForm() {
       <button type="submit">Send Message</button>
     </form>
   )
+ 
 }
+function FooterLinks() {
+  return (
+    <div style={{ marginTop: '16px' }}>
+      <a
+        href="/documents/information-about-brokerage-services.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37', marginRight: '18px' }}
+      >
+        Information About Brokerage Services
+      </a>
+
+      <a
+        href="/documents/consumer-protection-notice.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37' }}
+      >
+        Consumer Protection Notice
+      </a>
+    </div>
+  )
+}
+
+function SocialLinks() {
+  return (
+    <div className="socialIcons">
+      <a href="https://www.instagram.com/realtorharish" target="_blank" rel="noopener noreferrer">IG</a>
+      <a href="https://www.facebook.com/p/Realtor-Harish-at-REKonnection-61565769466996/" target="_blank" rel="noopener noreferrer">FB</a>
+      <a href="https://www.linkedin.com/in/patelharishn" target="_blank" rel="noopener noreferrer">IN</a>
+      <a href="https://www.tiktok.com/@realtor.harish" target="_blank" rel="noopener noreferrer">TT</a>
+      <a href="https://www.realtor.com/realestateagents/66bcfbc76e0cc7bd9220513c" target="_blank" rel="noopener noreferrer">R</a>
+    </div>
+  )
+}
+
+function FloatingSocialBar() {
+  return (
+    <div className="floatingSocialBar">
+      <a href="https://www.instagram.com/realtorharish" target="_blank" rel="noopener noreferrer">📸</a>
+      <a href="https://www.facebook.com/p/Realtor-Harish-at-REKonnection-61565769466996/" target="_blank" rel="noopener noreferrer">f</a>
+      <a href="https://www.tiktok.com/@realtor.harish" target="_blank" rel="noopener noreferrer">♪</a>
+     <a href="https://www.youtube.com/@RealtorHarish" target="_blank" rel="noopener noreferrer">▶</a>
+
+<a href="sms:9725520158">💬</a>
+    </div>
+  )
+}
+
 
 function FloatingButtons() {
   return (
@@ -143,11 +198,34 @@ function ListingPage() {
         <ContactForm />
       </section>
 
-      <footer>
-        <img src="/rek-logo.png" alt="REKonnection Logo" />
-        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
-        <p>Residential | Commercial | Leasing | Investment</p>
-      </footer>
+     <footer>
+      <img src="/rek-logo.png" alt="REKonnection Logo" />
+
+      <p>
+      Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com
+      </p>
+
+      <div style={{ marginTop: '16px' }}>
+      <a
+        href="/documents/information-about-brokerage-services.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37', marginRight: '18px' }}
+      >
+        Information About Brokerage Services
+      </a>
+
+    <a
+      href="/documents/consumer-protection-notice.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: '#d4af37' }}
+    >
+      Consumer Protection Notice
+    </a>
+  </div>
+</footer>
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -236,15 +314,17 @@ function AmberwoodsPage() {
         <ContactForm />
       </section>
 
-      <footer>
-        <img src="/rek-logo.png" alt="REKonnection Logo" />
+    <footer>
+      <img src="/rek-logo.png" alt="REKonnection Logo" />
 
-        <p>
-          Harish Patel • Realtor® • 972-552-0158 •
-          realtor.harishp@gmail.com
-        </p>
-      </footer>
+      <p>
+        Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com
+      </p>
 
+     <FooterLinks />
+    <SocialLinks />
+  </footer>
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -341,7 +421,7 @@ function ShetlandPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -418,7 +498,7 @@ function StonebrookPage() {
         <img src="/rek-logo.png" alt="REKonnection Logo" />
         <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -514,7 +594,7 @@ function GalvestonPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -610,7 +690,7 @@ function VillageWoodPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -706,7 +786,7 @@ function HemmingwayPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -802,7 +882,7 @@ function SilverweedPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -874,7 +954,7 @@ function PurtisCreekPage() {
         <img src="/rek-logo.png" alt="REKonnection Logo" />
         <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -953,7 +1033,18 @@ function HomePage() {
       <section id="about" className="about"><div className="aboutPhotoWrap"><img src="/harish-patel.png" alt="Harish Patel" /></div><div><p className="eyebrow dark">Meet Your Realtor</p><h2>Harish Patel</h2><p>Harish helps North Texas clients buy, sell, lease, and invest with confidence through premium marketing, strong communication, and relationship-first service.</p><a href="tel:9725520158" className="btnGold inlineButton">Call 972-552-0158</a></div></section>
 
       <section id="contact" className="contact"><p className="eyebrow">Contact Harish Patel</p><h2>Ready To Make Your Next Move?</h2><p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p><ContactForm /></section>
-      <footer><img src="/rek-logo.png" alt="REKonnection Logo" /><p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p><p>Residential | Commercial | Leasing | Investment</p></footer>
+     <footer>
+      <img src="/rek-logo.png" alt="REKonnection Logo" />
+
+      <p>
+        Harish Patel • Realtor® • 972-552-0158 •
+        realtor.harishp@gmail.com
+      </p>
+
+   <FooterLinks />
+  <SocialLinks />
+  </footer>
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
