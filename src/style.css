@@ -34,6 +34,11 @@ body {
   height: 56px;
   object-fit: contain;
 }
+.footerAddress {
+  margin-top: 10px;
+  color: #777;
+  font-size: 15px;
+}
 
 .navbar nav {
   display: flex;
