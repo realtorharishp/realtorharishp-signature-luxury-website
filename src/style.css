@@ -947,8 +947,9 @@ footer p {
     font-weight: bold;
     border-right: 1px solid rgba(0,0,0,.2);
   }
+
   .socialIcons {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 10px;
 }
@@ -957,18 +958,19 @@ footer p {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  display: grid;
+  display: grid !important;
   place-items: center;
   background: #111;
-  color: #d4af37;
-  text-decoration: none;
-  font-size: 15px;
+  color: #d4af37 !important;
+  text-decoration: none !important;
+  font-size: 13px;
   font-weight: 800;
   border: 1px solid rgba(212,175,55,.55);
+  line-height: 1;
 }
 
 .socialIcons a:hover {
   background: #d4af37;
-  color: #111;
+  color: #111 !important;
 }
 }
