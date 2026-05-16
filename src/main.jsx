@@ -291,7 +291,7 @@ function MarketActivitySection() {
           city: 'Frisco, TX',
           price: '$549,999',
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',
-          status: 'Open House • Saturday 24th May, 2026 between 2PM–5PM'
+          status: 'Open House • Sunday 24th May, 2026 between 2PM–5PM'
         }
       ]
     },
