@@ -11,7 +11,7 @@ function Header() {
   return (
     <header className="navbar">
       <a href="/" className="brand">
-        <img src="/rek-logo.png" alt="REKonnection Real Estate Logo" />
+        <img src="/rek-logo-1.png" alt="REKonnection Real Estate Logo" />
       </a>
       <nav>
         <a href="/#home">Home</a>
@@ -285,7 +285,7 @@ function MarketActivitySection() {
           price: '$923,631',
           image: '/listings/14839-story-lane/story-1.jpg',
           status: 'Open House • Saturday 23rd May, 2026 between 2PM–5PM'
-        }
+        },
         {
           address: '9650 Amberwoods Lane',
           city: 'Frisco, TX',
@@ -305,6 +305,13 @@ function MarketActivitySection() {
           price: 'Contact Harish',
           image: '/property-1.jpg',
           status: 'Coming Soon'
+        },
+        {
+          address: 'Investor Listing Coming Soon',
+          city: 'Frisco, TX',
+          price: 'Contact Harish',
+          image: '/property-1.jpg',
+          status: 'Coming Soon'
         }
       ]
     },
@@ -318,14 +325,14 @@ function MarketActivitySection() {
           price: '$1,041,000',
           image: '/Douglas.jpg',
           status: 'Under Contract'
-        }
+        },
         {
           address: '2661 Archgate CT',
           city: 'Prosper, TX',
           price: '$1,300,100',
           image: '/Archgate.jpg',
           status: 'Under Contract'
-        }
+        },
         {
           address: '4433 Ginger Road',
           city: 'Prosper, TX',
@@ -345,7 +352,7 @@ function MarketActivitySection() {
           Sold price: '$605,000',
           image: '/fort-buckner.jpg',
           status: 'Sold'
-        }
+        },
         {
           address: '2560 Valley Glen Drive',
           city: 'Little Elm, TX',
@@ -471,9 +478,14 @@ function ListingPage() {
      <footer>
       <img src="/rek-logo.png" alt="REKonnection Logo" />
 
-      <p>
-      Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com
-      </p>
+     <p>
+        Harish Patel • Realtor® • 972-552-0158 •
+        realtor.harishp@gmail.com
+    </p>
+
+    <p className="footerAddress">
+    100 N Central Expwy, Suite #913, Richardson, TX 75080
+    </p>
 
       <div style={{ marginTop: '16px' }}>
       <a
@@ -587,9 +599,14 @@ function AmberwoodsPage() {
     <footer>
       <img src="/rek-logo.png" alt="REKonnection Logo" />
 
-      <p>
-        Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com
+     <p>
+        Harish Patel • Realtor® • 972-552-0158 •
+        realtor.harishp@gmail.com
       </p>
+
+    <p className="footerAddress">
+      100 N Central Expwy, Suite #913, Richardson, TX 75080
+    </p>
 
      <FooterLinks />
     <SocialLinks />
@@ -690,6 +707,10 @@ function ShetlandPage() {
           Harish Patel • Realtor® • 972-552-0158 •
           realtor.harishp@gmail.com
         </p>
+
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
+        </p>
       </footer>
       <FloatingSocialBar />
       <FloatingButtons />
@@ -766,7 +787,14 @@ function StonebrookPage() {
 
       <footer>
         <img src="/rek-logo.png" alt="REKonnection Logo" />
-        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+       <p>
+          Harish Patel • Realtor® • 972-552-0158 •
+          realtor.harishp@gmail.com
+        </p>
+
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
+        </p>
       </footer>
       <FloatingSocialBar />
       <FloatingButtons />
@@ -858,10 +886,13 @@ function GalvestonPage() {
 
       <footer>
         <img src="/rek-logo.png" alt="REKonnection Logo" />
-
         <p>
           Harish Patel • Realtor® • 972-552-0158 •
           realtor.harishp@gmail.com
+        </p>
+
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
         </p>
       </footer>
       <FloatingSocialBar />
@@ -954,10 +985,13 @@ function VillageWoodPage() {
 
       <footer>
         <img src="/rek-logo.png" alt="REKonnection Logo" />
-
         <p>
           Harish Patel • Realtor® • 972-552-0158 •
           realtor.harishp@gmail.com
+        </p>
+
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
         </p>
       </footer>
       <FloatingSocialBar />
@@ -1085,10 +1119,13 @@ function HemmingwayPage() {
 
       <footer>
         <img src="/rek-logo.png" alt="REKonnection Logo" />
-
         <p>
           Harish Patel • Realtor® • 972-552-0158 •
           realtor.harishp@gmail.com
+        </p>
+
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
         </p>
       </footer>
       <FloatingSocialBar />
@@ -1182,10 +1219,15 @@ function SilverweedPage() {
       <footer>
         <img src="/rek-logo.png" alt="REKonnection Logo" />
 
-        <p>
+       <p>
           Harish Patel • Realtor® • 972-552-0158 •
           realtor.harishp@gmail.com
         </p>
+
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
+        </p>
+        
       </footer>
       <FloatingSocialBar />
       <FloatingButtons />
@@ -1257,7 +1299,14 @@ function PurtisCreekPage() {
 
       <footer>
         <img src="/rek-logo.png" alt="REKonnection Logo" />
-        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+       <p>
+          Harish Patel • Realtor® • 972-552-0158 •
+          realtor.harishp@gmail.com
+        </p>
+
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
+        </p>
       </footer>
       <FloatingSocialBar />
       <FloatingButtons />
@@ -1379,7 +1428,7 @@ function HomePage() {
 </div>
           <div className="agent"><img className="agentImage" src="/harish-patel.png" alt="Harish Patel Realtor" /><div><h3>Harish Patel</h3><p>Realtor®</p><p>972-552-0158</p><p>realtor.harishp@gmail.com</p></div></div>
         </div>
-        <div className="heroCard"><div className="logoPanel"><img src="/rek-logo.png" alt="REKonnection Logo" /></div></div>
+        <div className="heroCard"><div className="logoPanel"><img src="/rek-logo-1.png" alt="REKonnection Logo" /></div></div>
       </section>
       <FeaturedListingsCarousel />
       <MarketActivitySection />
@@ -1431,12 +1480,16 @@ function HomePage() {
       <GoogleReviewsSection />
       <section id="contact" className="contact"><p className="eyebrow">Contact Harish Patel</p><h2>Ready To Make Your Next Move?</h2><p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p><ContactForm /></section>
      <footer>
-      <img src="/rek-logo.png" alt="REKonnection Logo" />
+      <img src="/rek-logo-1.png" alt="REKonnection Logo" />
 
       <p>
-        Harish Patel • Realtor® • 972-552-0158 •
-        realtor.harishp@gmail.com
-      </p>
+          Harish Patel • Realtor® • 972-552-0158 •
+          realtor.harishp@gmail.com
+        </p>
+
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
+        </p>
 
    <FooterLinks />
   <SocialLinks />
