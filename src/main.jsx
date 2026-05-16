@@ -152,6 +152,37 @@ function FloatingButtons() {
   )
 }
 
+function ImageCarousel({ images, title }) {
+  const [currentIndex, setCurrentIndex] = React.useState(0)
+
+  const nextImage = () => {
+    setCurrentIndex((currentIndex + 1) % images.length)
+  }
+
+  const prevImage = () => {
+    setCurrentIndex((currentIndex - 1 + images.length) % images.length)
+  }
+
+  return (
+    <div className="carousel">
+      <img src={images[currentIndex]} alt={`${title} photo ${currentIndex + 1}`} />
+
+      <button className="carouselBtn left" onClick={prevImage}>‹</button>
+      <button className="carouselBtn right" onClick={nextImage}>›</button>
+
+      <div className="carouselDots">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className={index === currentIndex ? 'activeDot' : ''}
+            onClick={() => setCurrentIndex(index)}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function ListingPage() {
   const highlights = ['North Facing Lot','3 Car Garage','$15K Seller Incentive','Large Gourmet Kitchen','Hardwood Floors','New Tankless Water Heater','Pre-Inspected Home','Lightning Protection System','Shelfed Garage Storage','Fresh Paint','Upgraded Bathrooms','60ft Ceiling Height Cabinets']
   const standouts = [
