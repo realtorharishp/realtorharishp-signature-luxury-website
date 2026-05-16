@@ -89,6 +89,17 @@ function SocialLinks() {
   )
 }
 
+function FloatingSocialBar() {
+  return (
+    <div className="floatingSocialBar">
+      <a href="https://www.instagram.com/realtorharish" target="_blank" rel="noopener noreferrer">📸</a>
+      <a href="https://www.facebook.com/p/Realtor-Harish-at-REKonnection-61565769466996/" target="_blank" rel="noopener noreferrer">f</a>
+      <a href="https://www.tiktok.com/@realtor.harish" target="_blank" rel="noopener noreferrer">♪</a>
+      <a href="sms:9725520158">💬</a>
+    </div>
+  )
+}
+
 
 function FloatingButtons() {
   return (
@@ -212,7 +223,7 @@ function ListingPage() {
     </a>
   </div>
 </footer>
-      
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -311,7 +322,7 @@ function AmberwoodsPage() {
      <FooterLinks />
     <SocialLinks />
   </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -408,7 +419,7 @@ function ShetlandPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -485,7 +496,7 @@ function StonebrookPage() {
         <img src="/rek-logo.png" alt="REKonnection Logo" />
         <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -581,7 +592,7 @@ function GalvestonPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -677,7 +688,7 @@ function VillageWoodPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -773,7 +784,7 @@ function HemmingwayPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -869,7 +880,7 @@ function SilverweedPage() {
           realtor.harishp@gmail.com
         </p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -941,7 +952,7 @@ function PurtisCreekPage() {
         <img src="/rek-logo.png" alt="REKonnection Logo" />
         <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
       </footer>
-
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
@@ -1031,6 +1042,7 @@ function HomePage() {
    <FooterLinks />
   <SocialLinks />
   </footer>
+      <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
