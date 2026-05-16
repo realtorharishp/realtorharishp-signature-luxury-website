@@ -1014,7 +1014,20 @@ function HomePage() {
           <p className="eyebrow">REKonnection Real Estate</p>
           <h1>Reconnecting You <span>To Your Future</span></h1>
           <p className="subtitle">Luxury real estate representation for buying, selling, leasing, commercial opportunities, and investment properties across North Texas.</p>
-          <div className="buttons"><a href="#listings" className="btnGold">View Listings</a><a href="#contact" className="btnOutline">Schedule Consultation</a></div>
+         <div className="buttons">
+            <a href="#listings" className="btnGold">View Listings</a>
+            <a href="#contact" className="btnOutline">Schedule Consultation</a>
+        </div>
+
+<div className="googleMiniReview">
+  <a
+    href="https://share.google/4FY1ESFb6aay18YdW"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ⭐ 5.0 Google Reviews
+  </a>
+</div>
           <div className="agent"><img className="agentImage" src="/harish-patel.png" alt="Harish Patel Realtor" /><div><h3>Harish Patel</h3><p>Realtor®</p><p>972-552-0158</p><p>realtor.harishp@gmail.com</p></div></div>
         </div>
         <div className="heroCard"><div className="logoPanel"><img src="/rek-logo.png" alt="REKonnection Logo" /></div></div>
