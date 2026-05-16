@@ -153,26 +153,38 @@ function FloatingButtons() {
 }
 
 function ImageCarousel({ images, title }) {
-  React.useEffect(() => {
-  const nextIndex = (currentIndex + 1) % images.length
+  const [currentIndex, setCurrentIndex] = React.useState(0)
 
-  const img = new Image()
-  img.src = images[nextIndex]
-}, [currentIndex, images])
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 4000)
+
+    return () => clearInterval(timer)
+  }, [images.length])
+
+  React.useEffect(() => {
+    const nextIndex = (currentIndex + 1) % images.length
+
+    const img = new Image()
+    img.src = images[nextIndex]
+  }, [currentIndex, images])
 
   return (
     <div className="carousel">
-     <img
-      src={images[currentIndex]}
-      alt={`${title} photo ${currentIndex + 1}`}
-      loading="eager"
-    />
+      <img
+        src={images[currentIndex]}
+        alt={`${title} photo ${currentIndex + 1}`}
+        loading="eager"
+      />
 
       <button
         type="button"
         className="carouselBtn left"
         onClick={() =>
-          setCurrentIndex((currentIndex - 1 + images.length) % images.length)
+          setCurrentIndex(
+            (currentIndex - 1 + images.length) % images.length
+          )
         }
       >
         ‹
@@ -182,11 +194,23 @@ function ImageCarousel({ images, title }) {
         type="button"
         className="carouselBtn right"
         onClick={() =>
-          setCurrentIndex((currentIndex + 1) % images.length)
+          setCurrentIndex(
+            (currentIndex + 1) % images.length
+          )
         }
       >
         ›
       </button>
+
+      <div className="carouselDots">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className={index === currentIndex ? 'activeDot' : ''}
+            onClick={() => setCurrentIndex(index)}
+          />
+        ))}
+      </div>
     </div>
   )
 }
