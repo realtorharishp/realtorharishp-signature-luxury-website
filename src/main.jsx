@@ -72,6 +72,66 @@ function FooterLinks() {
   )
 }
 
+function SocialLinks() {
+  return (
+    <div
+      style={{
+        marginTop: '18px',
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '18px',
+        flexWrap: 'wrap'
+      }}
+    >
+      <a
+        href="https://www.instagram.com/realtorharish"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37', textDecoration: 'none' }}
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.facebook.com/p/Realtor-Harish-at-REKonnection-61565769466996/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37', textDecoration: 'none' }}
+      >
+        Facebook
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/patelharishn"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37', textDecoration: 'none' }}
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@realtor.harish"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37', textDecoration: 'none' }}
+      >
+        TikTok
+      </a>
+
+      <a
+        href="https://www.realtor.com/realestateagents/66bcfbc76e0cc7bd9220513c"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37', textDecoration: 'none' }}
+      >
+        Realtor.com
+      </a>
+    </div>
+  )
+}
+
+
 function FloatingButtons() {
   return (
     <>
@@ -290,7 +350,8 @@ function AmberwoodsPage() {
         Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com
       </p>
 
-      <FooterLinks />
+     <FooterLinks />
+    <SocialLinks />
   </footer>
 
       <FloatingButtons />
@@ -1009,7 +1070,8 @@ function HomePage() {
         realtor.harishp@gmail.com
       </p>
 
-    <FooterLinks />
+   <FooterLinks />
+  <SocialLinks />
   </footer>
       <FloatingButtons />
     </div>
