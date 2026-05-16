@@ -973,4 +973,34 @@ footer p {
   background: #d4af37;
   color: #111 !important;
 }
+  .navbar .socialIcons,
+footer .socialIcons {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  margin-top: 0 !important;
+}
+
+footer .socialIcons {
+  margin-top: 18px !important;
+}
+
+.socialIcons a {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #111 !important;
+  color: #d4af37 !important;
+  text-decoration: none !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  border: 1px solid rgba(212,175,55,.6) !important;
+  line-height: 1 !important;
+}
 }
