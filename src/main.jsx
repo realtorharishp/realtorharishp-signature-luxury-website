@@ -48,6 +48,29 @@ function ContactForm() {
   )
  
 }
+function FooterLinks() {
+  return (
+    <div style={{ marginTop: '16px' }}>
+      <a
+        href="/documents/information-about-brokerage-services.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37', marginRight: '18px' }}
+      >
+        Information About Brokerage Services
+      </a>
+
+      <a
+        href="/documents/consumer-protection-notice.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#d4af37' }}
+      >
+        Consumer Protection Notice
+      </a>
+    </div>
+  )
+}
 
 function FloatingButtons() {
   return (
@@ -260,33 +283,15 @@ function AmberwoodsPage() {
         <ContactForm />
       </section>
 
-     <footer>
-  <img src="/rek-logo.png" alt="REKonnection Logo" />
+    <footer>
+      <img src="/rek-logo.png" alt="REKonnection Logo" />
 
-  <p>
-    Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com
-  </p>
+      <p>
+        Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com
+      </p>
 
-  <div style={{ marginTop: '16px' }}>
-    <a
-      href="/documents/information-about-brokerage-services.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ color: '#d4af37', marginRight: '18px' }}
-    >
-      Information About Brokerage Services
-    </a>
-
-    <a
-      href="/documents/consumer-protection-notice.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ color: '#d4af37' }}
-    >
-      Consumer Protection Notice
-    </a>
-  </div>
-</footer>
+      <FooterLinks />
+  </footer>
 
       <FloatingButtons />
     </div>
