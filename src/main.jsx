@@ -95,7 +95,9 @@ function FloatingSocialBar() {
       <a href="https://www.instagram.com/realtorharish" target="_blank" rel="noopener noreferrer">📸</a>
       <a href="https://www.facebook.com/p/Realtor-Harish-at-REKonnection-61565769466996/" target="_blank" rel="noopener noreferrer">f</a>
       <a href="https://www.tiktok.com/@realtor.harish" target="_blank" rel="noopener noreferrer">♪</a>
-      <a href="sms:9725520158">💬</a>
+     <a href="https://www.youtube.com/@RealtorHarish" target="_blank" rel="noopener noreferrer">▶</a>
+
+<a href="sms:9725520158">💬</a>
     </div>
   )
 }
