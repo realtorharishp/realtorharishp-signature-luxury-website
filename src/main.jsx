@@ -89,6 +89,39 @@ function SocialLinks() {
   )
 }
 
+function GoogleReviewsSection() {
+  return (
+    <section className="googleReviews">
+      <p className="eyebrow dark">Google Reviews</p>
+      <h2>See What Clients Are Saying</h2>
+      <p>
+        Read verified Google reviews and share your experience working with
+        Harish Patel and REKonnection Real Estate.
+      </p>
+
+      <div className="reviewButtons">
+        <a
+          href="https://share.google/4FY1ESFb6aay18YdW"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btnGold"
+        >
+          View Google Profile
+        </a>
+
+        <a
+          href="https://share.google/4FY1ESFb6aay18YdW"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btnOutline"
+        >
+          Leave a Review
+        </a>
+      </div>
+    </section>
+  )
+}
+
 function FloatingSocialBar() {
   return (
     <div className="floatingSocialBar">
@@ -1031,7 +1064,7 @@ function HomePage() {
       <section className="homeValue"><div><p className="eyebrow">Home Value</p><h2>Curious What Your Home Is Worth?</h2><p>Get a personalized North Texas home value estimate and selling strategy from Harish Patel.</p></div><a href="#contact" className="btnGold">Request Home Valuation</a><a href="https://calendly.com/realtor-harishp/30min" target="_blank" className="btnGold">Book a Consultation</a></section>
 
       <section id="about" className="about"><div className="aboutPhotoWrap"><img src="/harish-patel.png" alt="Harish Patel" /></div><div><p className="eyebrow dark">Meet Your Realtor</p><h2>Harish Patel</h2><p>Harish helps North Texas clients buy, sell, lease, and invest with confidence through premium marketing, strong communication, and relationship-first service.</p><a href="tel:9725520158" className="btnGold inlineButton">Call 972-552-0158</a></div></section>
-
+      <GoogleReviewsSection />
       <section id="contact" className="contact"><p className="eyebrow">Contact Harish Patel</p><h2>Ready To Make Your Next Move?</h2><p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p><ContactForm /></section>
      <footer>
       <img src="/rek-logo.png" alt="REKonnection Logo" />
