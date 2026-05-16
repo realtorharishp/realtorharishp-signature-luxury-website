@@ -303,14 +303,14 @@ function MarketActivitySection() {
           address: 'Luxury Listing Coming Soon',
           city: 'Midlothian, TX',
           price: 'Contact Harish',
-          image: '/property-1.jpg',
+          image: '/midlothian.jpg',
           status: 'Coming Soon'
         },
         {
-          address: 'Investor Listing Coming Soon',
+          address: 'Lease Listing Coming Soon',
           city: 'Frisco, TX',
           price: 'Contact Harish',
-          image: '/property-1.jpg',
+          image: '/9929-gw.jpg',
           status: 'Coming Soon'
         }
       ]
@@ -323,7 +323,7 @@ function MarketActivitySection() {
           address: '2761 Douglas Lane',
           city: 'Prosper, TX',
           price: '$1,041,000',
-          image: '/Douglas.jpg',
+          image: '/douglas.jpg',
           status: 'Under Contract'
         },
         {
@@ -337,7 +337,7 @@ function MarketActivitySection() {
           address: '4433 Ginger Road',
           city: 'Prosper, TX',
           price: '$670,000',
-          image: '/Ginger.jpg',
+          image: '/ginger.jpg',
           status: 'Under Contract'
         }
       ]
