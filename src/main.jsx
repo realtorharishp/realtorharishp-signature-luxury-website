@@ -1042,7 +1042,7 @@ const featuredListings = [
   {
     title: '12820 Cooper River Trail',
     location: 'Frisco, TX 75035-1713',
-    image: '/listings/cooper-river.jpg',
+    image: '/cooper-river.jpg',
     link: '/listings/12820-cooper-river'
   }
 ]
