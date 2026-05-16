@@ -349,14 +349,14 @@ function MarketActivitySection() {
         {
           address: '5109 Fort Bucker Drive',
           city: 'Mckinney, TX',
-          Sold price: '$605,000',
+          price: '$605,000',
           image: '/fort-buckner.jpg',
           status: 'Sold'
         },
         {
           address: '2560 Valley Glen Drive',
           city: 'Little Elm, TX',
-          Sold price: '$3250',
+          price: '$3250',
           image: '/valley-glen.jpg',
           status: 'Sold'
         }
