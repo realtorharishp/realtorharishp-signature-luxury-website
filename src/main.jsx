@@ -264,15 +264,7 @@ function ListingPage() {
 
       <section className="listingSection alt">
         <h2>Photo Gallery</h2>
-       <div className="photoGallery">
-          {storyImages.map((src, index) => (
-        <img
-          src={src}
-          alt={`14839 Story Lane photo ${index + 1}`}
-          key={src}
-        />
-  ))}
-</div>
+       <ImageCarousel images={storyImages} title="14839 Story Lane" />
       </section>
 
       <section className="listingSection">
