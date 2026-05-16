@@ -1001,7 +1001,16 @@ function HomePage() {
       <section id="about" className="about"><div className="aboutPhotoWrap"><img src="/harish-patel.png" alt="Harish Patel" /></div><div><p className="eyebrow dark">Meet Your Realtor</p><h2>Harish Patel</h2><p>Harish helps North Texas clients buy, sell, lease, and invest with confidence through premium marketing, strong communication, and relationship-first service.</p><a href="tel:9725520158" className="btnGold inlineButton">Call 972-552-0158</a></div></section>
 
       <section id="contact" className="contact"><p className="eyebrow">Contact Harish Patel</p><h2>Ready To Make Your Next Move?</h2><p>Let’s create a strategy for buying, selling, leasing, or investing in North Texas real estate.</p><ContactForm /></section>
-      <footer><img src="/rek-logo.png" alt="REKonnection Logo" /><p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p><p>Residential | Commercial | Leasing | Investment</p></footer>
+     <footer>
+      <img src="/rek-logo.png" alt="REKonnection Logo" />
+
+      <p>
+        Harish Patel • Realtor® • 972-552-0158 •
+        realtor.harishp@gmail.com
+      </p>
+
+    <FooterLinks />
+  </footer>
       <FloatingButtons />
     </div>
   )
