@@ -281,18 +281,25 @@ function MarketActivitySection() {
       items: [
         {
           address: '14839 Story Lane',
-          city: 'Frisco, TX',
+          city: 'Frisco, TX, 75035',
           price: '$923,631',
           image: '/listings/14839-story-lane/story-1.jpg',
           status: 'Open House • Saturday 23rd May, 2026 between 2PM–5PM'
         },
         {
           address: '9650 Amberwoods Lane',
-          city: 'Frisco, TX',
+          city: 'Frisco, TX, 75035',
           price: '$549,999',
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',
           status: 'Open House • Sunday 24th May, 2026 between 2PM–5PM'
-        }
+        },
+        {
+          address: '12820 Cooper River Trail',
+          city: 'Frisco, TX 75035',
+          price: '$865,000',
+          image: '/cooper-river.jpg',
+          status: 'Open House • Sunday 17th May, 2026 between 2PM–4PM'
+}
       ]
     },
 
