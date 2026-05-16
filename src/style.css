@@ -1041,6 +1041,10 @@ footer .socialIcons {
 }
 
 .floatingSocialBar a:nth-child(4) {
+  background: #FF0000;
+}
+
+.floatingSocialBar a:nth-child(5) {
   background: #25D366;
 }
 .floatingSocialBar a:hover {
