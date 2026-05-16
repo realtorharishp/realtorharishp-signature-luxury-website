@@ -1005,3 +1005,33 @@ footer .socialIcons {
   border: 1px solid rgba(212,175,55,.6) !important;
   line-height: 1 !important;
 }
+.floatingSocialBar {
+  position: fixed;
+  left: 20px;
+  bottom: 95px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.floatingSocialBar a {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #111;
+  color: #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  border: 1px solid rgba(212,175,55,.6);
+  box-shadow: 0 14px 35px rgba(0,0,0,.25);
+}
+
+.floatingSocialBar a:hover {
+  background: #d4af37;
+  color: #111;
+}
