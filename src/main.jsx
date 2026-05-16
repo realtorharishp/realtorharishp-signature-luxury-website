@@ -330,7 +330,7 @@ function MarketActivitySection() {
           address: '2661 Archgate CT',
           city: 'Prosper, TX',
           price: '$1,300,100',
-          image: '/listings/Archgate.jpg',
+          image: '/listings/archgate.jpg',
           status: 'Under Contract'
         },
         {
