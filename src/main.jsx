@@ -4,6 +4,7 @@ import './style.css'
 import { listings } from './data/listings'
 import { marketSections } from './data/marketActivity'
 import { partners } from './data/partners'
+import { testimonials } from './data/testimonials'
 
 const storyImages = Array.from(
   { length: 20 },
@@ -1290,6 +1291,52 @@ function RecommendedBusinessesSection() {
   )
 }
 
+function TestimonialsCarousel() {
+  const [currentIndex, setCurrentIndex] = React.useState(0)
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+    }, 5000)
+
+    return () => clearInterval(timer)
+  }, [])
+
+  const testimonial = testimonials[currentIndex]
+
+  return (
+    <section className="testimonials">
+      <p className="eyebrow dark">Client Testimonials</p>
+      <h2>Trusted By North Texas Families & Investors</h2>
+
+      <div className="testimonialCarousel">
+        <p>“{testimonial.review}”</p>
+        <h4>— {testimonial.name}</h4>
+
+        <button
+          className="carouselBtn left"
+          onClick={() =>
+            setCurrentIndex((prev) =>
+              (prev - 1 + testimonials.length) % testimonials.length
+            )
+          }
+        >
+          ‹
+        </button>
+
+        <button
+          className="carouselBtn right"
+          onClick={() =>
+            setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+          }
+        >
+          ›
+        </button>
+      </div>
+    </section>
+  )
+}
+
 function HomePage() {
  
   return (
@@ -1357,7 +1404,7 @@ function HomePage() {
 
       <section className="whyWork"><p className="eyebrow dark">Why Work With Harish</p><h2>Local Expertise. Premium Marketing. Client-First Service.</h2><div className="whyGrid"><div><h3>Market Expertise</h3><p>Guidance backed by North Texas market knowledge and pricing strategy.</p></div><div><h3>Data-Driven Advice</h3><p>Smart decisions supported by real market numbers and analysis.</p></div><div><h3>Residential & Leasing</h3><p>Experience helping buyers, sellers, landlords, tenants, and investors.</p></div><div><h3>Premium Marketing</h3><p>Luxury flyers, social media campaigns, listing exposure, and branded presentation.</p></div><div><h3>Investor Guidance</h3><p>Support for rental income, lease strategy, and long-term investment goals.</p></div><div><h3>Relationship First</h3><p>Patient, responsive, and personal guidance from start to closing.</p></div></div></section>
 
-      <section className="testimonials"><p className="eyebrow dark">Client Testimonials</p><h2>Trusted By North Texas Families & Investors</h2><div className="testimonialGrid"><div><p>“We are truly grateful for Harish Patel’s exceptional support and guidance throughout our home search journey. His calm approach and thoughtful advice helped us navigate every stage with confidence and ease. He felt more like an elder brother walking alongside us.”</p><h4>— Happy Homeowners</h4></div><div><p>“Mr. Patel is truly excellent to work with. He represented us both as renters and later as homebuyers, making every step smooth and stress-free. He is kind, patient, and very knowledgeable.”</p><h4>— Happy Clients</h4></div><div><p>“Mr. Harish is an exceptional real estate professional with deep market knowledge. He was prompt, data-driven, and always guided us while keeping our needs at the center.”</p><h4>— Satisfied Clients</h4></div></div></section>
+      <TestimonialsCarousel />
 
       <section className="areasServed"><p className="eyebrow dark">Areas Served</p><h2>Helping Clients Across North Texas</h2><div className="areaGrid">{['Frisco','Plano','McKinney','Little Elm','Aubrey','Melissa','Prosper','Celina','Allen','Arlington'].map((city) => <div className="areaPill" key={city}>{city}</div>)}</div></section>
 
