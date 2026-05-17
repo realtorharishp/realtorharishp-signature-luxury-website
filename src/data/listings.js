@@ -107,3 +107,4 @@ export const listings = [
     facts: ['4 Bed', '3.5 Bath', '3,106 Sq Ft', 'Built 2021'],
     link: '/listings/arrow'
   }
+  ]
