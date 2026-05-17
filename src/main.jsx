@@ -1336,6 +1336,81 @@ function TestimonialsCarousel() {
     </section>
   )
 }
+function DynamicListingPage({ listing }) {
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background: `linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('${listing.image}') center/cover no-repeat`
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+          <p className="eyebrow">{listing.status}</p>
+          <h1>{listing.title}</h1>
+          <p>{listing.city}</p>
+          <p className="listingPrice">{listing.price}</p>
+
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        {listing.facts.map((fact) => (
+          <div key={fact}>
+            <strong>{fact}</strong>
+          </div>
+        ))}
+      </section>
+
+      <section className="listingSection">
+        <h2>{listing.title}</h2>
+        <p className="listingDescription">
+          Contact Harish Patel for private tours, pricing details, availability,
+          and full property information.
+        </p>
+
+        <div className="photoGallery">
+          {(listing.gallery || [listing.image]).map((src, index) => (
+            <img
+              src={src}
+              alt={`${listing.title} photo ${index + 1}`}
+              key={src}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in {listing.title}?</h2>
+        <p>Submit your information below and Harish will follow up with details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>
+          Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com
+        </p>
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
+        </p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+
+      <FloatingSocialBar />
+      <FloatingButtons />
+    </div>
+  )
+}
 
 function HomePage() {
  
@@ -1436,6 +1511,9 @@ function HomePage() {
 }
 
 function App() {
+   const path = window.location.pathname
+  const dynamicListing = listings.find((listing) => listing.link === path)
+
   if (window.location.pathname === '/listings/14839-story-lane') {
     return <ListingPage />
   }
@@ -1471,6 +1549,10 @@ function App() {
   if (window.location.pathname === '/listings/1874-purtis-creek') {
     return <PurtisCreekPage />
   }
+ 
+if (dynamicListing) {
+  return <DynamicListingPage listing={dynamicListing} />
+}
 
   return <HomePage />
 }
