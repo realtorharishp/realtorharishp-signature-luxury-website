@@ -1441,7 +1441,6 @@ function HomePage() {
         <div className="heroCard"><div className="logoPanel"><img src="/rek-logo-1.png" alt="REKonnection Logo" /></div></div>
       </section>
       <FeaturedListingsCarousel />
-      <MarketActivitySection />
       <section className="featuredListing">
         <div className="featuredListingInner">
            <img
@@ -1469,7 +1468,7 @@ function HomePage() {
           ))}
         </div>
       </section>
-
+ <MarketActivitySection />
       <section id="services" className="section">
         <p className="eyebrow dark">Services</p><h2>Real Estate Services Built Around Your Goals</h2>
         <div className="services">
