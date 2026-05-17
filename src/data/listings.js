@@ -98,13 +98,17 @@ export const listings = [
     link: '/listings/1874-purtis-creek'
   },
   {
-    slug: 'arrow',
-    status: 'Residential Sale',
-    title: '1312 Arrowwood Drive',
-    city: 'Aubrey, Texas 76227',
-    price: '$549,999',
-    image: '/listings/arrow/arrow-1.jpg',
-    facts: ['4 Bed', '3.5 Bath', '3,106 Sq Ft', 'Built 2021'],
-    link: '/listings/arrow'
-  }
+  number: 10,
+  status: 'Residential Sale',
+  title: '1312 Arrowwood Drive',
+  city: 'Aubrey, Texas 76227',
+  price: '$549,999',
+  image: '/listings/arrow/arrow-1.jpg',
+  gallery: Array.from(
+    { length: 20 },
+    (_, i) => `/listings/arrow/arrow-${i + 1}.jpg`
+  ),
+  facts: ['4 Bed', '3.5 Bath', '3,106 Sq Ft', 'Built 2021'],
+  link: '/listings/arrow'
+}
   ]
