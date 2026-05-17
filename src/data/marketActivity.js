@@ -2,7 +2,14 @@ export const marketSections = [
   {
     title: 'Upcoming Open Houses',
     items: [
-        {
+      {
+          address: '12820 Cooper River Trail',
+          city: 'Frisco, TX 75035',
+          price: '$865,000',
+          image: '/cooper-river.jpg',
+          status: 'Open House • Sunday 17th May, 2026 between 2PM–4PM'
+        },  
+      {
           address: '14839 Story Lane',
           city: 'Frisco, TX, 75035',
           price: '$923,631',
@@ -17,10 +24,10 @@ export const marketSections = [
           status: 'Open House • Sunday 24th May, 2026 between 2PM–5PM'
         },
         {
-          address: '12820 Cooper River Trail',
-          city: 'Frisco, TX 75035',
-          price: '$865,000',
-          image: '/cooper-river.jpg',
+          address: '1312 Arrowwood Drive',
+          city: 'Aubrey, Texas 76227',
+          price: '$549,999',
+          image: '/listings/arrow/arrow-1.jpg',
           status: 'Open House • Sunday 17th May, 2026 between 2PM–4PM'
         }
       ]
