@@ -1,6 +1,6 @@
 export const listings = [
   {
-    number: 1,
+    slug: '14839 Story Lane',
     status: 'Residential Sale',
     title: '14839 Story Lane',
     city: 'Frisco, TX 75035',
@@ -11,7 +11,7 @@ export const listings = [
   },
 
   {
-    number: 2,
+    slug: '9650-amberwoods-lane',
     status: 'Residential Sale',
     title: '9650 Amberwoods Lane',
     city: 'Frisco, TX',
@@ -22,7 +22,7 @@ export const listings = [
   },
 
   {
-    number: 3,
+    slug: '2935-shetland-drive',
     status: 'Residential Sale',
     title: '2935 Shetland Drive',
     city: 'Aubrey, TX',
@@ -33,7 +33,7 @@ export const listings = [
   },
 
   {
-    number: 4,
+   slug: '400-stonebrook-303',
     status: 'Commercial Property',
     title: '400 Stonebrook Pkwy #303',
     city: 'Frisco, TX',
@@ -44,7 +44,7 @@ export const listings = [
   },
 
   {
-    number: 5,
+    slug: '2900-galveston',
     status: 'Residential Lease',
     title: '2900 Galveston Street',
     city: 'Plano, TX',
@@ -55,7 +55,7 @@ export const listings = [
   },
 
   {
-    number: 6,
+   slug: '1009-village-wood-ct',
     status: 'Residential Lease',
     title: '1009 Village Wood Ct',
     city: 'Arlington, TX',
@@ -66,7 +66,7 @@ export const listings = [
   },
 
   {
-    number: 7,
+    slug: '615-hemmingway-lane',
     status: 'Residential Lease',
     title: '615 Hemmingway Lane',
     city: 'McKinney, TX',
@@ -77,7 +77,7 @@ export const listings = [
   },
 
   {
-    number: 8,
+    slug: '4414-silverweed-lane',
     status: 'Investor Opportunity',
     title: '4414 Silverweed Lane',
     city: 'Melissa, TX',
@@ -88,7 +88,7 @@ export const listings = [
   },
 
   {
-    number: 9,
+    slug: '1874-purtis-creek',
     status: 'Residential Lease',
     title: '1874 Purtis Creek',
     city: 'Forney, TX',
@@ -98,7 +98,7 @@ export const listings = [
     link: '/listings/1874-purtis-creek'
   },
   {
-    number: 10,
+    slug: 'arrow',
     status: 'Residential Sale',
     title: '1312 Arrowwood Drive',
     city: 'Aubrey, Texas 76227',
