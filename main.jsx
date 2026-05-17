@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
+import { listings } from './data/listings'
 
 const storyImages = Array.from(
   { length: 20 },
@@ -154,7 +155,7 @@ function ListingPage() {
 }
 
 function HomePage() {
-  const properties = [
+  /*const properties = [
     { number: 1, status: 'Residential Sale', title: '9650 Amberwoods Lane', city: 'Frisco, TX', price: '$549,999', image: '/property-1.jpg', facts: ['3 Bed', '2.5 Bath', '2,593 Sq Ft', 'Built 2013', '2 Car Garage', 'Dedicated Office', 'Dining Room', 'Media Room'] },
     { number: 2, status: 'Residential Sale', title: '14839 Story Lane', city: 'Frisco, TX 75035', price: '$923,631', image: '/property-2.jpg', facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011', '3 Car Garage', 'Dedicated Office', 'Dining Room', 'Media & Game Room'], link: '/listings/14839-story-lane' },
     { number: 3, status: 'Residential Sale', title: '2935 Shetland Drive', city: 'Aubrey, TX', price: '$318,000', image: '/property-3.jpg', facts: ['3 Bed', '2 Bath', '1,792 Sq Ft', 'Built 2023', '2 Car Garage', 'Park Facing', 'Huge Backyard'] },
@@ -163,7 +164,8 @@ function HomePage() {
     { number: 6, status: 'Residential Lease', title: '1009 Village Wood Ct', city: 'Arlington, TX', price: '$3,249 / Month', image: '/property-6.jpg', facts: ['4 Bed', '2.5 Bath', '2,336 Sq Ft', 'Built 1987'] },
     { number: 7, status: 'Residential Lease', title: '615 Hemming Way', city: 'McKinney, TX 75069', price: '$2,239 / Month', image: '/property-7.jpg', facts: ['4 Bed', '2 Bath', '1,605 Sq Ft', 'Built 2024'] },
     { number: 8, status: 'Investor Opportunity', title: '4414 Silverweed', city: 'Melissa, TX 75454', price: '$379,999', image: '/property-8.jpg', facts: ['3 Bed', '2.5 Bath', '1,862 Sq Ft', 'Built 2024', 'Leased at $2,676 / Month', 'Huge Backyard', 'Perfect for Investors'] }
-  ]
+  ]*/
+  
 
   return (
     <div>
@@ -195,7 +197,8 @@ function HomePage() {
       <section id="listings" className="section light">
         <p className="eyebrow dark">Featured Listings</p><h2>Premium North Texas Properties</h2><p className="sectionIntro">Explore residential sales, lease homes, commercial space, and investor-ready opportunities represented by Harish Patel.</p>
         <div className="propertyGrid">
-          {properties.map((p) => (
+          {listings.map((p) => (
+      
             <article className="propertyCard" key={p.number}>
               <div className="imageWrap"><img src={p.image} alt={`${p.title}, ${p.city}`} /><div className="numberBadge">{p.number}</div><div className="statusBadge">{p.status}</div></div>
               <div className="propertyBody"><p className="propertyPrice">{p.price}</p><h3>{p.title}</h3><p className="propertyCity">{p.city}</p><div className="facts">{p.facts.map((fact) => <span key={fact}>{fact}</span>)}</div><a className="propertyButton" href={p.link || '#contact'}>{p.link ? 'View Details' : 'Schedule Showing'}</a></div>
