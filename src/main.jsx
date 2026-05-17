@@ -1453,7 +1453,7 @@ function HomePage() {
       <section id="listings" className="section light">
         <p className="eyebrow dark">Featured Listings</p><h2>Premium North Texas Properties</h2><p className="sectionIntro">Explore residential sales, lease homes, commercial space, and investor-ready opportunities represented by Harish Patel.</p>
         <div className="propertyGrid">
-          {properties.map((p) => (
+          {listings.map((p) => (
             <article className="propertyCard" key={p.number}>
               <div className="imageWrap"><img src={p.image} alt={`${p.title}, ${p.city}`} /><div className="numberBadge">{p.number}</div><div className="statusBadge">{p.status}</div></div>
               <div className="propertyBody"><p className="propertyPrice">{p.price}</p><h3>{p.title}</h3><p className="propertyCity">{p.city}</p><div className="facts">{p.facts.map((fact) => <span key={fact}>{fact}</span>)}</div><a className="propertyButton" href={p.link || '#contact'}>{p.link ? 'View Details' : 'Schedule Showing'}</a></div>
