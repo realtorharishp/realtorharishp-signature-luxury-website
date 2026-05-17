@@ -1405,18 +1405,7 @@ function RecommendedBusinessesSection() {
 
 
 function HomePage() {
-  const properties = [
-    { number: 1, status: 'Residential Sale', title: '9650 Amberwoods Lane', city: 'Frisco, TX', price: '$549,999', image: '/property-1.jpg', facts: ['3 Bed', '2.5 Bath', '2,593 Sq Ft', 'Built 2013', '2 Car Garage', 'Dedicated Office', 'Dining Room', 'Media Room'],link: '/listings/9650-amberwoods-lane' },
-    { number: 2, status: 'Residential Sale', title: '14839 Story Lane', city: 'Frisco, TX 75035', price: '$923,631', image: '/property-2.jpg', facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011', '3 Car Garage', 'Dedicated Office', 'Dining Room', 'Media & Game Room'], link: '/listings/14839-story-lane' },
-    { number: 3, status: 'Residential Sale', title: '2935 Shetland Drive', city: 'Aubrey, TX', price: '$318,000', image: '/property-3.jpg', facts: ['3 Bed', '2 Bath', '1,792 Sq Ft', 'Built 2023', '2 Car Garage', 'Park Facing', 'Huge Backyard'],link: '/listings/2935-shetland-drive' },
-    { number: 4, status: 'Commercial Property', title: '400 Stonebrook Pkwy #303', city: 'Frisco, TX', price: '$429,999', image: '/property-4.jpg', facts: ['4 Offices', '1 Restroom', '1,225 Sq Ft', 'Dedicated Reception'],link: '/listings/400-stonebrook-303' },
-    { number: 5, status: 'Residential Lease', title: '2900 Galveston Street', city: 'Plano, TX 75075', price: '$2,799 / Month', image: '/property-5.jpg', facts: ['3 Bed', '2.5 Bath', '1,870 Sq Ft', 'Built 2018'],link: '/listings/2900-galveston' },
-    { number: 6, status: 'Residential Lease', title: '1009 Village Wood Ct', city: 'Arlington, TX', price: '$2,850 / Month', image: '/property-6.jpg', facts: ['4 Bed', '2.5 Bath', '2,336 Sq Ft', 'Built 1987'],link: '/listings/1009-village-wood-ct'},
-    { number: 7, status: 'Residential Lease', title: '615 Hemming Way', city: 'McKinney, TX 75069', price: '$2,239 / Month', image: '/property-7.jpg', facts: ['4 Bed', '2 Bath', '1,605 Sq Ft', 'Built 2024'],link: '/listings/615-hemmingway-lane' },
-    { number: 8, status: 'Investor Opportunity', title: '4414 Silverweed', city: 'Melissa, TX 75454', price: '$379,999', image: '/property-8.jpg', facts: ['3 Bed', '2.5 Bath', '1,862 Sq Ft', 'Built 2024', 'Leased at $2,676 / Month', 'Huge Backyard', 'Perfect for Investors'],link: '/listings/4414-silverweed-lane' },
-    { number: 9, status: 'Residential Lease', title: '1874 Purtis creek', city: 'Forney, TX 75126', price: '$3099', image: '/property-9.jpg', facts: ['5 Bed', '3 Bath', '2,212 Sq Ft', 'Built 2024',  'Huge Backyard', 'Section 8 Accepted'],link: '/listings/1874-purtis-creek' }
-  ]
-
+ 
   return (
     <div>
       <Header />
