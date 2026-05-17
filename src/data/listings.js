@@ -106,12 +106,4 @@ export const listings = [
     image: '/listings/arrow/arrow-1.jpg',
     facts: ['4 Bed', '3.5 Bath', '3,106 Sq Ft', 'Built 2021'],
     link: '/listings/arrow'
-  },
-  {
-          address: '1312 Arrowwood Drive',
-          city: 'Aubrey, Texas 76227',
-          price: '$549,999',
-          image: '/listings/arrow/arrow-1.jpg',
-          status: 'Open House • Sunday 17th May, 2026 between 2PM–4PM'
-        }
-]
+  }
