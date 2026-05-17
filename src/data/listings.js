@@ -98,17 +98,31 @@ export const listings = [
     link: '/listings/1874-purtis-creek'
   },
   {
-  number: 10,
+  slug: 'arrow',
   status: 'Residential Sale',
   title: '1312 Arrowwood Drive',
   city: 'Aubrey, Texas 76227',
   price: '$549,999',
   image: '/listings/arrow/arrow-1.jpg',
   gallery: Array.from(
-    { length: 20 },
+    { length: 15 },
     (_, i) => `/listings/arrow/arrow-${i + 1}.jpg`
   ),
   facts: ['4 Bed', '3.5 Bath', '3,106 Sq Ft', 'Built 2021'],
   link: '/listings/arrow'
+},
+  {
+  slug: 'washington',
+  status: 'Residential lease',
+  title: '9929 George Washington Dr',
+  city: 'Mckinney, Texas, 75070',
+  price: '$2,999',
+  image: '/listings/washington/washington-1.jpg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `/listings/washington/washington-${i + 1}.jpg`
+  ),
+  facts: ['3 Bed', '2 Bath', '1700 Sq Ft', 'Built 2005'],
+  link: '/listings/warrow'
 }
   ]
