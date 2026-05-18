@@ -76,7 +76,7 @@ export const listings = [
     { length: 15 },
     (_, i) => `/listings/cooper/cooper-${i + 1}.jpg`
   ),
-  facts: ['4 Bed', '3.5 Bath', '3,106 Sq Ft', 'Built 2021'],
+  facts: ['4 Bed', '2.5 Bath', '3,385 Sq Ft', 'Built 2020'],
   link: '/listings/cooper'
 },
 
