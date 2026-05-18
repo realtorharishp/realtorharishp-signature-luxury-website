@@ -1427,6 +1427,20 @@ function ChatbaseWidget() {
 }
 
 function CityPage({ city }) {
+  React.useEffect(() => {
+  document.title = `${city.title} | Realtor Harish`
+
+  const metaDescription = document.querySelector(
+    'meta[name="description"]'
+  )
+
+  if (metaDescription) {
+    metaDescription.setAttribute(
+      'content',
+      city.description
+    )
+  }
+}, [city])
   return (
     <div>
       <Header />
