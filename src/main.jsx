@@ -1433,6 +1433,9 @@ function CityPage({ city }) {
   const metaDescription = document.querySelector(
     'meta[name="description"]'
   )
+  const cityListings = listings.filter((listing) =>
+  listing.city.toLowerCase().includes(city.city.toLowerCase())
+)
 
   if (metaDescription) {
     metaDescription.setAttribute(
@@ -1466,6 +1469,14 @@ function CityPage({ city }) {
           and surrounding North Texas communities with local market expertise,
           premium marketing, and professional guidance.
         </p>
+        <h2>Why Buyers Love {city.city}</h2>
+
+      <p className="listingDescription">
+      {city.city} offers strong schools, beautiful communities,
+      convenient access to shopping and dining, and excellent
+      opportunities for families, professionals, and investors
+      looking to live in North Texas.
+    </p>
       </section>
 
       <section id="contact" className="contact">
