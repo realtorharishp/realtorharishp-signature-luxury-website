@@ -71,9 +71,9 @@ export const listings = [
   title: '12820 Cooper River Trail',
   city: 'Frisco, Texas 75035',
   price: '$865,000',
-  image: '/listings/cooper/cooper-1.jpeg',
+  image: '/listings/cooper/cooper-1.jpg',
   gallery: Array.from(
-    { length: 15 },
+    { length: 20 },
     (_, i) => `/listings/cooper/cooper-${i + 1}.jpg`
   ),
   facts: ['4 Bed', '2.5 Bath', '3,385 Sq Ft', 'Built 2020'],

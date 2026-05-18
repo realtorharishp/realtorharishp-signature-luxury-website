@@ -1366,11 +1366,45 @@ function DynamicListingPage({ listing }) {
   )
 }
 
+function ChatbaseWidget() {
+  React.useEffect(() => {
+    if (document.getElementById('XeHFtp4qjjzaViuCVKiX7')) return
+
+    if (!window.chatbase || window.chatbase('getState') !== 'initialized') {
+      window.chatbase = (...args) => {
+        if (!window.chatbase.q) {
+          window.chatbase.q = []
+        }
+        window.chatbase.q.push(args)
+      }
+
+      window.chatbase = new Proxy(window.chatbase, {
+        get(target, prop) {
+          if (prop === 'q') {
+            return target.q
+          }
+          return (...args) => target(prop, ...args)
+        }
+      })
+    }
+
+    const script = document.createElement('script')
+    script.src = 'https://www.chatbase.co/embed.min.js'
+    script.id = 'XeHFtp4qjjzaViuCVKiX7'
+    script.setAttribute('domain', 'www.chatbase.co')
+    document.body.appendChild(script)
+  }, [])
+
+  return null
+}
+
+
 function HomePage() {
  
   return (
     <div>
       <Header />
+      <ChatbaseWidget />
       <section id="home" className="hero">
         <div>
           <p className="eyebrow">Harish Patel</p>
