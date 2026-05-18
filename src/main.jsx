@@ -5,6 +5,7 @@ import { listings } from './data/listings'
 import { marketSections } from './data/marketActivity'
 import { partners } from './data/partners'
 import { testimonials } from './data/testimonials'
+import { cities } from './data/cities'
 
 const storyImages = Array.from(
   { length: 20 },
@@ -1425,6 +1426,57 @@ function ChatbaseWidget() {
   return null
 }
 
+function CityPage({ city }) {
+  return (
+    <div>
+      <Header />
+
+      <section className="listingPageHero">
+        <div className="listingHeroContent">
+          <a href="/" className="backLink">← Back Home</a>
+          <p className="eyebrow">North Texas Real Estate</p>
+          <h1>{city.title}</h1>
+          <p>{city.description}</p>
+
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Contact Harish</a>
+            <a href="tel:9725520158" className="btnOutline">Call 972-552-0158</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Real Estate Services in {city.city}</h2>
+        <p className="listingDescription">
+          Harish Patel helps clients buy, sell, lease, and invest in {city.city}
+          and surrounding North Texas communities with local market expertise,
+          premium marketing, and professional guidance.
+        </p>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Looking for Real Estate Help in {city.city}?</h2>
+        <p>Submit your information and Harish will follow up with you.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
+        </p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+
+      <FloatingSocialBar />
+      <FloatingButtons />
+      <ChatbaseWidget />
+    </div>
+  )
+}
 
 function HomePage() {
  
@@ -1525,9 +1577,14 @@ function HomePage() {
 }
 
 function App() {
-   const path = window.location.pathname
+  const path = window.location.pathname
   const dynamicListing = listings.find((listing) => listing.link === path)
+  const citySlug = window.location.pathname.replace('/cities/', '')
+  const cityPage = cities.find((city) => city.slug === citySlug)
 
+if (window.location.pathname.startsWith('/cities/') && cityPage) {
+  return <CityPage city={cityPage} />
+}
   if (window.location.pathname === '/listings/14839-story-lane') {
     return <ListingPage />
   }
