@@ -71,7 +71,7 @@ export const listings = [
   title: '12820 Cooper River Trail',
   city: 'Frisco, Texas 75035',
   price: '$865,000',
-  image: '/listings/cooper/cooper-1.jpeg',
+  image: '/listings/cooper/cooper-1.jpg',
   gallery: Array.from(
     { length: 20 },
     (_, i) => `/listings/cooper/cooper-${i + 1}.jpg`
