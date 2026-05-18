@@ -1478,6 +1478,50 @@ function CityPage({ city }) {
       looking to live in North Texas.
     </p>
       </section>
+      <section className="section">
+  <p className="eyebrow dark">Services</p>
+
+  <h2>
+    Real Estate Services in {city.city}
+  </h2>
+
+  <div className="services">
+    {[
+      [
+        'Buy',
+        `Find homes and luxury properties in ${city.city} with expert local guidance.`
+      ],
+
+      [
+        'Sell',
+        `Professional marketing and pricing strategies for homeowners in ${city.city}.`
+      ],
+
+      [
+        'Lease',
+        `Helping landlords and tenants with lease homes throughout ${city.city}.`
+      ],
+
+      [
+        'Invest',
+        `Identify rental and investment opportunities in ${city.city} and North Texas.`
+      ],
+
+      [
+        'Relocate',
+        `Helping families and professionals relocate smoothly to ${city.city}.`
+      ]
+    ].map(([title, desc]) => (
+      <div className="service" key={title}>
+        <div className="icon"></div>
+
+        <h3>{title}</h3>
+
+        <p>{desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
       <section id="contact" className="contact">
         <p className="eyebrow">Contact Harish Patel</p>
