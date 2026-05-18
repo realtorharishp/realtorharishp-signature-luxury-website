@@ -377,6 +377,33 @@ function ListingPage() {
         </div>
       </section>
 
+      <section className="leadMagnet">
+  <h2>Get Free North Texas Home Updates</h2>
+
+  <p>
+    Receive new listings, market updates, investment opportunities,
+    and open house alerts directly from Harish Patel.
+  </p>
+
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input
+      type="hidden"
+      name="access_key"
+      value="YOUR_KEY"
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter Your Email"
+      required
+    />
+
+    <button type="submit">
+      Subscribe
+    </button>
+  </form>
+</section>
       <section id="contact" className="contact">
         <p className="eyebrow">Contact Harish Patel</p>
         <h2>Interested in 14839 Story Lane?</h2>
