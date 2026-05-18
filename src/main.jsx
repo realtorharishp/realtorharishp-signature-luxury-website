@@ -224,9 +224,7 @@ function FeaturedListingsCarousel() {
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) =>
-        (prev + 1) % featuredListings.length
-      )
+      setCurrentIndex((prev) => (prev + 1) % featuredListings.length)
     }, 4500)
 
     return () => clearInterval(timer)
@@ -240,8 +238,7 @@ function FeaturedListingsCarousel() {
         <img src={listing.image} alt={listing.title} />
 
         <div className="featuredOverlay">
-          <p>{listing.location}</p>
-
+          <p>{listing.city}</p>
           <h2>{listing.title}</h2>
 
           <a href={listing.link} className="btnGold">
@@ -254,8 +251,7 @@ function FeaturedListingsCarousel() {
           onClick={() =>
             setCurrentIndex(
               (prev) =>
-                (prev - 1 + featuredListings.length) %
-                featuredListings.length
+                (prev - 1 + featuredListings.length) % featuredListings.length
             )
           }
         >
@@ -265,10 +261,7 @@ function FeaturedListingsCarousel() {
         <button
           className="carouselBtn right"
           onClick={() =>
-            setCurrentIndex(
-              (prev) =>
-                (prev + 1) % featuredListings.length
-            )
+            setCurrentIndex((prev) => (prev + 1) % featuredListings.length)
           }
         >
           ›
@@ -277,7 +270,6 @@ function FeaturedListingsCarousel() {
     </section>
   )
 }
-
 function MarketActivitySection() {
  const sections = marketSections
 
@@ -917,45 +909,7 @@ function VillageWoodPage() {
   )
 }
 
-const featuredListings = [
-  {
-    title: '14839 Story Lane',
-    location: 'Frisco, TX',
-    image: '/listings/14839-story-lane/story-1.jpg',
-    link: '/listings/14839-story-lane'
-  },
-  {
-    title: '9650 Amberwoods Lane',
-    location: 'Frisco, TX',
-    image: '/listings/9650-amberwoods-lane/amber-1.jpg',
-    link: '/listings/9650-amberwoods-lane'
-  },
-  
-  {
-    title: '615 Hemmingway Lane',
-    location: 'Mckinney, TX',
-    image: '/listings/615-hemmingway-lane/hemmingway-1.jpg',
-    link: '/listings/615-hemmingway-lane'
-  },
-  {
-    title: '4414 Silverweed Lane',
-    location: 'Melissa, TX',
-    image: '/listings/4414-silverweed-lane/silverweed-1.jpg',
-    link: '/listings/4414-silverweed-lane'
-  },
-  {
-    title: '1874 Purtis Creek',
-    location: 'Forney, TX',
-    image: '/listings/1874-purtis-creek/purtis-1.jpg',
-    link: '/listings/1874-purtis-creek'
-  },
-  {
-    title: '12820 Cooper River Trail',
-    location: 'Frisco, TX 75035-1713',
-    image: '/cooper-river.jpg',
-    link: '/listings/12820-cooper-river'
-  }
-]
+const featuredListings = listings.slice(0, 6)
 
 function HemmingwayPage() {
   const hemmingImages = Array.from(
