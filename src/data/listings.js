@@ -66,6 +66,21 @@ export const listings = [
   },
 
   {
+  slug: 'cooper',
+  status: 'Residential Sale',
+  title: '12820 Cooper River Trail',
+  city: 'Frisco, Texas 75035',
+  price: '$865,000',
+  image: '/listings/cooper/cooper-1.jpeg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `/listings/cooper/cooper-${i + 1}.jpg`
+  ),
+  facts: ['4 Bed', '2.5 Bath', '3,385 Sq Ft', 'Built 2020'],
+  link: '/listings/cooper'
+},
+
+  {
     slug: '615-hemmingway-lane',
     status: 'Residential Lease',
     title: '615 Hemmingway Lane',
