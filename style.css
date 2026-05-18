@@ -1146,3 +1146,25 @@ footer p {
     max-width: 120px;
   }
 }
+@media (max-width: 768px) {
+
+  .topSocials {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .topSocials a {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .navbar {
+    padding: 16px 18px;
+  }
+
+  .brand img {
+    max-width: 120px;
+  }
+}
