@@ -962,3 +962,127 @@ footer p {
 .cityLinksSection .areaPill {
   text-decoration: none;
 }
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btnGold,
+  .btnOutline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .agent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featuredListingInner {
+    grid-template-columns: 1fr;
+  }
+
+  .propertyGrid,
+  .services,
+  .whyGrid,
+  .businessGrid,
+  .activityGrid,
+  .standoutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsBar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 30px 20px;
+  }
+
+  .listingHeroContent h1 {
+    font-size: 42px;
+  }
+
+  .listingSection,
+  .section,
+  .contact,
+  .about,
+  .areasServed,
+  .recommendedBusinesses,
+  .marketActivity {
+    padding: 70px 20px;
+  }
+
+  .photoGallery {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonialCarousel {
+    padding: 35px 24px;
+  }
+
+  .testimonialCarousel p {
+    font-size: 18px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .floatingSocialBar {
+    display: none;
+  }
+
+  .mobileSticky {
+    display: flex;
+  }
+
+  .listingPrice {
+    font-size: 32px;
+  }
+
+  .featuredOverlay h2 {
+    font-size: 32px;
+  }
+
+  .areaGrid {
+    justify-content: center;
+  }
+
+  .partnerLogo {
+    max-width: 140px;
+  }
+
+  .carousel img {
+    height: auto;
+  }
+}
