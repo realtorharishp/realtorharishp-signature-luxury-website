@@ -1427,25 +1427,21 @@ function ChatbaseWidget() {
 }
 
 function CityPage({ city }) {
-  React.useEffect(() => {
-  document.title = `${city.title} | Realtor Harish`
   const cityListings = listings.filter((listing) =>
-  listing.city.toLowerCase().includes(city.city.toLowerCase())
-)
-  const metaDescription = document.querySelector(
-    'meta[name="description"]'
+    listing.city.toLowerCase().includes(city.city.toLowerCase())
   )
-  const cityListings = listings.filter((listing) =>
-  listing.city.toLowerCase().includes(city.city.toLowerCase())
-)
 
-  if (metaDescription) {
-    metaDescription.setAttribute(
-      'content',
-      city.description
+  React.useEffect(() => {
+    document.title = `${city.title} | Realtor Harish`
+
+    const metaDescription = document.querySelector(
+      'meta[name="description"]'
     )
-  }
-}, [city])
+
+    if (metaDescription) {
+      metaDescription.setAttribute('content', city.description)
+    }
+  }, [city])
   return (
     <div>
       <Header />
