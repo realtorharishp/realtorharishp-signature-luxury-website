@@ -1540,3 +1540,43 @@ footer .socialIcons {
   color: #d4af37;
   margin-top: 24px;
 }
+@media (max-width: 768px) {
+  .floatingSocialBar {
+    display: none !important;
+  }
+
+  .navbar {
+    padding: 14px 16px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .navbar > div {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  .navbar .socialIcons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .navbar .socialIcons a {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    font-size: 13px !important;
+  }
+
+  .callButton {
+    display: none !important;
+  }
+
+  .brand img {
+    width: 115px !important;
+    height: auto !important;
+  }
+}
