@@ -1546,6 +1546,22 @@ function HomePage() {
       <section className="whyWork"><p className="eyebrow dark">Why Work With Harish</p><h2>Local Expertise. Premium Marketing. Client-First Service.</h2><div className="whyGrid"><div><h3>Market Expertise</h3><p>Guidance backed by North Texas market knowledge and pricing strategy.</p></div><div><h3>Data-Driven Advice</h3><p>Smart decisions supported by real market numbers and analysis.</p></div><div><h3>Residential & Leasing</h3><p>Experience helping buyers, sellers, landlords, tenants, and investors.</p></div><div><h3>Premium Marketing</h3><p>Luxury flyers, social media campaigns, listing exposure, and branded presentation.</p></div><div><h3>Investor Guidance</h3><p>Support for rental income, lease strategy, and long-term investment goals.</p></div><div><h3>Relationship First</h3><p>Patient, responsive, and personal guidance from start to closing.</p></div></div></section>
 
       <TestimonialsCarousel />
+      <section className="cityLinksSection">
+  <p className="eyebrow dark">Local Real Estate</p>
+  <h2>Explore North Texas City Pages</h2>
+
+  <div className="areaGrid">
+    {cities.map((city) => (
+      <a
+        href={`/cities/${city.slug}`}
+        className="areaPill"
+        key={city.slug}
+      >
+        {city.city}
+      </a>
+    ))}
+  </div>
+</section>
 
       <section className="areasServed"><p className="eyebrow dark">Areas Served</p><h2>Helping Clients Across North Texas</h2><div className="areaGrid">{['Frisco','Plano','McKinney','Little Elm','Aubrey','Melissa','Prosper','Celina','Allen','Arlington'].map((city) => <div className="areaPill" key={city}>{city}</div>)}</div></section>
 
