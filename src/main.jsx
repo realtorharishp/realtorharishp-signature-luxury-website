@@ -1429,7 +1429,9 @@ function ChatbaseWidget() {
 function CityPage({ city }) {
   React.useEffect(() => {
   document.title = `${city.title} | Realtor Harish`
-
+  const cityListings = listings.filter((listing) =>
+  listing.city.toLowerCase().includes(city.city.toLowerCase())
+)
   const metaDescription = document.querySelector(
     'meta[name="description"]'
   )
@@ -1478,6 +1480,40 @@ function CityPage({ city }) {
       looking to live in North Texas.
     </p>
       </section>
+
+      <section className="section light">
+  <p className="eyebrow dark">{city.city} Listings</p>
+
+  <h2>Featured Properties in {city.city}</h2>
+
+  <div className="propertyGrid">
+    {cityListings.map((p) => (
+      <article className="propertyCard" key={p.number}>
+        <div className="imageWrap">
+          <img src={p.image} alt={`${p.title}, ${p.city}`} />
+          <div className="numberBadge">{p.number}</div>
+          <div className="statusBadge">{p.status}</div>
+        </div>
+
+        <div className="propertyBody">
+          <p className="propertyPrice">{p.price}</p>
+          <h3>{p.title}</h3>
+          <p className="propertyCity">{p.city}</p>
+
+          <div className="facts">
+            {p.facts.map((fact) => (
+              <span key={fact}>{fact}</span>
+            ))}
+          </div>
+
+          <a className="propertyButton" href={p.link}>
+            View Details
+          </a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
       <section className="section">
   <p className="eyebrow dark">Services</p>
 
