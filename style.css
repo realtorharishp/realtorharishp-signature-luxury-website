@@ -948,3 +948,217 @@ footer p {
     border-right: 1px solid rgba(0,0,0,.2);
   }
 }
+.cityLinksSection {
+  padding: 90px 7%;
+  background: linear-gradient(135deg,#fbfaf7,#ffffff);
+  text-align: center;
+}
+
+.cityLinksSection h2 {
+  font-size: clamp(36px,5vw,58px);
+  margin: 12px auto 50px;
+}
+
+.cityLinksSection .areaPill {
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btnGold,
+  .btnOutline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .agent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featuredListingInner {
+    grid-template-columns: 1fr;
+  }
+
+  .propertyGrid,
+  .services,
+  .whyGrid,
+  .businessGrid,
+  .activityGrid,
+  .standoutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsBar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 30px 20px;
+  }
+
+  .listingHeroContent h1 {
+    font-size: 42px;
+  }
+
+  .listingSection,
+  .section,
+  .contact,
+  .about,
+  .areasServed,
+  .recommendedBusinesses,
+  .marketActivity {
+    padding: 70px 20px;
+  }
+
+  .photoGallery {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonialCarousel {
+    padding: 35px 24px;
+  }
+
+  .testimonialCarousel p {
+    font-size: 18px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+
+
+
+  .mobileSticky {
+    display: flex;
+  }
+
+  .listingPrice {
+    font-size: 32px;
+  }
+
+  .featuredOverlay h2 {
+    font-size: 32px;
+  }
+
+  .areaGrid {
+    justify-content: center;
+  }
+
+  .partnerLogo {
+    max-width: 140px;
+  }
+
+  .carousel img {
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .floatingSocialBar {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+
+  .topSocials {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .topSocials a {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .navbar {
+    padding: 16px 18px;
+  }
+
+  .brand img {
+    max-width: 120px;
+  }
+}
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 16px 18px;
+  }
+
+  .brand img {
+    max-width: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .floatingSocialBar {
+    display: none !important;
+  }
+
+  .navbar {
+    padding: 14px 16px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .navbar > div {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  .navbar .socialIcons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .navbar .socialIcons a {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    font-size: 13px !important;
+  }
+
+  .callButton {
+    display: none !important;
+  }
+
+  .brand img {
+    width: 115px !important;
+    height: auto !important;
+  }
+}

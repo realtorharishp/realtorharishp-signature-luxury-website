@@ -5,6 +5,7 @@ import { listings } from './data/listings'
 import { marketSections } from './data/marketActivity'
 import { partners } from './data/partners'
 import { testimonials } from './data/testimonials'
+import { cities } from './data/cities'
 
 const storyImages = Array.from(
   { length: 20 },
@@ -377,6 +378,33 @@ function ListingPage() {
         </div>
       </section>
 
+      <section className="leadMagnet">
+  <h2>Get Free North Texas Home Updates</h2>
+
+  <p>
+    Receive new listings, market updates, investment opportunities,
+    and open house alerts directly from Harish Patel.
+  </p>
+
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input
+      type="hidden"
+      name="access_key"
+      value="YOUR_KEY"
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter Your Email"
+      required
+    />
+
+    <button type="submit">
+      Subscribe
+    </button>
+  </form>
+</section>
       <section id="contact" className="contact">
         <p className="eyebrow">Contact Harish Patel</p>
         <h2>Interested in 14839 Story Lane?</h2>
@@ -1398,6 +1426,158 @@ function ChatbaseWidget() {
   return null
 }
 
+function CityPage({ city }) {
+  const cityListings = listings.filter((listing) =>
+    listing.city.toLowerCase().includes(city.city.toLowerCase())
+  )
+
+  React.useEffect(() => {
+    document.title = `${city.title} | Realtor Harish`
+
+    const metaDescription = document.querySelector(
+      'meta[name="description"]'
+    )
+
+    if (metaDescription) {
+      metaDescription.setAttribute('content', city.description)
+    }
+  }, [city])
+  return (
+    <div>
+      <Header />
+
+      <section className="listingPageHero">
+        <div className="listingHeroContent">
+          <a href="/" className="backLink">← Back Home</a>
+          <p className="eyebrow">North Texas Real Estate</p>
+          <h1>{city.title}</h1>
+          <p>{city.description}</p>
+
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Contact Harish</a>
+            <a href="tel:9725520158" className="btnOutline">Call 972-552-0158</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Real Estate Services in {city.city}</h2>
+        <p className="listingDescription">
+          Harish Patel helps clients buy, sell, lease, and invest in {city.city}
+          and surrounding North Texas communities with local market expertise,
+          premium marketing, and professional guidance.
+        </p>
+        <h2>Why Buyers Love {city.city}</h2>
+
+      <p className="listingDescription">
+      {city.city} offers strong schools, beautiful communities,
+      convenient access to shopping and dining, and excellent
+      opportunities for families, professionals, and investors
+      looking to live in North Texas.
+    </p>
+      </section>
+
+      <section className="section light">
+  <p className="eyebrow dark">{city.city} Listings</p>
+
+  <h2>Featured Properties in {city.city}</h2>
+
+  <div className="propertyGrid">
+    {cityListings.map((p) => (
+      <article className="propertyCard" key={p.number}>
+        <div className="imageWrap">
+          <img src={p.image} alt={`${p.title}, ${p.city}`} />
+          <div className="numberBadge">{p.number}</div>
+          <div className="statusBadge">{p.status}</div>
+        </div>
+
+        <div className="propertyBody">
+          <p className="propertyPrice">{p.price}</p>
+          <h3>{p.title}</h3>
+          <p className="propertyCity">{p.city}</p>
+
+          <div className="facts">
+            {p.facts.map((fact) => (
+              <span key={fact}>{fact}</span>
+            ))}
+          </div>
+
+          <a className="propertyButton" href={p.link}>
+            View Details
+          </a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+      <section className="section">
+  <p className="eyebrow dark">Services</p>
+
+  <h2>
+    Real Estate Services in {city.city}
+  </h2>
+
+  <div className="services">
+    {[
+      [
+        'Buy',
+        `Find homes and luxury properties in ${city.city} with expert local guidance.`
+      ],
+
+      [
+        'Sell',
+        `Professional marketing and pricing strategies for homeowners in ${city.city}.`
+      ],
+
+      [
+        'Lease',
+        `Helping landlords and tenants with lease homes throughout ${city.city}.`
+      ],
+
+      [
+        'Invest',
+        `Identify rental and investment opportunities in ${city.city} and North Texas.`
+      ],
+
+      [
+        'Relocate',
+        `Helping families and professionals relocate smoothly to ${city.city}.`
+      ]
+    ].map(([title, desc]) => (
+      <div className="service" key={title}>
+        <div className="icon"></div>
+
+        <h3>{title}</h3>
+
+        <p>{desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Looking for Real Estate Help in {city.city}?</h2>
+        <p>Submit your information and Harish will follow up with you.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">
+          100 N Central Expwy, Suite #913, Richardson, TX 75080
+        </p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+
+      <FloatingSocialBar />
+      <FloatingButtons />
+      <ChatbaseWidget />
+    </div>
+  )
+}
 
 function HomePage() {
  
@@ -1467,6 +1647,22 @@ function HomePage() {
       <section className="whyWork"><p className="eyebrow dark">Why Work With Harish</p><h2>Local Expertise. Premium Marketing. Client-First Service.</h2><div className="whyGrid"><div><h3>Market Expertise</h3><p>Guidance backed by North Texas market knowledge and pricing strategy.</p></div><div><h3>Data-Driven Advice</h3><p>Smart decisions supported by real market numbers and analysis.</p></div><div><h3>Residential & Leasing</h3><p>Experience helping buyers, sellers, landlords, tenants, and investors.</p></div><div><h3>Premium Marketing</h3><p>Luxury flyers, social media campaigns, listing exposure, and branded presentation.</p></div><div><h3>Investor Guidance</h3><p>Support for rental income, lease strategy, and long-term investment goals.</p></div><div><h3>Relationship First</h3><p>Patient, responsive, and personal guidance from start to closing.</p></div></div></section>
 
       <TestimonialsCarousel />
+      <section className="cityLinksSection">
+  <p className="eyebrow dark">Local Real Estate</p>
+  <h2>Explore North Texas City Pages</h2>
+
+  <div className="areaGrid">
+    {cities.map((city) => (
+      <a
+        href={`/cities/${city.slug}`}
+        className="areaPill"
+        key={city.slug}
+      >
+        {city.city}
+      </a>
+    ))}
+  </div>
+</section>
 
       <section className="areasServed"><p className="eyebrow dark">Areas Served</p><h2>Helping Clients Across North Texas</h2><div className="areaGrid">{['Frisco','Plano','McKinney','Little Elm','Aubrey','Melissa','Prosper','Celina','Allen','Arlington'].map((city) => <div className="areaPill" key={city}>{city}</div>)}</div></section>
 
@@ -1498,9 +1694,14 @@ function HomePage() {
 }
 
 function App() {
-   const path = window.location.pathname
+  const path = window.location.pathname
   const dynamicListing = listings.find((listing) => listing.link === path)
+  const citySlug = window.location.pathname.replace('/cities/', '')
+  const cityPage = cities.find((city) => city.slug === citySlug)
 
+if (window.location.pathname.startsWith('/cities/') && cityPage) {
+  return <CityPage city={cityPage} />
+}
   if (window.location.pathname === '/listings/14839-story-lane') {
     return <ListingPage />
   }
