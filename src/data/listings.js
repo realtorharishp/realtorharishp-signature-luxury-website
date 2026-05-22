@@ -137,7 +137,7 @@ export const listings = [
     image: '/listings/400-stonebrook-301/stone-1.jpg',
      gallery: Array.from(
     { length: 15 },
-    (_, i) => `/listings//400-stonebrook-301/stone-${i + 1}.jpg`
+    (_, i) => `/listings/400-stonebrook-301/stone-${i + 1}.jpg`
   ),
     facts: ['4 Offices', '1 Bath', '1,225 Sq Ft', 'Suite #301'],
     link: '/listings/400-stonebrook-301'
