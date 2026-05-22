@@ -14,21 +14,21 @@ export const marketSections = [
           city: 'Frisco, TX, 75035',
           price: '$923,631',
           image: '/listings/14839-story-lane/story-1.jpg',
-          status: 'Open House • Saturday 23rd May, 2026 between 2PM–5PM'
+          status: 'Open House • Saturday 30th May, 2026 between 2PM–5PM'
         },
         {
           address: '9650 Amberwoods Lane',
           city: 'Frisco, TX, 75035',
           price: '$549,999',
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',
-          status: 'Open House • Sunday 24th May, 2026 between 2PM–5PM'
+          status: 'Open House • Sunday 31st May, 2026 between 2PM–5PM'
         },
         {
           address: '1312 Arrowwood Drive',
           city: 'Aubrey, Texas 76227',
           price: '$549,999',
           image: '/listings/arrow/arrow-1.jpg',
-          status: 'Open House • Sunday 17th May, 2026 between 2PM–4PM'
+          status: 'Open House • Sunday 24th May, 2026 between 1PM–3PM'
         }
       ]
   },
@@ -51,10 +51,17 @@ export const marketSections = [
           status: 'Under Contract'
         },
         {
-          address: '4433 Ginger Road',
-          city: 'Prosper, TX',
-          price: '$670,000',
+          address: '717 Dotty Drive',
+          city: 'Mckinney, TX',
+          price: '$370,000',
           image: '/listings/ginger.jpg',
+          status: 'Under Contract'
+        },
+      {
+          address: '615 Hemmingway Lane',
+          city: 'Mckinney, TX',
+          price: '$2,650',
+          image: '/listings/heemingway-1.jpg',
           status: 'Under Contract'
         }
       ]
@@ -76,7 +83,22 @@ export const marketSections = [
           price: '$3250',
           image: '/listings/valley.jpg',
           status: 'Sold'
+        },
+       {
+          address: '4433 Ginger Road',
+          city: 'Prosper, TX',
+          price: '$670,000',
+          image: '/listings/ginger.jpg',
+          status: 'Sold'
+        },
+       {
+          address: '1324 Rockwell Drive',
+          city: 'Little Elm, TX, 75068',
+          price: '$2,530',
+          image: '/listings/1324-rockwell.jpg',
+          status: 'Sold'
         }
+       
       ]
   }
 ]
