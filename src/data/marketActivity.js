@@ -63,7 +63,7 @@ export const marketSections = [
           address: '615 Hemmingway Lane',
           city: 'Mckinney, TX',
           price: '$2,650',
-          image: '/listings/heemingway-1.jpg',
+          image: '/listings/615-hemmingway-lane/hemmingway-1.jpg',
           status: 'Under Contract'
         }
       ]
@@ -97,7 +97,7 @@ export const marketSections = [
           address: '1324 Rockwell Drive',
           city: 'Little Elm, TX, 75068',
           price: '$2,530',
-          image: '/listings/1324-rockwell.jpg',
+          image: '/listings/1324-rockwell/rockwell.jpg',
           status: 'Sold'
         }
        
