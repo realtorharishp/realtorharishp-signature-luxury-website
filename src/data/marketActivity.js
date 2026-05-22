@@ -56,7 +56,7 @@ export const marketSections = [
           address: '717 Dotty Drive',
           city: 'Mckinney, TX',
           price: '$370,000',
-          image: '/listings/ginger.jpg',
+          image: '/listings/717-dotty/717-dotty.jpg',
           status: 'Under Contract'
         },
       {
