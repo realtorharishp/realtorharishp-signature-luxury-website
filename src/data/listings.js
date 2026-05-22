@@ -40,9 +40,10 @@ export const listings = [
     price: '$429,999',
     image: '/listings/400-stonebrook-303/stonebrook-1.jpg',
     facts: ['4 Offices', '1 Bath', '1,225 Sq Ft', 'Suite #303'],
-    link: '/listings/400-stonebrook'
+    link: '/listings/400-stonebrook-303'
   },
 
+  
   {
     slug: '2900-galveston',
     status: 'Residential Lease',
@@ -126,6 +127,22 @@ export const listings = [
   facts: ['4 Bed', '3.5 Bath', '3,106 Sq Ft', 'Built 2021'],
   link: '/listings/arrow'
 },
+
+   {
+   slug: '400-stonebrook-301',
+    status: 'Commercial Lease',
+    title: '400 Stonebrook Pkwy #301',
+    city: 'Frisco, TX',
+    price: '$3,299',
+    image: '/listings/400-stonebrook-301/stone-1.jpg',
+     gallery: Array.from(
+    { length: 15 },
+    (_, i) => `/listings//400-stonebrook-301/stone-${i + 1}.jpg`
+  ),
+    facts: ['4 Offices', '1 Bath', '1,225 Sq Ft', 'Suite #301'],
+    link: '/listings/400-stonebrook-301'
+  },
+  
   {
   slug: 'washington',
   status: 'Residential lease',
