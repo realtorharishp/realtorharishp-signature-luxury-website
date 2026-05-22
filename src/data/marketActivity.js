@@ -2,13 +2,14 @@ export const marketSections = [
   {
     title: 'Upcoming Open Houses',
     items: [
-      {
-          address: '12820 Cooper River Trail',
-          city: 'Frisco, TX 75035',
-          price: '$865,000',
-          image: '/cooper-river.jpg',
-          status: 'Open House • Sunday 17th May, 2026 between 2PM–4PM'
-        },  
+        {
+          address: '1312 Arrowwood Drive',
+          city: 'Aubrey, Texas 76227',
+          price: '$549,999',
+          image: '/listings/arrow/arrow-1.jpg',
+          status: 'Open House • Sunday 24th May, 2026 between 1PM–3PM'
+        }, 
+     
       {
           address: '14839 Story Lane',
           city: 'Frisco, TX, 75035',
@@ -23,13 +24,14 @@ export const marketSections = [
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',
           status: 'Open House • Sunday 31st May, 2026 between 2PM–5PM'
         },
-        {
-          address: '1312 Arrowwood Drive',
-          city: 'Aubrey, Texas 76227',
-          price: '$549,999',
-          image: '/listings/arrow/arrow-1.jpg',
-          status: 'Open House • Sunday 24th May, 2026 between 1PM–3PM'
-        }
+       
+       {
+          address: '12820 Cooper River Trail',
+          city: 'Frisco, TX 75035',
+          price: '$865,000',
+          image: '/cooper-river.jpg',
+          status: 'Open House • Sunday 30th May, 2026 between 2PM–4PM'
+        }  
       ]
   },
 
@@ -61,7 +63,7 @@ export const marketSections = [
           address: '615 Hemmingway Lane',
           city: 'Mckinney, TX',
           price: '$2,650',
-          image: '/listings/heemingway-1.jpg',
+          image: '/listings/615-hemmingway-lane/hemmingway-1.jpg',
           status: 'Under Contract'
         }
       ]
@@ -95,7 +97,7 @@ export const marketSections = [
           address: '1324 Rockwell Drive',
           city: 'Little Elm, TX, 75068',
           price: '$2,530',
-          image: '/listings/1324-rockwell.jpg',
+          image: '/listings/1324-rockwell/rockwell.jpg',
           status: 'Sold'
         }
        
