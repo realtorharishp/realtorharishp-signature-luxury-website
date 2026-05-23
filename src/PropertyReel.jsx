@@ -279,6 +279,7 @@ export default function PropertyReel({
   sqft,
   built,
   listingUrl,
+  tourUrl = 'https://calendly.com/realtor-harishp/30min',
   phone = '972-552-0158',
   roomLabels = [],
   slideTitles = [],
@@ -435,6 +436,7 @@ export default function PropertyReel({
               {built && <div className="preel-stat"><strong>{built}</strong>Built</div>}
             </div>
             <div className="preel-btns">
+              <a className="preel-btn-gold" href={tourUrl} target="_blank" rel="noopener noreferrer">Schedule Tour</a>
               <a className="preel-btn-gold" href={`tel:${phone.replace(/\D/g,'')}`}>Call {phone}</a>
               {listingUrl && <a className="preel-btn-out" href={listingUrl}>View Listing</a>}
             </div>
