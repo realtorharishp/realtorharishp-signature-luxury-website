@@ -6,6 +6,7 @@ import { marketSections } from './data/marketActivity'
 import { partners } from './data/partners'
 import { testimonials } from './data/testimonials'
 import { cities } from './data/cities'
+import PropertyReel from './PropertyReel'
 
 const storyImages = Array.from(
   { length: 20 },
