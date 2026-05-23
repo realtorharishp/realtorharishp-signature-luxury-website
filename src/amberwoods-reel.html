@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9650 Amberwoods Lane – Property Reel | REKonnection</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #000;
+      font-family: Georgia, serif;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      user-select: none;
+    }
+
+    .reel {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    /* ── Slides ── */
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1.4s ease-in-out;
+      z-index: 1;
+    }
+    .slide.active { opacity: 1; z-index: 2; }
+
+    .slide img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.08);
+    }
+    .slide.active img { animation: kb-in 6s ease-out forwards; }
+    .slide.active.alt img { animation: kb-alt 6s ease-out forwards; }
+
+    @keyframes kb-in {
+      0%   { transform: scale(1.08) translate(1.5%, 0.8%); }
+      100% { transform: scale(1)    translate(0%,   0%); }
+    }
+    @keyframes kb-alt {
+      0%   { transform: scale(1.08) translate(-1.5%, -0.8%); }
+      100% { transform: scale(1)    translate(0%,    0%); }
+    }
+
+    /* ── Gradient overlay ── */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom,
+          rgba(0,0,0,0.45) 0%,
+          rgba(0,0,0,0)    30%,
+          rgba(0,0,0,0)    55%,
+          rgba(0,0,0,0.82) 100%);
+      z-index: 3;
+    }
+
+    /* ── Gold progress bar ── */
+    #progress {
+      position: absolute;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: #d4af37;
+      z-index: 30;
+      transition: none;
+    }
+    #progress.running { transition: width linear; }
+
+    /* ── Top bar ── */
+    .top-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      padding: 22px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    .brand-name {
+      color: #d4af37;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+    }
+    .brand-sub {
+      color: rgba(255,255,255,0.6);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+      margin-top: 3px;
+    }
+    .slide-counter {
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ── Bottom info panel ── */
+    .bottom-info {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 28px 40px 44px;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      pointer-events: none;
+    }
+    .room-label {
+      color: #d4af37;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+      margin-bottom: 8px;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.7s ease 0.5s, transform 0.7s ease 0.5s;
+    }
+    .slide-title {
+      color: #fff;
+      font-size: 30px;
+      font-weight: normal;
+      line-height: 1.25;
+      max-width: 560px;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.8s ease 0.7s, transform 0.8s ease 0.7s;
+    }
+    .property-info {
+      text-align: right;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.7s ease 0.9s, transform 0.7s ease 0.9s;
+    }
+    .slide.active .room-label,
+    .slide.active .slide-title,
+    .slide.active .property-info { opacity: 1; transform: translateY(0); }
+
+    .prop-addr { color: #fff; font-size: 15px; font-family: Arial, sans-serif; font-weight: 700; }
+    .prop-city { color: rgba(255,255,255,0.65); font-size: 12px; font-family: Arial, sans-serif; margin-top: 2px; }
+    .prop-price { color: #d4af37; font-size: 22px; font-family: Arial, sans-serif; font-weight: 700; margin-top: 6px; }
+
+    /* ── Navigation arrows ── */
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.28);
+      border: 1px solid rgba(212,175,55,0.45);
+      color: #d4af37;
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 26px;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 15;
+      transition: background 0.3s, border-color 0.3s;
+      line-height: 1;
+    }
+    .nav-btn:hover { background: rgba(212,175,55,0.28); border-color: rgba(212,175,55,0.9); }
+    .nav-btn.left  { left: 22px; }
+    .nav-btn.right { right: 22px; }
+
+    /* ── Dot navigation ── */
+    .dots {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 15;
+    }
+    .dot {
+      width: 6px; height: 6px;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      border: none;
+      transition: all 0.35s ease;
+    }
+    .dot.active { background: #d4af37; width: 22px; }
+
+    /* ── Pause indicator ── */
+    #pause-icon {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(255,255,255,0.75);
+      font-size: 64px;
+      z-index: 20;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    #pause-icon.show { opacity: 1; }
+
+    /* ── CTA Finale ── */
+    #cta {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 8;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1.2s ease;
+    }
+    #cta.show { opacity: 1; pointer-events: auto; }
+    .cta-box {
+      background: rgba(0,0,0,0.78);
+      border: 1px solid rgba(212,175,55,0.55);
+      padding: 44px 64px;
+      text-align: center;
+      max-width: 520px;
+    }
+    .cta-eyebrow {
+      color: #d4af37;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+      margin-bottom: 14px;
+    }
+    .cta-heading { color: #fff; font-size: 34px; margin-bottom: 6px; }
+    .cta-sub { color: rgba(255,255,255,0.6); font-size: 13px; font-family: Arial, sans-serif; margin-bottom: 6px; }
+    .cta-price { color: #d4af37; font-size: 26px; font-family: Arial, sans-serif; font-weight: 700; margin-bottom: 26px; }
+    .cta-stats {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    .cta-stat { color: rgba(255,255,255,0.7); font-size: 12px; font-family: Arial, sans-serif; }
+    .cta-stat strong { display: block; color: #fff; font-size: 18px; font-family: Arial, sans-serif; }
+    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      display: inline-block;
+      background: #d4af37;
+      color: #000;
+      padding: 13px 28px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: #d4af37;
+      border: 1px solid #d4af37;
+      padding: 13px 28px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .replay-btn {
+      display: block;
+      margin: 18px auto 0;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.45);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
+    .replay-btn:hover { color: rgba(255,255,255,0.8); }
+
+    /* ── Keyboard hint ── */
+    .key-hint {
+      position: absolute;
+      bottom: 44px;
+      right: 36px;
+      color: rgba(255,255,255,0.3);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      font-family: Arial, sans-serif;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+<div class="reel" id="reel">
+
+  <div id="progress"></div>
+
+  <div class="top-bar">
+    <div>
+      <div class="brand-name">REKonnection Real Estate</div>
+      <div class="brand-sub">Harish Patel · Realtor® · 972-552-0158</div>
+    </div>
+    <div class="slide-counter" id="counter">01 / 15</div>
+  </div>
+
+  <div id="slides-wrap"></div>
+  <div class="dots" id="dots"></div>
+
+  <button class="nav-btn left"  id="prev" aria-label="Previous">&#8249;</button>
+  <button class="nav-btn right" id="next" aria-label="Next">&#8250;</button>
+
+  <div id="pause-icon">&#10074;&#10074;</div>
+
+  <div id="cta">
+    <div class="cta-box">
+      <p class="cta-eyebrow">Featured Listing</p>
+      <h2 class="cta-heading">9650 Amberwoods Lane</h2>
+      <p class="cta-sub">Frisco, TX 75035 · Office + Media Room</p>
+      <p class="cta-price">$549,999</p>
+      <div class="cta-stats">
+        <div class="cta-stat"><strong>3</strong>Beds</div>
+        <div class="cta-stat"><strong>2.5</strong>Baths</div>
+        <div class="cta-stat"><strong>2,593</strong>Sq Ft</div>
+        <div class="cta-stat"><strong>2013</strong>Built</div>
+      </div>
+      <div class="cta-buttons">
+        <a class="btn-gold" href="tel:9725520158">Call 972-552-0158</a>
+        <a class="btn-outline" href="https://www.realtorharish.com/listings/9650-amberwoods-lane">View Listing</a>
+      </div>
+      <button class="replay-btn" id="replay">&#8635; Watch Again</button>
+    </div>
+  </div>
+
+  <div class="key-hint">← → arrows · space to pause</div>
+</div>
+
+<script>
+const BASE = 'https://www.realtorharish.com'
+const SLIDES = [
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-1.jpg',  room: 'Exterior',       title: 'Stunning Stone & Brick Elevation' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-2.jpg',  room: 'Office',          title: 'Private Study with French Doors' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-3.jpg',  room: 'Entry',           title: 'Grand Two-Story Entry Foyer' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-4.jpg',  room: 'Dining',          title: 'Sunlit Breakfast Nook' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-5.jpg',  room: 'Kitchen',         title: 'Gourmet Kitchen with Granite Island' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-6.jpg',  room: 'Kitchen',         title: 'Custom Cabinetry & Stainless Appliances' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-7.jpg',  room: 'Kitchen',         title: 'Gas Cooktop & Travertine Backsplash' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-8.jpg',  room: 'Kitchen',         title: 'Open Concept Kitchen & Living' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-9.jpg',  room: 'Family Room',     title: 'Floor-to-Ceiling Stone Fireplace' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-10.jpg', room: 'Family Room',     title: 'Expansive Open Floor Plan' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-11.jpg', room: 'Family Room',     title: 'Warm Stone Fireplace & Natural Light' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-12.jpg', room: 'Family Room',     title: 'Spacious Living Area' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-13.jpg', room: 'Formal Living',   title: 'Elegant Formal Living Room' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-14.jpg', room: 'Staircase',       title: 'Wrought Iron Baluster Staircase' },
+  { src: BASE+'/listings/9650-amberwoods-lane/amber-15.jpg', room: 'Exterior',        title: 'Beautiful Curb Appeal' },
+]
+
+const DURATION   = 4800   // ms per slide
+const FADE_SECS  = 1.4    // css transition duration in s
+
+let current  = 0
+let paused   = false
+let timer    = null
+let ctaShown = false
+
+const wrap     = document.getElementById('slides-wrap')
+const dotsEl   = document.getElementById('dots')
+const counterEl= document.getElementById('counter')
+const progEl   = document.getElementById('progress')
+const pauseEl  = document.getElementById('pause-icon')
+const ctaEl    = document.getElementById('cta')
+
+/* ── Build slides ── */
+SLIDES.forEach((s, i) => {
+  const div = document.createElement('div')
+  div.className = 'slide' + (i % 2 ? ' alt' : '') + (i === 0 ? ' active' : '')
+  div.innerHTML = `
+    <img src="${s.src}" alt="${s.room}" loading="${i < 4 ? 'eager' : 'lazy'}" />
+    <div class="overlay"></div>
+    <div class="bottom-info">
+      <div>
+        <div class="room-label">${s.room}</div>
+        <div class="slide-title">${s.title}</div>
+      </div>
+      <div class="property-info">
+        <div class="prop-addr">9650 Amberwoods Lane</div>
+        <div class="prop-city">Frisco, TX 75035</div>
+        <div class="prop-price">$549,999</div>
+      </div>
+    </div>`
+  wrap.appendChild(div)
+})
+
+/* ── Build dots ── */
+SLIDES.forEach((_, i) => {
+  const b = document.createElement('button')
+  b.className = 'dot' + (i === 0 ? ' active' : '')
+  b.setAttribute('aria-label', 'Go to slide ' + (i + 1))
+  b.onclick = e => { e.stopPropagation(); goTo(i) }
+  dotsEl.appendChild(b)
+})
+
+/* ── UI update ── */
+function updateUI() {
+  const all = wrap.querySelectorAll('.slide')
+  const dotAll = dotsEl.querySelectorAll('.dot')
+
+  all.forEach((el, i) => {
+    const base = 'slide' + (i % 2 ? ' alt' : '')
+    el.className = i === current ? base + ' active' : base
+  })
+  dotAll.forEach((el, i) => {
+    el.className = 'dot' + (i === current ? ' active' : '')
+  })
+  counterEl.textContent =
+    String(current + 1).padStart(2, '0') + ' / ' +
+    String(SLIDES.length).padStart(2, '0')
+
+  animateProgress()
+
+  if (current === SLIDES.length - 1 && !ctaShown) {
+    setTimeout(() => { ctaEl.classList.add('show'); ctaShown = true }, 2200)
+  } else if (current !== SLIDES.length - 1) {
+    ctaEl.classList.remove('show')
+    ctaShown = false
+  }
+}
+
+function animateProgress() {
+  progEl.classList.remove('running')
+  progEl.style.width = '0%'
+  void progEl.offsetWidth
+  progEl.style.transitionDuration = (DURATION / 1000) + 's'
+  progEl.classList.add('running')
+  progEl.style.width = '100%'
+}
+
+function goTo(idx) {
+  current = ((idx % SLIDES.length) + SLIDES.length) % SLIDES.length
+  updateUI()
+  resetTimer()
+}
+function next() { goTo(current + 1) }
+function prev() { goTo(current - 1) }
+
+function resetTimer() {
+  clearInterval(timer)
+  if (!paused) timer = setInterval(next, DURATION)
+}
+
+function togglePause() {
+  paused = !paused
+  if (paused) {
+    clearInterval(timer)
+    progEl.style.transitionDuration = '0s'
+    pauseEl.classList.add('show')
+  } else {
+    pauseEl.classList.remove('show')
+    next()
+    resetTimer()
+  }
+}
+
+/* ── Controls ── */
+document.getElementById('next').addEventListener('click', e => { e.stopPropagation(); next(); resetTimer() })
+document.getElementById('prev').addEventListener('click', e => { e.stopPropagation(); prev(); resetTimer() })
+document.getElementById('reel').addEventListener('click', e => {
+  if (e.target.closest('.nav-btn, .dot, #cta')) return
+  togglePause()
+})
+document.getElementById('replay').addEventListener('click', e => {
+  e.stopPropagation()
+  ctaEl.classList.remove('show')
+  ctaShown = false
+  paused = false
+  pauseEl.classList.remove('show')
+  goTo(0)
+})
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') { next(); resetTimer() }
+  if (e.key === 'ArrowLeft')  { prev(); resetTimer() }
+  if (e.key === ' ')          { e.preventDefault(); togglePause() }
+})
+
+/* ── Preload next image ── */
+wrap.querySelectorAll('.slide').forEach((_, i) => {
+  if (i >= 4) {
+    const img = new Image()
+    img.src = SLIDES[i].src
+  }
+})
+
+/* ── Start ── */
+updateUI()
+timer = setInterval(next, DURATION)
+</script>
+</body>
+</html>
