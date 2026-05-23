@@ -631,6 +631,8 @@ function ShetlandPage() {
           price="$318,000"
           beds="3" baths="2" sqft="1,792" built="2023"
           listingUrl="/listings/2935-shetland-drive"
+          roomLabels={['Exterior','Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Bedroom','Bedroom','Bathroom','Backyard','Park View']}
+          slideTitles={['Modern Park-Facing Elevation','Beautiful Curb Appeal','Bright Open Entry','Open Concept Living Room','Spacious Living Area','Modern Kitchen Finishes','Kitchen & Breakfast Bar','Sunlit Dining Area','Spacious Primary Suite','Primary Bathroom','Secondary Bedroom','Guest Bedroom','Full Bathroom','Huge Private Backyard','Stunning Park Views']}
         />
       </section>
 
@@ -720,6 +722,8 @@ function StonebrookPage() {
           city="Frisco, TX • Office Suite"
           price="$429,999"
           listingUrl="/listings/400-stonebrook"
+          roomLabels={['Building','Building','Suite Entry','Reception','Reception','Office 1','Office 2','Office 3','Office 4','Restroom','Hallway','Common Area','Common Area','Parking','Building']}
+          slideTitles={['Professional Class A Building','Prime Frisco Location','Suite #303 Entry','Welcoming Reception Area','Open Reception & Waiting','Private Office 1','Private Office 2','Private Office 3','Private Office 4','Dedicated Restroom','Suite Hallway','Shared Common Area','Breakroom & Common Space','Ample Parking Available','Stonebrook Pkwy Frontage']}
         />
       </section>
 
@@ -813,6 +817,8 @@ function GalvestonPage() {
           price="$2,799 / Month"
           beds="3" baths="2.5" sqft="1,870" built="2018"
           listingUrl="/listings/2900-galveston"
+          roomLabels={['Exterior','Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Dining','Primary Suite','Primary Suite','Primary Bath','Bedroom','Bedroom','Bathroom','Backyard']}
+          slideTitles={['Luxury Plano Exterior','Beautiful Street Presence','Welcoming Entry','Bright Open Living Room','Spacious Living Area','Modern Gourmet Kitchen','Kitchen & Breakfast Bar','Dining Area','Elegant Primary Suite','Primary Suite Sitting Area','Spa-Style Primary Bath','Secondary Bedroom','Guest Bedroom','Full Bathroom','Private Backyard']}
         />
       </section>
 
@@ -911,6 +917,8 @@ function VillageWoodPage() {
           price="$2,850 / Month"
           beds="4" baths="2.5" sqft="2,336" built="1987"
           listingUrl="/listings/1009-village-wood-ct"
+          roomLabels={['Exterior','Exterior','Entry','Formal Living','Dining Room','Family Room','Family Room','Kitchen','Kitchen','Primary Suite','Primary Bath','Bedroom','Bedroom','Bedroom','Backyard']}
+          slideTitles={['Established Neighborhood Exterior','Mature Trees & Curb Appeal','Inviting Entry','Formal Living Room','Dedicated Dining Room','Spacious Family Room','Open Family Living','Updated Kitchen','Kitchen & Breakfast Bar','Generous Primary Suite','Primary Bathroom','Bedroom Two','Bedroom Three','Bedroom Four','Private Backyard']}
         />
       </section>
 
@@ -1012,6 +1020,8 @@ function HemmingwayPage() {
           price="$2,239 / Month"
           beds="4" baths="2" sqft="1,605" built="2024"
           listingUrl="/listings/615-hemmingway-lane"
+          roomLabels={['Exterior','Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Bedroom','Bedroom','Bedroom','Bathroom','Backyard']}
+          slideTitles={['Brand New 2024 Construction','Modern Exterior & Landscaping','Open Bright Entry','Open Concept Living Room','Spacious Living Area','Sleek Modern Kitchen','Kitchen Island & Finishes','Dining Area','Primary Suite','Primary Bathroom','Bedroom Two','Bedroom Three','Bedroom Four','Full Bathroom','Private Backyard']}
         />
       </section>
 
@@ -1110,6 +1120,8 @@ function SilverweedPage() {
           price="$379,999"
           beds="3" baths="2.5" sqft="1,862" built="2024"
           listingUrl="/listings/4414-silverweed-lane"
+          roomLabels={['Exterior','Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Bedroom','Bedroom','Bathroom','Backyard','Community']}
+          slideTitles={['New Construction Investor Home','Modern Curb Appeal','Bright Open Entry','Open Concept Living','Spacious Living Room','Modern Gourmet Kitchen','Kitchen Island & Finishes','Dining Area','Primary Suite','Primary Bathroom','Secondary Bedroom','Guest Bedroom','Full Bathroom','Huge Backyard — Investor Upside','Growing Melissa Community']}
         />
       </section>
 
@@ -1199,6 +1211,8 @@ function PurtisCreekPage() {
           price="$3,099 / Month"
           beds="5" baths="3" sqft="2,212"
           listingUrl="/listings/1874-purtis-creek"
+          roomLabels={['Exterior','Entry','Living Room','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Bedroom','Bedroom','Backyard']}
+          slideTitles={['Spacious Forney Home','Welcoming Entry','Open Concept Living Room','Modern Kitchen','Kitchen Island & Finishes','Dining Area','Primary Suite','Primary Bathroom','Secondary Bedroom','Additional Bedroom','Private Backyard']}
         />
       </section>
 
