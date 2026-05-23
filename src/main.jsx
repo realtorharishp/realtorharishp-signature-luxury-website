@@ -6,6 +6,7 @@ import { marketSections } from './data/marketActivity'
 import { partners } from './data/partners'
 import { testimonials } from './data/testimonials'
 import { cities } from './data/cities'
+import PropertyReel from './PropertyReel'
 
 const storyImages = Array.from(
   { length: 20 },
@@ -357,7 +358,16 @@ function ListingPage() {
 
       <section className="listingSection alt">
         <h2>Photo Gallery</h2>
-       <ImageCarousel images={storyImages} title="14839 Story Lane" />
+        <PropertyReel
+          images={storyImages}
+          address="14839 Story Lane"
+          city="Frisco, TX 75035"
+          price="$923,631"
+          beds="4" baths="3.5" sqft="3,593" built="2011"
+          listingUrl="/listings/14839-story-lane"
+          roomLabels={['Exterior','Exterior','Entry','Office','Kitchen','Kitchen','Kitchen','Dining','Family Room','Family Room','Primary Suite','Primary Bath','Primary Bath','Bedroom','Bedroom','Game Room','Media Room','Backyard','Backyard','Community']}
+          slideTitles={['Stunning Stone Elevation','3-Car Garage & Curb Appeal','Grand Entry Foyer','Dedicated Home Office','Gourmet Kitchen with Double Ovens','Custom Maple Cabinetry','Granite Counters & Island','Sunlit Breakfast Nook','Family Room with Fireplace','Open Concept Living','Spacious Primary Suite','Luxury Primary Bath','Dual Vanity & Soaking Tub','Secondary Bedroom','Generous Bedroom Sizes','Upstairs Game Room','Private Media Room','Large 40-Foot Deep Backyard','Outdoor Living Space','Community Pool & Trails']}
+        />
       </section>
 
       <section className="listingSection">
@@ -509,15 +519,16 @@ function AmberwoodsPage() {
           and premium finishes throughout.
         </p>
 
-        <div className="photoGallery">
-          {amberImages.map((src, index) => (
-            <img
-              src={src}
-              alt={`Amberwoods photo ${index + 1}`}
-              key={src}
-            />
-          ))}
-        </div>
+        <PropertyReel
+          images={amberImages}
+          address="9650 Amberwoods Lane"
+          city="Frisco, TX 75035"
+          price="$549,999"
+          beds="3" baths="2.5" sqft="2,593" built="2013"
+          listingUrl="/listings/9650-amberwoods-lane"
+          roomLabels={['Exterior','Office','Entry','Dining','Kitchen','Kitchen','Kitchen','Kitchen','Family Room','Family Room','Family Room','Family Room','Formal Living','Staircase','Exterior']}
+          slideTitles={['Stunning Stone & Brick Elevation','Private Study with French Doors','Grand Two-Story Entry Foyer','Sunlit Breakfast Nook','Gourmet Kitchen with Granite Island','Custom Cabinetry & Stainless Appliances','Gas Cooktop & Travertine Backsplash','Open Concept Kitchen & Living','Floor-to-Ceiling Stone Fireplace','Expansive Open Floor Plan','Warm Stone Fireplace & Natural Light','Spacious Living Area','Elegant Formal Living Room','Wrought Iron Baluster Staircase','Beautiful Curb Appeal']}
+        />
       </section>
 
       <section id="contact" className="contact">
@@ -613,15 +624,14 @@ function ShetlandPage() {
           for entertaining and family living.
         </p>
 
-        <div className="photoGallery">
-          {shetlandImages.map((src, index) => (
-            <img
-              src={src}
-              alt={`Shetland photo ${index + 1}`}
-              key={src}
-            />
-          ))}
-        </div>
+        <PropertyReel
+          images={shetlandImages}
+          address="2935 Shetland Drive"
+          city="Aubrey, TX • Park Facing"
+          price="$318,000"
+          beds="3" baths="2" sqft="1,792" built="2023"
+          listingUrl="/listings/2935-shetland-drive"
+        />
       </section>
 
       <section id="contact" className="contact">
@@ -704,15 +714,13 @@ function StonebrookPage() {
           1 restroom, 1,225 square feet, and a dedicated reception area.
         </p>
 
-        <div className="photoGallery">
-          {stonebrookImages.map((src, index) => (
-            <img
-              src={src}
-              alt={`Stonebrook commercial suite photo ${index + 1}`}
-              key={src}
-            />
-          ))}
-        </div>
+        <PropertyReel
+          images={stonebrookImages}
+          address="400 Stonebrook Pkwy #303"
+          city="Frisco, TX • Office Suite"
+          price="$429,999"
+          listingUrl="/listings/400-stonebrook"
+        />
       </section>
 
       <section id="contact" className="contact">
@@ -798,15 +806,14 @@ function GalvestonPage() {
           living in a prime North Texas location.
         </p>
 
-        <div className="photoGallery">
-          {galvestonImages.map((src, index) => (
-            <img
-              src={src}
-              alt={`Galveston property photo ${index + 1}`}
-              key={src}
-            />
-          ))}
-        </div>
+        <PropertyReel
+          images={galvestonImages}
+          address="2900 Galveston Street"
+          city="Plano, TX 75075"
+          price="$2,799 / Month"
+          beds="3" baths="2.5" sqft="1,870" built="2018"
+          listingUrl="/listings/2900-galveston"
+        />
       </section>
 
       <section id="contact" className="contact">
@@ -897,15 +904,14 @@ function VillageWoodPage() {
           in a well-established neighborhood.
         </p>
 
-        <div className="photoGallery">
-          {villageImages.map((src, index) => (
-            <img
-              src={src}
-              alt={`Village Wood property photo ${index + 1}`}
-              key={src}
-            />
-          ))}
-        </div>
+        <PropertyReel
+          images={villageImages}
+          address="1009 Village Wood Ct"
+          city="Arlington, TX"
+          price="$2,850 / Month"
+          beds="4" baths="2.5" sqft="2,336" built="1987"
+          listingUrl="/listings/1009-village-wood-ct"
+        />
       </section>
 
       <section id="contact" className="contact">
@@ -999,15 +1005,14 @@ function HemmingwayPage() {
           and comfortable North Texas living.
         </p>
 
-        <div className="photoGallery">
-          {hemmingImages.map((src, index) => (
-            <img
-              src={src}
-              alt={`Hemmingway property photo ${index + 1}`}
-              key={src}
-            />
-          ))}
-        </div>
+        <PropertyReel
+          images={hemmingImages}
+          address="615 Hemmingway Lane"
+          city="McKinney, TX 75069"
+          price="$2,239 / Month"
+          beds="4" baths="2" sqft="1,605" built="2024"
+          listingUrl="/listings/615-hemmingway-lane"
+        />
       </section>
 
       <section id="contact" className="contact">
@@ -1098,15 +1103,14 @@ function SilverweedPage() {
           leased at approximately $2,676 per month.
         </p>
 
-        <div className="photoGallery">
-          {silverweedImages.map((src, index) => (
-            <img
-              src={src}
-              alt={`Silverweed property photo ${index + 1}`}
-              key={src}
-            />
-          ))}
-        </div>
+        <PropertyReel
+          images={silverweedImages}
+          address="4414 Silverweed Lane"
+          city="Melissa, TX 75454"
+          price="$379,999"
+          beds="3" baths="2.5" sqft="1,862" built="2024"
+          listingUrl="/listings/4414-silverweed-lane"
+        />
       </section>
 
       <section id="contact" className="contact">
@@ -1188,11 +1192,14 @@ function PurtisCreekPage() {
           comfortable living spaces, and a functional layout ideal for today’s lifestyle.
         </p>
 
-        <div className="photoGallery">
-          {purtisImages.map((src, index) => (
-            <img src={src} alt={`Purtis Creek photo ${index + 1}`} key={src} />
-          ))}
-        </div>
+        <PropertyReel
+          images={purtisImages}
+          address="1874 Purtis Creek"
+          city="Forney, TX 75126"
+          price="$3,099 / Month"
+          beds="5" baths="3" sqft="2,212"
+          listingUrl="/listings/1874-purtis-creek"
+        />
       </section>
 
       <section id="contact" className="contact">
@@ -1358,15 +1365,13 @@ function DynamicListingPage({ listing }) {
           and full property information.
         </p>
 
-        <div className="photoGallery">
-          {(listing.gallery || [listing.image]).map((src, index) => (
-            <img
-              src={src}
-              alt={`${listing.title} photo ${index + 1}`}
-              key={src}
-            />
-          ))}
-        </div>
+        <PropertyReel
+          images={listing.gallery || [listing.image]}
+          address={listing.title}
+          city={listing.city}
+          price={listing.price}
+          listingUrl={listing.link}
+        />
       </section>
 
       <section id="contact" className="contact">
