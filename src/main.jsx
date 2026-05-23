@@ -365,8 +365,8 @@ function ListingPage() {
           price="$923,631"
           beds="4" baths="3.5" sqft="3,593" built="2011"
           listingUrl="/listings/14839-story-lane"
-          roomLabels={['Exterior','Exterior','Entry','Office','Kitchen','Kitchen','Kitchen','Dining','Family Room','Family Room','Primary Suite','Primary Bath','Primary Bath','Bedroom','Bedroom','Game Room','Media Room','Backyard','Backyard','Community']}
-          slideTitles={['Stunning Stone Elevation','3-Car Garage & Curb Appeal','Grand Entry Foyer','Dedicated Home Office','Gourmet Kitchen with Double Ovens','Custom Maple Cabinetry','Granite Counters & Island','Sunlit Breakfast Nook','Family Room with Fireplace','Open Concept Living','Spacious Primary Suite','Luxury Primary Bath','Dual Vanity & Soaking Tub','Secondary Bedroom','Generous Bedroom Sizes','Upstairs Game Room','Private Media Room','Large 40-Foot Deep Backyard','Outdoor Living Space','Community Pool & Trails']}
+          roomLabels={['Primary Bath','Primary Suite','Primary Suite','Bathroom','Bedroom','Office','Entry','Breakfast Nook','Kitchen','Kitchen','Kitchen','Family Room','Family Room','Family Room','Family Room','Formal Living','Staircase','Exterior','Exterior','Exterior']}
+          slideTitles={['Spa-Style Primary Bath with Soaking Tub','Primary Suite with Vaulted Ceiling','Spacious Primary Suite with Bay Windows','Updated Secondary Bathroom','Comfortable Secondary Bedroom','Private Office with French Doors','Grand Two-Story Entry Foyer','Sunlit Breakfast Nook with Built-In Desk','Gourmet Kitchen with Granite Island','Gas Cooktop & Travertine Backsplash','Open Kitchen Layout','Stone Corner Fireplace','Open Concept Living & Kitchen','Family Room with Natural Light','Spacious Family Living Area','Formal Living Room','Elegant Staircase with Iron Balusters','Stone & Brick Elevation','3-Car Garage & Curb Appeal','Beautiful Street Presence']}
         />
       </section>
 
@@ -631,8 +631,8 @@ function ShetlandPage() {
           price="$318,000"
           beds="3" baths="2" sqft="1,792" built="2023"
           listingUrl="/listings/2935-shetland-drive"
-          roomLabels={['Exterior','Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Bedroom','Bedroom','Bathroom','Backyard','Park View']}
-          slideTitles={['Modern Park-Facing Elevation','Beautiful Curb Appeal','Bright Open Entry','Open Concept Living Room','Spacious Living Area','Modern Kitchen Finishes','Kitchen & Breakfast Bar','Sunlit Dining Area','Spacious Primary Suite','Primary Bathroom','Secondary Bedroom','Guest Bedroom','Full Bathroom','Huge Private Backyard','Stunning Park Views']}
+          roomLabels={['Living Room','Living Room','Living Room','Living Room','Entry','Kitchen','Kitchen','Kitchen','Kitchen & Living','Bedroom','Bathroom','Bedroom','Hallway','Exterior','Exterior']}
+          slideTitles={['Open Concept Living with Kitchen Views','Modern Linear Fireplace & Living Area','Wall-Mounted TV & Cozy Living Space','Spacious Living Area with Hardwood Floors','Entry Hall & Open Floor Plan','Gas Range & White Shaker Cabinets','Full Kitchen with Stainless Appliances','Kitchen Island with Sink','Open Concept Kitchen & Living','Comfortable Secondary Bedroom','Dual Vanity Bathroom with Tub','Bright Secondary Bedroom with Windows','Bedroom & Bath Wing','Brick Elevation with 2-Car Garage','Front Elevation & Curb Appeal']}
         />
       </section>
 
