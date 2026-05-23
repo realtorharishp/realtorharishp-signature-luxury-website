@@ -1155,7 +1155,7 @@ function SilverweedPage() {
     </div>
   )
 }
-function StonebrookPage() {
+function Stonebrook301Page() {
   const stonebrookImages = Array.from(
     { length: 17 },
     (_, i) => `/listings/400-stonebrook-pkwy/stonebrook-${i + 1}.jpg`
@@ -1864,7 +1864,7 @@ if (window.location.pathname.startsWith('/cities/') && cityPage) {
   }
 
   if (window.location.pathname === '/listings/400-stonebrook-pkwy') {
-    return <StonebrookPage />
+    return <Stonebrook301Page />
   }
  
 if (dynamicListing) {
