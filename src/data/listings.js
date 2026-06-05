@@ -21,7 +21,7 @@ export const listings = [
     { length: 15 },
     (_, i) => `/listings/stillwater/stillwater-${i + 1}.jpg`
   ),
-  facts: ['4 Bed', '3.5 Bath', '3,159 Sq Ft', 'Built 2016],
+  facts: ['4 Bed', '3.5 Bath', '3,159 Sq Ft', 'Built 2016'],
   link: '/listings/stillwater'
 },
 
