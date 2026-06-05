@@ -11,6 +11,22 @@ export const listings = [
   },
 
   {
+  slug: 'stillwater',
+  status: 'Residential Sale',
+  title: '6451 Still Water Court',
+  city: 'Midlothian, Texas 76065',
+  price: '$764,999',
+  image: '/listings/stillwater/stillwater-1.jpg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `/listings/stillwater/stillwater-${i + 1}.jpg`
+  ),
+  facts: ['4 Bed', '3.5 Bath', '3,159 Sq Ft', 'Built 2016],
+  link: '/listings/stillwater'
+},
+
+
+  {
     slug: '9650-amberwoods-lane',
     status: 'Residential Sale',
     title: '9650 Amberwoods Lane',
