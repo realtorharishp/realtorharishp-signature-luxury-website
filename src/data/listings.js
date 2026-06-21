@@ -29,7 +29,7 @@ export const listings = [
   slug: 'dotty',
   status: 'Residential Lease Or Sale',
   title: '717 Dotty Drive',
-  city: Mckinney, Texas 75071',
+  city: 'Mckinney, Texas 75071',
   price: '$3200',
   image: '/listings/dotty/dotty-1.jpg',
   gallery: Array.from(
@@ -40,6 +40,21 @@ export const listings = [
   link: 'listings/dotty/dotty'
 },
 
+ {
+  slug: 'alderton',
+  status: 'Residential Lease Or Sale',
+  title: '6007 Alderton drive',
+  city: 'Mckinney, Texas 75071',
+  price: '$3200',
+  image: '/listings/alderton/alderton-1.jpg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `listings/alderton/alderton-${i + 1}.jpg`
+  ),
+  facts: ['4 Bed', '2.5 Bath', '2,337 Sq Ft', 'Built 2026'],
+  link: 'listings/alderton/alderton'
+},
+  
 
   {
   slug: 'stillwater',
