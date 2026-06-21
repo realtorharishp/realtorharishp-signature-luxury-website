@@ -4,7 +4,7 @@ export const listings = [
     status: 'Residential Sale',
     title: '14839 Story Lane',
     city: 'Frisco, TX 75035',
-    price: '$923,631',
+    price: '$899,999',
     image: '/listings/14839-story-lane/story-1.jpg',
     facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011'],
     link: '/listings/14839-story-lane'
@@ -16,7 +16,6 @@ export const listings = [
   title: '2201 Peters Colony Drive',
   city: 'Little Elm, Texas 75036',
   price: '$599,999',
-  price: '$3291',
   image: '/listings/peters/peters-1.jpg',
   gallery: Array.from(
     { length: 15 },
