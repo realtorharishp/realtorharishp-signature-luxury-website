@@ -11,6 +11,38 @@ export const listings = [
   },
 
   {
+  slug: 'peters',
+  status: 'Residential Lease Or Sale',
+  title: '2201 Peters Colony Drive',
+  city: 'Little Elm, Texas 75036',
+  price: '$599,999',
+  price: '$3291',
+  image: '/listings/peters/peters-1.jpg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `/listings/peters/peters-${i + 1}.jpg`
+  ),
+  facts: ['4 Bed', '2.5 Bath', '3,108 Sq Ft', 'Built 2023'],
+  link: 'listings/peters/peters'
+},
+
+ {
+  slug: 'dotty',
+  status: 'Residential Lease Or Sale',
+  title: '717 Dotty Drive',
+  city: Mckinney, Texas 75071',
+  price: '$3200',
+  image: '/listings/dotty/dotty-1.jpg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `/listings/dotty/dotty-${i + 1}.jpg`
+  ),
+  facts: ['4 Bed', '2.5 Bath', '2,337 Sq Ft', 'Built 2026'],
+  link: 'listings/dotty/dotty'
+},
+
+
+  {
   slug: 'stillwater',
   status: 'Residential Sale',
   title: '6451 Still Water Court',
