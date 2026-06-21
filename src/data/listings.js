@@ -4,11 +4,57 @@ export const listings = [
     status: 'Residential Sale',
     title: '14839 Story Lane',
     city: 'Frisco, TX 75035',
-    price: '$923,631',
+    price: '$899,999',
     image: '/listings/14839-story-lane/story-1.jpg',
     facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011'],
     link: '/listings/14839-story-lane'
   },
+
+  {
+  slug: 'peters',
+  status: 'Residential Lease Or Sale',
+  title: '2201 Peters Colony Drive',
+  city: 'Little Elm, Texas 75036',
+  price: '$599,999',
+  image: '/listings/peters/peters-1.jpg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `/listings/peters/peters-${i + 1}.jpg`
+  ),
+  facts: ['4 Bed', '2.5 Bath', '3,108 Sq Ft', 'Built 2023'],
+  link: 'listings/peters/peters'
+},
+
+ {
+  slug: 'dotty',
+  status: 'Residential Lease Or Sale',
+  title: '717 Dotty Drive',
+  city: 'Mckinney, Texas 75071',
+  price: '$3200',
+  image: '/listings/dotty/dotty-1.jpg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `/listings/dotty/dotty-${i + 1}.jpg`
+  ),
+  facts: ['4 Bed', '2.5 Bath', '2,337 Sq Ft', 'Built 2026'],
+  link: 'listings/dotty/dotty'
+},
+
+ {
+  slug: 'alderton',
+  status: 'Residential Lease Or Sale',
+  title: '6007 Alderton drive',
+  city: 'Mckinney, Texas 75071',
+  price: '$3200',
+  image: '/listings/alderton/alderton-1.jpg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `listings/alderton/alderton-${i + 1}.jpg`
+  ),
+  facts: ['4 Bed', '2.5 Bath', '2,337 Sq Ft', 'Built 2026'],
+  link: 'listings/alderton/alderton'
+},
+  
 
   {
   slug: 'stillwater',
