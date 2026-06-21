@@ -15,14 +15,14 @@ export const marketSections = [
           city: 'Frisco, TX, 75035',
           price: '$923,631',
           image: '/listings/14839-story-lane/story-1.jpg',
-          status: 'Open House • Saturday 30th May, 2026 between 2PM–5PM'
+          status: 'Open House • Sunday 28th June, 2026 between 2PM–5PM'
         },
         {
           address: '9650 Amberwoods Lane',
           city: 'Frisco, TX, 75035',
           price: '$549,999',
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',
-          status: 'Open House • Sunday 31st May, 2026 between 2PM–5PM'
+          status: 'Open House • Sunday 28th June, 2026 between 2PM–5PM'
         },
        
        {
@@ -53,19 +53,30 @@ export const marketSections = [
           status: 'Under Contract'
         },
         {
-          address: '717 Dotty Drive',
+          address: '6007 Alderton Drive',
           city: 'Mckinney, TX',
-          price: '$370,000',
-          image: '/listings/717-dotty/717-dotty.jpg',
+          price: '$363,000',
+          image: '/listings/alderton/alderton-1.jpg',
           status: 'Under Contract'
         },
+
       {
-          address: '615 Hemmingway Lane',
+          address: '1418 Old Stead Drive',
           city: 'Mckinney, TX',
-          price: '$2,650',
-          image: '/listings/615-hemmingway-lane/hemmingway-1.jpg',
+          price: '$359,999',
+          image: '/listings/alderton/alderton-1.jpg',
+          status: 'Under Contract'
+        },
+      
+      
+      {
+          address: '717 Dotty Drive',
+          city: 'Mckinney, TX',
+          price: '$3200',
+          image: '/listings/717-dotty/717-dotty.jpg',
           status: 'Under Contract'
         }
+      
       ]
   },
 
@@ -79,6 +90,15 @@ export const marketSections = [
           image: '/listings/fort-buckner.jpg',
           status: 'Sold'
         },
+
+         {
+          address: '717 Dotty Drive',
+          city: 'Mckinney, TX',
+          price: '$370,000',
+          image: '/listings/717-dotty/717-dotty.jpg',
+          status: 'Under Contract'
+        },
+       
         {
           address: '2560 Valley Glen Drive',
           city: 'Little Elm, TX',
@@ -86,6 +106,15 @@ export const marketSections = [
           image: '/listings/valley.jpg',
           status: 'Sold'
         },
+
+       {
+          address: '615 Hemmingway Lane',
+          city: 'Mckinney, TX',
+          price: '$2,650',
+          image: '/listings/615-hemmingway-lane/hemmingway-1.jpg',
+          status: 'Under Contract'
+        },
+       
        {
           address: '4433 Ginger Road',
           city: 'Prosper, TX',
