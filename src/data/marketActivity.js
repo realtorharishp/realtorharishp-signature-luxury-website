@@ -64,7 +64,7 @@ export const marketSections = [
           address: '1418 Old Stead Drive',
           city: 'Mckinney, TX',
           price: '$359,999',
-          image: '/listings/alderton/alderton-1.jpg',
+          image: '/listings/oldstead/oldstead-1.jpg',
           status: 'Under Contract'
         },
       
@@ -73,7 +73,7 @@ export const marketSections = [
           address: '717 Dotty Drive',
           city: 'Mckinney, TX',
           price: '$3200',
-          image: '/listings/717-dotty/717-dotty.jpg',
+          image: '/listings/dotty/dotty-1.jpg',
           status: 'Under Contract'
         }
       
@@ -95,7 +95,7 @@ export const marketSections = [
           address: '717 Dotty Drive',
           city: 'Mckinney, TX',
           price: '$370,000',
-          image: '/listings/717-dotty/717-dotty.jpg',
+          image: '/listings/dotty/dotty-1.jpg',
           status: 'Under Contract'
         },
        
