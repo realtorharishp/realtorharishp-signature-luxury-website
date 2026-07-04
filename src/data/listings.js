@@ -15,7 +15,7 @@ export const listings = [
   status: 'Residential Lease Or Sale',
   title: '2201 Peters Colony Drive',
   city: 'Little Elm, Texas 75036',
-  price: '$572,999',
+  price: '$599,999',
   image: '/listings/peters/peters-1.jpg',
   gallery: Array.from(
     { length: 15 },
@@ -232,6 +232,6 @@ export const listings = [
     (_, i) => `/listings/washington/washington-${i + 1}.jpg`
   ),
   facts: ['3 Bed', '2 Bath', '1700 Sq Ft', 'Built 2005'],
-  link: '/listings/warrow'
+  link: '/listings/washington'
 }
   ]
