@@ -22,7 +22,7 @@ export const listings = [
     (_, i) => `/listings/peters/peters-${i + 1}.jpg`
   ),
   facts: ['4 Bed', '2.5 Bath', '3,108 Sq Ft', 'Built 2023'],
-  link: 'listings/peters/peters'
+  link: '/listings/peters/peters'
 },
   
  {
@@ -37,7 +37,7 @@ export const listings = [
     (_, i) => `/listings/Yarrow/Yarrow-${i + 1}.jpg`
   ),
   facts: ['5 Bed', '4 Bath', '4,070 Sq Ft', 'Built 2018'],
-  link: 'listings/Yarrow/Yarrow'
+  link: '/listings/Yarrow/Yarrow'
 },
   
  {
@@ -52,7 +52,7 @@ export const listings = [
     (_, i) => `/listings/dotty/dotty-${i + 1}.jpg`
   ),
   facts: ['4 Bed', '2.5 Bath', '2,337 Sq Ft', 'Built 2026'],
-  link: 'listings/dotty/dotty'
+  link: '/listings/dotty/dotty'
 },
 
  {
@@ -64,10 +64,10 @@ export const listings = [
   image: '/listings/alderton/alderton-1.jpg',
   gallery: Array.from(
     { length: 15 },
-    (_, i) => `listings/alderton/alderton-${i + 1}.jpg`
+    (_, i) => `/listings/alderton/alderton-${i + 1}.jpg`
   ),
   facts: ['4 Bed', '2.5 Bath', '2,337 Sq Ft', 'Built 2026'],
-  link: 'listings/alderton/alderton'
+  link: '/listings/alderton/alderton'
 },
   
 
