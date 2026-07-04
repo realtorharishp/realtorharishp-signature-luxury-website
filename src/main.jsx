@@ -1519,6 +1519,348 @@ function DynamicListingPage({ listing }) {
   )
 }
 
+function DottyPage() {
+  const dottyImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/dotty/dotty-${i + 1}.jpg`
+  )
+
+  const highlights = ['Brand New 2026 Construction','4 Bedrooms','2.5 Bathrooms','2,337 Sq Ft','Open Concept Layout','Modern Finishes','Spacious Kitchen','Primary Suite Downstairs','2-Car Garage','Private Backyard','McKinney Location','Available for Lease or Sale']
+  const standouts = [
+    ['Brand New 2026 Build', 'Never-lived-in home with the latest construction standards, modern finishes, and full builder warranty coverage.'],
+    ['Flexible Lease or Sale', 'Available for purchase or monthly lease at $3,200/mo — ideal for buyers and renters exploring McKinney.'],
+    ['Open Concept Living', 'Thoughtfully designed layout connecting the kitchen, dining, and living areas for everyday comfort and entertaining.'],
+    ['Spacious Primary Suite', 'Generous primary bedroom with walk-in closet and dual vanity bath, offering a private retreat.'],
+    ['Prime McKinney Location', "Located in one of North Texas's most sought-after cities with top-rated schools, shopping, and dining nearby."],
+    ['Move-In Ready', 'Fully finished and ready for immediate occupancy — no waiting, no projects.']
+  ]
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/dotty/dotty-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+          <p className="eyebrow">Residential Lease Or Sale</p>
+          <h1>717 Dotty Drive</h1>
+          <p>McKinney, Texas 75071 • Brand New 2026 Construction</p>
+          <p className="listingPrice">$3,200 / Month</p>
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>4</strong>Bedrooms</div>
+        <div><strong>2.5</strong>Bathrooms</div>
+        <div><strong>2,337</strong>Sq Ft</div>
+        <div><strong>2026</strong>Built</div>
+        <div><strong>2</strong>Car Garage</div>
+        <div><strong>Lease</strong>Or Sale</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Brand New Construction in McKinney</h2>
+        <p className="listingDescription">
+          Welcome to 717 Dotty Drive — a stunning brand new 2026 construction home nestled in one of McKinney's most desirable neighborhoods. This never-lived-in residence features an open-concept floor plan with modern finishes throughout, a spacious kitchen with granite countertops, stainless appliances, and a large island perfect for entertaining.
+        </p>
+        <p className="listingDescription">
+          The thoughtfully designed layout offers four generous bedrooms and 2.5 bathrooms across 2,337 square feet. The primary suite features a walk-in closet and dual vanity bath. A 2-car garage, private backyard, and prime McKinney location make this home ideal for families, professionals, and investors alike. Available for lease at $3,200/month or for sale.
+        </p>
+        <div className="highlightGrid">
+          {highlights.map((item) => <div key={item}>{item}</div>)}
+        </div>
+      </section>
+
+      <section className="listingSection alt">
+        <h2>Photo Gallery</h2>
+        <PropertyReel
+          images={dottyImages}
+          address="717 Dotty Drive"
+          city="McKinney, Texas 75071"
+          price="$3,200 / Month"
+          beds="4" baths="2.5" sqft="2,337" built="2026"
+          listingUrl="listings/dotty/dotty"
+          roomLabels={['Exterior','Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Bedroom','Bedroom','Bedroom','Backyard']}
+          slideTitles={['Modern 2026 Exterior Elevation','Front View & 2-Car Garage','Open Bright Entry Foyer','Spacious Open Concept Living Room','Living Room with Natural Light','Modern Kitchen with Granite Island','Kitchen with Stainless Appliances','White Shaker Cabinets & Backsplash','Dining Area with Natural Light','Primary Suite with Walk-In Closet','Primary Dual Vanity Bathroom','Secondary Bedroom','Third Bedroom with Closet','Fourth Bedroom','Private Fenced Backyard']}
+        />
+      </section>
+
+      <section className="listingSection">
+        <h2>Why This Home Stands Out</h2>
+        <div className="standoutGrid">
+          {standouts.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
+        </div>
+      </section>
+
+      <section className="tourCTA">
+        <p className="eyebrow">Private Tour</p>
+        <h2>Schedule Your Showing Today</h2>
+        <p>Contact Harish Patel to tour 717 Dotty Drive or get full pricing and lease details.</p>
+        <div className="tourActions">
+          <a className="btnGold" href="tel:9725520158">Call 972-552-0158</a>
+          <a className="btnOutline" href="sms:9725520158">Text Harish</a>
+          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank">Book Consultation</a>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in 717 Dotty Drive?</h2>
+        <p>Submit your information below and Harish will follow up with tour options and full details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">100 N Central Expwy, Suite #913, Richardson, TX 75080</p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+      <FloatingSocialBar />
+      <FloatingButtons />
+    </div>
+  )
+}
+
+function AldertonPage() {
+  const aldertonImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/alderton/alderton-${i + 1}.jpg`
+  )
+
+  const highlights = ['Brand New 2026 Construction','4 Bedrooms','2.5 Bathrooms','2,337 Sq Ft','Open Concept Design','Premium Finishes','Gourmet Kitchen','Spacious Primary Suite','2-Car Garage','Large Backyard','McKinney ISD','Lease or Sale Available']
+  const standouts = [
+    ['Brand New 2026 Build', 'Never-lived-in home built in 2026 with full builder-quality construction, modern finishes, and move-in ready condition.'],
+    ['Flexible Lease or Sale', 'Available for $3,200/month lease or outright purchase — offering flexibility for buyers and tenants in McKinney.'],
+    ['Premium Kitchen Design', 'Chef-inspired kitchen featuring granite counters, stainless appliances, large island, and white shaker cabinetry.'],
+    ['Spacious 4-Bedroom Layout', 'Four well-sized bedrooms with ample closet space and a split-bedroom layout for privacy and comfort.'],
+    ['McKinney ISD Schools', 'Located within highly rated McKinney ISD, making this home ideal for families seeking top-tier education.'],
+    ['Private Backyard', 'Enjoy a large fenced backyard perfect for outdoor entertaining, kids, and pets in a quiet neighborhood setting.']
+  ]
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/alderton/alderton-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+          <p className="eyebrow">Residential Lease Or Sale</p>
+          <h1>6007 Alderton Drive</h1>
+          <p>McKinney, Texas 75071 • Brand New 2026 Construction</p>
+          <p className="listingPrice">$3,200 / Month</p>
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>4</strong>Bedrooms</div>
+        <div><strong>2.5</strong>Bathrooms</div>
+        <div><strong>2,337</strong>Sq Ft</div>
+        <div><strong>2026</strong>Built</div>
+        <div><strong>2</strong>Car Garage</div>
+        <div><strong>Lease</strong>Or Sale</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Modern New Construction in McKinney</h2>
+        <p className="listingDescription">
+          Discover 6007 Alderton Drive — a beautiful brand new 2026 construction home offering modern luxury in the heart of McKinney. This never-occupied property features an open-concept floor plan, premium finishes, and a gourmet kitchen with granite island, stainless appliances, and abundant cabinet storage ideal for everyday living and entertaining.
+        </p>
+        <p className="listingDescription">
+          With 4 bedrooms, 2.5 bathrooms, and 2,337 square feet of thoughtfully designed living space, this home delivers comfort and functionality. The split-bedroom layout provides privacy, while the large backyard and 2-car garage add practical everyday value. Available for $3,200/month lease or for purchase — a rare opportunity in McKinney's competitive market.
+        </p>
+        <div className="highlightGrid">
+          {highlights.map((item) => <div key={item}>{item}</div>)}
+        </div>
+      </section>
+
+      <section className="listingSection alt">
+        <h2>Photo Gallery</h2>
+        <PropertyReel
+          images={aldertonImages}
+          address="6007 Alderton Drive"
+          city="McKinney, Texas 75071"
+          price="$3,200 / Month"
+          beds="4" baths="2.5" sqft="2,337" built="2026"
+          listingUrl="listings/alderton/alderton"
+          roomLabels={['Exterior','Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Bedroom','Bedroom','Bedroom','Backyard']}
+          slideTitles={['Brand New 2026 Exterior Elevation','2-Car Garage & Curb Appeal','Welcoming Entry Foyer','Open Concept Living & Kitchen','Spacious Living Area with Natural Light','Granite Island Kitchen','Stainless Appliances & Shaker Cabinets','Kitchen with Pantry & Storage','Open Dining Area','Primary Suite with Walk-In Closet','Primary Bath with Dual Vanity','Secondary Bedroom','Third Bedroom with Closet','Fourth Bedroom','Private Fenced Backyard']}
+        />
+      </section>
+
+      <section className="listingSection">
+        <h2>Why This Home Stands Out</h2>
+        <div className="standoutGrid">
+          {standouts.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
+        </div>
+      </section>
+
+      <section className="tourCTA">
+        <p className="eyebrow">Private Tour</p>
+        <h2>Schedule Your Showing Today</h2>
+        <p>Contact Harish Patel to tour 6007 Alderton Drive or request full pricing and lease information.</p>
+        <div className="tourActions">
+          <a className="btnGold" href="tel:9725520158">Call 972-552-0158</a>
+          <a className="btnOutline" href="sms:9725520158">Text Harish</a>
+          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank">Book Consultation</a>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in 6007 Alderton Drive?</h2>
+        <p>Submit your information below and Harish will follow up with tour options and full details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">100 N Central Expwy, Suite #913, Richardson, TX 75080</p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+      <FloatingSocialBar />
+      <FloatingButtons />
+    </div>
+  )
+}
+
+function PetersPage() {
+  const petersImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/peters/peters-${i + 1}.jpg`
+  )
+
+  const highlights = ['Built 2023','4 Bedrooms','2.5 Bathrooms','3,108 Sq Ft','Open Concept Floor Plan','Game Room Upstairs','Gourmet Kitchen','Primary Suite Downstairs','2-Car Garage','Covered Patio','Little Elm Location','For Sale or Lease']
+  const standouts = [
+    ['2023 Modern Construction', 'Newer build featuring contemporary finishes, energy-efficient systems, and a move-in ready condition with no deferred maintenance.'],
+    ['For Sale or Lease', 'Priced at $599,999 for purchase with lease options available — making this an attractive choice for buyers and investors.'],
+    ['Generous 3,108 Sq Ft', 'One of the largest floor plans in the area, offering ample space for growing families, remote workers, and entertaining.'],
+    ['Primary Suite on Main Floor', 'Convenient main-floor primary bedroom with ensuite bath, walk-in shower, dual vanity, and large walk-in closet.'],
+    ['Game Room + Flex Space', 'Upstairs game room and additional bedrooms provide flexible space for family living, guest accommodations, or a home office.'],
+    ["Little Elm Lifestyle", "Enjoy proximity to Little Elm's lakeside community, dining, shopping, and top-rated schools in a growing and vibrant area."]
+  ]
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/peters/peters-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+          <p className="eyebrow">Residential Lease Or Sale</p>
+          <h1>2201 Peters Colony Drive</h1>
+          <p>Little Elm, Texas 75036 • 2023 Build • Primary Down</p>
+          <p className="listingPrice">$599,999</p>
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>4</strong>Bedrooms</div>
+        <div><strong>2.5</strong>Bathrooms</div>
+        <div><strong>3,108</strong>Sq Ft</div>
+        <div><strong>2023</strong>Built</div>
+        <div><strong>Game</strong>Room</div>
+        <div><strong>Sale</strong>Or Lease</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Exceptional Space in Little Elm</h2>
+        <p className="listingDescription">
+          Welcome to 2201 Peters Colony Drive — a stunning 2023-built home offering 3,108 square feet of modern living in the heart of Little Elm. This spacious four-bedroom residence features an open-concept layout with a gourmet kitchen complete with granite countertops, a large center island, stainless appliances, and generous cabinet storage flowing seamlessly into the dining and living areas.
+        </p>
+        <p className="listingDescription">
+          The main-floor primary suite provides a private retreat with a spa-like ensuite bath featuring a walk-in shower, dual vanity, and oversized walk-in closet. Upstairs you'll find a dedicated game room, three additional bedrooms, and a full bath — perfect for families of all sizes. The covered patio and 2-car garage round out this exceptional offering. Available for sale at $599,999 or for lease.
+        </p>
+        <div className="highlightGrid">
+          {highlights.map((item) => <div key={item}>{item}</div>)}
+        </div>
+      </section>
+
+      <section className="listingSection alt">
+        <h2>Photo Gallery</h2>
+        <PropertyReel
+          images={petersImages}
+          address="2201 Peters Colony Drive"
+          city="Little Elm, Texas 75036"
+          price="$599,999"
+          beds="4" baths="2.5" sqft="3,108" built="2023"
+          listingUrl="listings/peters/peters"
+          roomLabels={['Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Primary Bath','Game Room','Bedroom','Bedroom','Covered Patio']}
+          slideTitles={['Modern 2023 Brick Elevation','Open Entry Foyer with Wood Floors','Open Concept Family Room','Family Room with Natural Light & Fireplace','Gourmet Kitchen with Granite Island','Kitchen with Stainless Appliances & Gas Range','White Shaker Cabinets & Tile Backsplash','Dining Area Open to Kitchen','Main Floor Primary Suite','Primary Spa Bath with Dual Vanity','Walk-In Shower & Soaking Tub','Upstairs Game Room','Secondary Bedroom with Walk-In Closet','Additional Bedroom with Natural Light','Covered Patio & Backyard']}
+        />
+      </section>
+
+      <section className="listingSection">
+        <h2>Why This Home Stands Out</h2>
+        <div className="standoutGrid">
+          {standouts.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
+        </div>
+      </section>
+
+      <section className="tourCTA">
+        <p className="eyebrow">Private Tour</p>
+        <h2>Schedule Your Showing Today</h2>
+        <p>Contact Harish Patel to tour 2201 Peters Colony Drive or request full pricing and availability details.</p>
+        <div className="tourActions">
+          <a className="btnGold" href="tel:9725520158">Call 972-552-0158</a>
+          <a className="btnOutline" href="sms:9725520158">Text Harish</a>
+          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank">Book Consultation</a>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in 2201 Peters Colony Drive?</h2>
+        <p>Submit your information below and Harish will follow up with tour options and full property details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">100 N Central Expwy, Suite #913, Richardson, TX 75080</p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+      <FloatingSocialBar />
+      <FloatingButtons />
+    </div>
+  )
+}
+
 function ChatbaseWidget() {
   React.useEffect(() => {
     if (document.getElementById('XeHFtp4qjjzaViuCVKiX7')) return
@@ -1866,7 +2208,19 @@ if (window.location.pathname.startsWith('/cities/') && cityPage) {
   if (window.location.pathname === '/listings/400-stonebrook-pkwy') {
     return <Stonebrook301Page />
   }
- 
+
+  if (window.location.pathname === '/listings/dotty/dotty') {
+    return <DottyPage />
+  }
+
+  if (window.location.pathname === '/listings/alderton/alderton') {
+    return <AldertonPage />
+  }
+
+  if (window.location.pathname === '/listings/peters/peters') {
+    return <PetersPage />
+  }
+
 if (dynamicListing) {
   return <DynamicListingPage listing={dynamicListing} />
 }
