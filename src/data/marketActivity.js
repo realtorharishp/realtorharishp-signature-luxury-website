@@ -21,7 +21,7 @@ export const marketSections = [
         {
           address: '9650 Amberwoods Lane',
           city: 'Frisco, TX, 75035',
-          price: '$520,000',
+          price: '$572,999',
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',
           status: 'Open House • Sunday 5th July, 2026 between 11:30AM–1:30PM'
         },
