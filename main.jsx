@@ -7,6 +7,31 @@ import { partners } from './data/partners'
 import { testimonials } from './data/testimonials'
 import { cities } from './data/cities'
 import PropertyReel from './PropertyReel'
+import ViewCounter from './ViewCounter'
+
+// Replace with your real GA4 Measurement ID (Admin > Data Streams in Google
+// Analytics). Tracks every full page load automatically — homepage and
+// every listing page — since each address is a real browser navigation.
+const GA4_MEASUREMENT_ID = 'G-9KT7WRMZ30'
+
+function useGoogleAnalytics(measurementId) {
+  React.useEffect(() => {
+    if (!measurementId || measurementId === 'G-XXXXXXXXXX') return
+    if (document.getElementById('ga4-script')) return
+
+    const script = document.createElement('script')
+    script.id = 'ga4-script'
+    script.async = true
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`
+    document.head.appendChild(script)
+
+    window.dataLayer = window.dataLayer || []
+    function gtag() { window.dataLayer.push(arguments) }
+    window.gtag = gtag
+    gtag('js', new Date())
+    gtag('config', measurementId)
+  }, [measurementId])
+}
 
 const storyImages = Array.from(
   { length: 20 },
@@ -330,6 +355,7 @@ function ListingPage() {
           <h1>14839 Story Lane</h1>
           <p>Frisco, TX 75035 • North Facing • 3 Car Garage • Highland Homes</p>
           <p className="listingPrice">$923,631 • Seller Offering $15,000 Incentive</p>
+          <ViewCounter slug="story-lane" />
           <div className="buttons">
             <a href="#private-tour" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -488,6 +514,7 @@ function AmberwoodsPage() {
           <p>Frisco, TX • Luxury Residential Listing</p>
 
           <p className="listingPrice">$549,999</p>
+          <ViewCounter slug="amberwoods" />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">
@@ -593,6 +620,7 @@ function ShetlandPage() {
           <p>Aubrey, TX • Park Facing Home</p>
 
           <p className="listingPrice">$318,000</p>
+          <ViewCounter slug="shetland" />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">
@@ -690,6 +718,7 @@ function StonebrookPage() {
           <h1>400 Stonebrook Pkwy #303</h1>
           <p>Frisco, TX • Office Suite</p>
           <p className="listingPrice">$429,999</p>
+          <ViewCounter slug="stonebrook-303" />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
@@ -779,6 +808,7 @@ function GalvestonPage() {
           <p>Plano, TX 75075 • Luxury Lease Home</p>
 
           <p className="listingPrice">$2,799 / Month</p>
+          <ViewCounter slug="galveston" />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">
@@ -879,6 +909,7 @@ function VillageWoodPage() {
           <p>Arlington, TX • Spacious Lease Home</p>
 
           <p className="listingPrice">$2,850 / Month</p>
+          <ViewCounter slug="village-wood" />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">
@@ -982,6 +1013,7 @@ function HemmingwayPage() {
           <p>McKinney, TX 75069 • Modern Lease Home</p>
 
           <p className="listingPrice">$2,239 / Month</p>
+          <ViewCounter slug="hemmingway" />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">
@@ -1082,6 +1114,7 @@ function SilverweedPage() {
           <p>Melissa, TX 75454 • Investment Property</p>
 
           <p className="listingPrice">$379,999</p>
+          <ViewCounter slug="silverweed" />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">
@@ -1184,6 +1217,7 @@ function Stonebrook301Page() {
           <p>Frisco, TX 75034 • Suite #301</p>
 
           <p className="listingPrice">$3,299<span style={{fontSize:'1rem',fontWeight:400}}>/mo</span></p>
+          <ViewCounter slug="stonebrook-301" />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">
@@ -1285,6 +1319,7 @@ function PurtisCreekPage() {
           <h1>1874 Purtis Creek</h1>
           <p>Forney, TX 75126</p>
           <p className="listingPrice">$3,099</p>
+          <ViewCounter slug="purtis-creek" />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
@@ -1462,6 +1497,7 @@ function DynamicListingPage({ listing }) {
           <h1>{listing.title}</h1>
           <p>{listing.city}</p>
           <p className="listingPrice">{listing.price}</p>
+          <ViewCounter slug={listing.slug} />
 
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
@@ -1552,6 +1588,7 @@ function DottyPage() {
           <h1>717 Dotty Drive</h1>
           <p>McKinney, Texas 75071 • Brand New 2026 Construction</p>
           <p className="listingPrice">$3,200 / Month</p>
+          <ViewCounter slug="dotty" />
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -1666,6 +1703,7 @@ function AldertonPage() {
           <h1>6007 Alderton Drive</h1>
           <p>McKinney, Texas 75071 • Brand New 2026 Construction</p>
           <p className="listingPrice">$3,200 / Month</p>
+          <ViewCounter slug="alderton" />
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -1756,7 +1794,7 @@ function PetersPage() {
   const highlights = ['Built 2023','4 Bedrooms','2.5 Bathrooms','3,108 Sq Ft','Open Concept Floor Plan','Game Room Upstairs','Gourmet Kitchen','Primary Suite Downstairs','2-Car Garage','Covered Patio','Little Elm Location','For Sale or Lease']
   const standouts = [
     ['2023 Modern Construction', 'Newer build featuring contemporary finishes, energy-efficient systems, and a move-in ready condition with no deferred maintenance.'],
-    ['For Sale or Lease', 'Priced at $599,999 for purchase with lease options available — making this an attractive choice for buyers and investors.'],
+    ['For Sale or Lease', 'Priced at $572,999 for purchase with lease options available — making this an attractive choice for buyers and investors.'],
     ['Generous 3,108 Sq Ft', 'One of the largest floor plans in the area, offering ample space for growing families, remote workers, and entertaining.'],
     ['Primary Suite on Main Floor', 'Convenient main-floor primary bedroom with ensuite bath, walk-in shower, dual vanity, and large walk-in closet.'],
     ['Game Room + Flex Space', 'Upstairs game room and additional bedrooms provide flexible space for family living, guest accommodations, or a home office.'],
@@ -1779,7 +1817,8 @@ function PetersPage() {
           <p className="eyebrow">Residential Lease Or Sale</p>
           <h1>2201 Peters Colony Drive</h1>
           <p>Little Elm, Texas 75036 • 2023 Build • Primary Down</p>
-          <p className="listingPrice">$599,999</p>
+          <p className="listingPrice">$572,999</p>
+          <ViewCounter slug="peters" />
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -1802,7 +1841,7 @@ function PetersPage() {
           Welcome to 2201 Peters Colony Drive — a stunning 2023-built home offering 3,108 square feet of modern living in the heart of Little Elm. This spacious four-bedroom residence features an open-concept layout with a gourmet kitchen complete with granite countertops, a large center island, stainless appliances, and generous cabinet storage flowing seamlessly into the dining and living areas.
         </p>
         <p className="listingDescription">
-          The main-floor primary suite provides a private retreat with a spa-like ensuite bath featuring a walk-in shower, dual vanity, and oversized walk-in closet. Upstairs you'll find a dedicated game room, three additional bedrooms, and a full bath — perfect for families of all sizes. The covered patio and 2-car garage round out this exceptional offering. Available for sale at $599,999 or for lease.
+          The main-floor primary suite provides a private retreat with a spa-like ensuite bath featuring a walk-in shower, dual vanity, and oversized walk-in closet. Upstairs you'll find a dedicated game room, three additional bedrooms, and a full bath — perfect for families of all sizes. The covered patio and 2-car garage round out this exceptional offering. Available for sale at $572,999 or for lease.
         </p>
         <div className="highlightGrid">
           {highlights.map((item) => <div key={item}>{item}</div>)}
@@ -1815,7 +1854,7 @@ function PetersPage() {
           images={petersImages}
           address="2201 Peters Colony Drive"
           city="Little Elm, Texas 75036"
-          price="$599,999"
+          price="$572,999"
           beds="4" baths="2.5" sqft="3,108" built="2023"
           listingUrl="listings/peters/peters"
           roomLabels={['Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Primary Bath','Game Room','Bedroom','Bedroom','Covered Patio']}
@@ -1894,6 +1933,7 @@ function YarrowPage() {
           <h1>625 Yarrow Street</h1>
           <p>Little Elm, Texas 75068 • 2018 Build • Primary Down</p>
           <p className="listingPrice">$774,999</p>
+          <ViewCounter slug="Yarrow" />
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -2008,6 +2048,7 @@ function StillwaterPage() {
           <h1>6451 Still Water Court</h1>
           <p>Midlothian, Texas 76065 • 2016 Build • Primary Down</p>
           <p className="listingPrice">$764,999</p>
+          <ViewCounter slug="stillwater" />
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -2122,6 +2163,7 @@ function CooperPage() {
           <h1>12820 Cooper River Trail</h1>
           <p>Frisco, Texas 75035 • 2020 Build • Primary Down</p>
           <p className="listingPrice">$865,000</p>
+          <ViewCounter slug="cooper" />
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -2236,6 +2278,7 @@ function ArrowPage() {
           <h1>1312 Arrowwood Drive</h1>
           <p>Aubrey, Texas 76227 • 2021 Build • Primary Down</p>
           <p className="listingPrice">$549,999</p>
+          <ViewCounter slug="arrow" />
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -2350,6 +2393,7 @@ function WashingtonPage() {
           <h1>9929 George Washington Dr</h1>
           <p>McKinney, Texas 75070 • Move-In Ready</p>
           <p className="listingPrice">$2,999 / Month</p>
+          <ViewCounter slug="washington" />
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -2731,6 +2775,7 @@ function HomePage() {
 }
 
 function App() {
+  useGoogleAnalytics(GA4_MEASUREMENT_ID)
   const path = window.location.pathname
   const dynamicListing = listings.find((listing) => listing.link === path)
   const citySlug = window.location.pathname.replace('/cities/', '')
