@@ -4,7 +4,7 @@ export const listings = [
     status: 'Residential Sale',
     title: '14839 Story Lane',
     city: 'Frisco, TX 75035',
-    price: '$899,999',
+    price: '$839,999',
     image: '/listings/14839-story-lane/story-1.jpg',
     facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011'],
     link: '/listings/14839-story-lane'
@@ -24,7 +24,22 @@ export const listings = [
   facts: ['4 Bed', '2.5 Bath', '3,108 Sq Ft', 'Built 2023'],
   link: 'listings/peters/peters'
 },
-
+  
+ {
+  slug: 'Yarrow',
+  status: 'Residential Sale',
+  title: '625 Yarrow Street',
+  city: 'Little Elm, Texas 75068',
+  price: '$774,999',
+  image: '/listings/Yarrow/Yarrow-1.jpg',
+  gallery: Array.from(
+    { length: 15 },
+    (_, i) => `/listings/Yarrow/Yarrow-${i + 1}.jpg`
+  ),
+  facts: ['5 Bed', '4 Bath', '4,070 Sq Ft', 'Built 2018'],
+  link: 'listings/Yarrow/Yarrow'
+},
+  
  {
   slug: 'dotty',
   status: 'Residential Lease Or Sale',
