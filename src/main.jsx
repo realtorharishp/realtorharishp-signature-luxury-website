@@ -1756,7 +1756,7 @@ function PetersPage() {
   const highlights = ['Built 2023','4 Bedrooms','2.5 Bathrooms','3,108 Sq Ft','Open Concept Floor Plan','Game Room Upstairs','Gourmet Kitchen','Primary Suite Downstairs','2-Car Garage','Covered Patio','Little Elm Location','For Sale or Lease']
   const standouts = [
     ['2023 Modern Construction', 'Newer build featuring contemporary finishes, energy-efficient systems, and a move-in ready condition with no deferred maintenance.'],
-    ['For Sale or Lease', 'Priced at $599,999 for purchase with lease options available — making this an attractive choice for buyers and investors.'],
+    ['For Sale or Lease', 'Priced at $572,999 for purchase with lease options available — making this an attractive choice for buyers and investors.'],
     ['Generous 3,108 Sq Ft', 'One of the largest floor plans in the area, offering ample space for growing families, remote workers, and entertaining.'],
     ['Primary Suite on Main Floor', 'Convenient main-floor primary bedroom with ensuite bath, walk-in shower, dual vanity, and large walk-in closet.'],
     ['Game Room + Flex Space', 'Upstairs game room and additional bedrooms provide flexible space for family living, guest accommodations, or a home office.'],
@@ -1779,7 +1779,7 @@ function PetersPage() {
           <p className="eyebrow">Residential Lease Or Sale</p>
           <h1>2201 Peters Colony Drive</h1>
           <p>Little Elm, Texas 75036 • 2023 Build • Primary Down</p>
-          <p className="listingPrice">$599,999</p>
+          <p className="listingPrice">$572,999</p>
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -1815,7 +1815,7 @@ function PetersPage() {
           images={petersImages}
           address="2201 Peters Colony Drive"
           city="Little Elm, Texas 75036"
-          price="$599,999"
+          price="$572,999"
           beds="4" baths="2.5" sqft="3,108" built="2023"
           listingUrl="listings/peters/peters"
           roomLabels={['Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Primary Bath','Game Room','Bedroom','Bedroom','Covered Patio']}
