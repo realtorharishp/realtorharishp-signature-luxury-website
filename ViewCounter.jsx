@@ -1,10 +1,12 @@
 import React from 'react'
-import { Counter } from 'counterapi'
 
-// One free, no-signup-required counter "workspace" for the whole site.
+// Free, no-signup-required counter namespace for the whole site.
 // Each property page passes its own unique `slug`, so every listing gets
-// its own independent view count inside this workspace.
-const counter = new Counter({ workspace: 'rekonnection-real-estate' })
+// its own independent view count inside this namespace.
+// Uses CounterAPI's public V1 endpoint directly (no npm package, no account,
+// no API key) — the V2 SDK requires a pre-registered workspace, which is
+// why an earlier version of this component silently failed.
+const COUNTER_NAMESPACE = 'rekonnection-real-estate'
 
 export default function ViewCounter({ slug }) {
   const [views, setViews] = React.useState(null)
@@ -16,11 +18,14 @@ export default function ViewCounter({ slug }) {
     // the page or navigating back and forth doesn't inflate the count.
     const sessionKey = `viewed-${slug}`
     const alreadyCounted = sessionStorage.getItem(sessionKey)
-    const request = alreadyCounted ? counter.get(slug) : counter.up(slug)
+    const url = alreadyCounted
+      ? `https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${slug}/`
+      : `https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${slug}/up`
 
-    request
-      .then((result) => {
-        setViews(result.value)
+    fetch(url)
+      .then((r) => r.json())
+      .then((data) => {
+        setViews(data.count)
         if (!alreadyCounted) sessionStorage.setItem(sessionKey, '1')
       })
       .catch(() => setViews(null))
