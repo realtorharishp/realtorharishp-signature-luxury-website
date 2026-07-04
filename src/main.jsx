@@ -1756,7 +1756,7 @@ function PetersPage() {
   const highlights = ['Built 2023','4 Bedrooms','2.5 Bathrooms','3,108 Sq Ft','Open Concept Floor Plan','Game Room Upstairs','Gourmet Kitchen','Primary Suite Downstairs','2-Car Garage','Covered Patio','Little Elm Location','For Sale or Lease']
   const standouts = [
     ['2023 Modern Construction', 'Newer build featuring contemporary finishes, energy-efficient systems, and a move-in ready condition with no deferred maintenance.'],
-    ['For Sale or Lease', 'Priced at $572,999 for purchase with lease options available — making this an attractive choice for buyers and investors.'],
+    ['For Sale or Lease', 'Priced at $599,999 for purchase with lease options available — making this an attractive choice for buyers and investors.'],
     ['Generous 3,108 Sq Ft', 'One of the largest floor plans in the area, offering ample space for growing families, remote workers, and entertaining.'],
     ['Primary Suite on Main Floor', 'Convenient main-floor primary bedroom with ensuite bath, walk-in shower, dual vanity, and large walk-in closet.'],
     ['Game Room + Flex Space', 'Upstairs game room and additional bedrooms provide flexible space for family living, guest accommodations, or a home office.'],
@@ -1779,7 +1779,7 @@ function PetersPage() {
           <p className="eyebrow">Residential Lease Or Sale</p>
           <h1>2201 Peters Colony Drive</h1>
           <p>Little Elm, Texas 75036 • 2023 Build • Primary Down</p>
-          <p className="listingPrice">$572,999</p>
+          <p className="listingPrice">$599,999</p>
           <div className="buttons">
             <a href="#contact" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
@@ -1815,7 +1815,7 @@ function PetersPage() {
           images={petersImages}
           address="2201 Peters Colony Drive"
           city="Little Elm, Texas 75036"
-          price="$572,999"
+          price="$599,999"
           beds="4" baths="2.5" sqft="3,108" built="2023"
           listingUrl="listings/peters/peters"
           roomLabels={['Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Primary Bath','Game Room','Bedroom','Bedroom','Covered Patio']}
@@ -1845,6 +1845,576 @@ function PetersPage() {
         <p className="eyebrow">Contact Harish Patel</p>
         <h2>Interested in 2201 Peters Colony Drive?</h2>
         <p>Submit your information below and Harish will follow up with tour options and full property details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">100 N Central Expwy, Suite #913, Richardson, TX 75080</p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+      <FloatingSocialBar />
+      <FloatingButtons />
+    </div>
+  )
+}
+
+function YarrowPage() {
+  const yarrowImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/Yarrow/Yarrow-${i + 1}.jpg`
+  )
+
+  const highlights = ['Built 2018','5 Bedrooms','4 Bathrooms','4,070 Sq Ft','Two-Story Layout','Primary Suite Downstairs','Gourmet Kitchen','Game Room Upstairs','Media Room','3-Car Garage','Little Elm Location','Covered Patio']
+  const standouts = [
+    ['Spacious 4,070 Sq Ft Floor Plan', 'One of the larger homes in the neighborhood, offering five bedrooms and four full bathrooms across a thoughtfully designed two-story layout.'],
+    ['Primary Suite on the Main Floor', 'Private main-level primary retreat with an ensuite spa bath, dual vanities, soaking tub, and an oversized walk-in closet.'],
+    ['Built for Entertaining', 'Open-concept kitchen and living areas flow together, complemented by an upstairs game room and media room for movie nights and gatherings.'],
+    ['3-Car Garage & Storage', 'A rare 3-car garage provides ample parking and storage space, a sought-after feature at this price point.'],
+    ['2018 Construction', 'Modern build quality with contemporary finishes and systems newer than much of the surrounding inventory.'],
+    ['Prime Little Elm Location', 'Located in Little Elm, TX with easy access to Lake Lewisville, top-rated schools, shopping, and dining.']
+  ]
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/Yarrow/Yarrow-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+          <p className="eyebrow">Residential Sale</p>
+          <h1>625 Yarrow Street</h1>
+          <p>Little Elm, Texas 75068 • 2018 Build • Primary Down</p>
+          <p className="listingPrice">$774,999</p>
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>5</strong>Bedrooms</div>
+        <div><strong>4</strong>Bathrooms</div>
+        <div><strong>4,070</strong>Sq Ft</div>
+        <div><strong>2018</strong>Built</div>
+        <div><strong>3-Car</strong>Garage</div>
+        <div><strong>Little Elm</strong>Location</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Exceptional Space in Little Elm</h2>
+        <p className="listingDescription">
+          Welcome to 625 Yarrow Street — a spacious 4,070 square foot home in Little Elm offering five bedrooms and four full bathrooms across a versatile two-story floor plan. Built in 2018, this home blends contemporary design with everyday functionality, anchored by an open-concept kitchen and living space ideal for both daily life and entertaining.
+        </p>
+        <p className="listingDescription">
+          The main-floor primary suite offers a private retreat with a spa-inspired ensuite bath, while the second floor features additional bedrooms, a game room, and a dedicated media room. A 3-car garage and covered patio round out this exceptional Little Elm offering, listed at $774,999.
+        </p>
+        <div className="highlightGrid">
+          {highlights.map((item) => <div key={item}>{item}</div>)}
+        </div>
+      </section>
+
+      <section className="listingSection alt">
+        <h2>Photo Gallery</h2>
+        <PropertyReel
+          images={yarrowImages}
+          address="625 Yarrow Street"
+          city="Little Elm, Texas 75068"
+          price="$774,999"
+          beds="5" baths="4" sqft="4,070" built="2018"
+          listingUrl="/listings/Yarrow/Yarrow"
+          roomLabels={['Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Primary Bath','Game Room','Media Room','Bedroom','Backyard']}
+          slideTitles={['Two-Story Brick & Stone Elevation','Bright Entry Foyer','Open Concept Living Room','Spacious Living Area with Natural Light','Gourmet Kitchen with Large Island','Kitchen with Stainless Appliances','Custom Cabinetry & Backsplash','Dining Area Open to Kitchen','Main Floor Primary Suite','Primary Spa Bath with Dual Vanity','Walk-In Shower & Soaking Tub','Upstairs Game Room','Dedicated Media Room','Spacious Secondary Bedroom','Covered Patio & Backyard']}
+        />
+      </section>
+
+      <section className="listingSection">
+        <h2>Why This Home Stands Out</h2>
+        <div className="standoutGrid">
+          {standouts.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
+        </div>
+      </section>
+
+      <section className="tourCTA">
+        <p className="eyebrow">Private Tour</p>
+        <h2>Schedule Your Showing Today</h2>
+        <p>Contact Harish Patel to tour 625 Yarrow Street or request full pricing and availability details.</p>
+        <div className="tourActions">
+          <a className="btnGold" href="tel:9725520158">Call 972-552-0158</a>
+          <a className="btnOutline" href="sms:9725520158">Text Harish</a>
+          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank">Book Consultation</a>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in 625 Yarrow Street?</h2>
+        <p>Submit your information below and Harish will follow up with tour options and full property details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">100 N Central Expwy, Suite #913, Richardson, TX 75080</p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+      <FloatingSocialBar />
+      <FloatingButtons />
+    </div>
+  )
+}
+
+function StillwaterPage() {
+  const stillwaterImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/stillwater/stillwater-${i + 1}.jpg`
+  )
+
+  const highlights = ['Built 2016','4 Bedrooms','3.5 Bathrooms','3,159 Sq Ft','Two-Story Layout','Primary Suite Downstairs','Open Concept Kitchen','Upstairs Game Room','Covered Patio','2-Car Garage','Midlothian Location','Move-In Ready']
+  const standouts = [
+    ['Spacious 3,159 Sq Ft Layout', 'Four bedrooms and three and a half bathrooms provide plenty of room for growing families across a well-planned two-story design.'],
+    ['Primary Suite on the Main Floor', 'Private main-level primary bedroom with ensuite bath offers convenience and separation from the secondary bedrooms upstairs.'],
+    ['Upstairs Game Room', 'A dedicated game room upstairs adds flexible living space for entertainment, a playroom, or a home office.'],
+    ['2016 Construction', 'Solid build quality with well-maintained finishes and systems throughout.'],
+    ['Covered Patio & 2-Car Garage', 'Enjoy outdoor living on the covered patio, plus the convenience of a 2-car garage for parking and storage.'],
+    ['Prime Midlothian Location', 'Located in Midlothian with easy access to major highways, shopping, dining, and highly regarded local schools.']
+  ]
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/stillwater/stillwater-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+          <p className="eyebrow">Residential Sale</p>
+          <h1>6451 Still Water Court</h1>
+          <p>Midlothian, Texas 76065 • 2016 Build • Primary Down</p>
+          <p className="listingPrice">$764,999</p>
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>4</strong>Bedrooms</div>
+        <div><strong>3.5</strong>Bathrooms</div>
+        <div><strong>3,159</strong>Sq Ft</div>
+        <div><strong>2016</strong>Built</div>
+        <div><strong>2-Car</strong>Garage</div>
+        <div><strong>Midlothian</strong>Location</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Well-Appointed Living in Midlothian</h2>
+        <p className="listingDescription">
+          Welcome to 6451 Still Water Court — a well-appointed 3,159 square foot home in Midlothian offering four bedrooms and three and a half bathrooms across a spacious two-story floor plan. Built in 2016, this home pairs classic curb appeal with a functional, family-friendly layout.
+        </p>
+        <p className="listingDescription">
+          The main-floor primary suite provides a private retreat, while the upstairs game room and additional bedrooms offer flexible space for family living or a home office. A covered patio and 2-car garage complete this Midlothian offering, listed at $764,999.
+        </p>
+        <div className="highlightGrid">
+          {highlights.map((item) => <div key={item}>{item}</div>)}
+        </div>
+      </section>
+
+      <section className="listingSection alt">
+        <h2>Photo Gallery</h2>
+        <PropertyReel
+          images={stillwaterImages}
+          address="6451 Still Water Court"
+          city="Midlothian, Texas 76065"
+          price="$764,999"
+          beds="4" baths="3.5" sqft="3,159" built="2016"
+          listingUrl="/listings/stillwater"
+          roomLabels={['Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Primary Bath','Game Room','Bedroom','Bedroom','Backyard']}
+          slideTitles={['Classic Two-Story Elevation','Bright Entry Foyer','Open Concept Living Room','Spacious Living Area with Natural Light','Kitchen with Large Island','Kitchen with Stainless Appliances','Custom Cabinetry & Backsplash','Dining Area Open to Kitchen','Main Floor Primary Suite','Primary Bath with Dual Vanity','Walk-In Shower & Soaking Tub','Upstairs Game Room','Spacious Secondary Bedroom','Additional Bedroom with Natural Light','Covered Patio & Backyard']}
+        />
+      </section>
+
+      <section className="listingSection">
+        <h2>Why This Home Stands Out</h2>
+        <div className="standoutGrid">
+          {standouts.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
+        </div>
+      </section>
+
+      <section className="tourCTA">
+        <p className="eyebrow">Private Tour</p>
+        <h2>Schedule Your Showing Today</h2>
+        <p>Contact Harish Patel to tour 6451 Still Water Court or request full pricing and availability details.</p>
+        <div className="tourActions">
+          <a className="btnGold" href="tel:9725520158">Call 972-552-0158</a>
+          <a className="btnOutline" href="sms:9725520158">Text Harish</a>
+          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank">Book Consultation</a>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in 6451 Still Water Court?</h2>
+        <p>Submit your information below and Harish will follow up with tour options and full property details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">100 N Central Expwy, Suite #913, Richardson, TX 75080</p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+      <FloatingSocialBar />
+      <FloatingButtons />
+    </div>
+  )
+}
+
+function CooperPage() {
+  const cooperImages = Array.from(
+    { length: 20 },
+    (_, i) => `/listings/cooper/cooper-${i + 1}.jpg`
+  )
+
+  const highlights = ['Built 2020','4 Bedrooms','2.5 Bathrooms','3,385 Sq Ft','Two-Story Layout','Primary Suite Downstairs','Gourmet Kitchen','Upstairs Game Room','Media Room','3-Car Garage','Frisco Location','Move-In Ready']
+  const standouts = [
+    ['Expansive 3,385 Sq Ft Floor Plan', 'One of the larger homes in the area, offering four bedrooms and two and a half bathrooms across a thoughtfully designed layout.'],
+    ['Primary Suite on the Main Floor', 'Private main-level primary retreat with an ensuite spa bath and oversized walk-in closet.'],
+    ['Game Room + Media Room', 'Upstairs game room and dedicated media room provide flexible entertainment space for the whole family.'],
+    ['3-Car Garage', 'A rare 3-car garage offers ample parking and storage — a standout feature in this Frisco neighborhood.'],
+    ['2020 Modern Construction', 'Newer build featuring contemporary finishes, energy-efficient systems, and a move-in ready condition.'],
+    ['Prime Frisco Location', 'Located in Frisco, TX with easy access to top-rated schools, shopping, dining, and major highways.']
+  ]
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/cooper/cooper-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+          <p className="eyebrow">Residential Sale</p>
+          <h1>12820 Cooper River Trail</h1>
+          <p>Frisco, Texas 75035 • 2020 Build • Primary Down</p>
+          <p className="listingPrice">$865,000</p>
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>4</strong>Bedrooms</div>
+        <div><strong>2.5</strong>Bathrooms</div>
+        <div><strong>3,385</strong>Sq Ft</div>
+        <div><strong>2020</strong>Built</div>
+        <div><strong>3-Car</strong>Garage</div>
+        <div><strong>Frisco</strong>Location</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Exceptional Space in Frisco</h2>
+        <p className="listingDescription">
+          Welcome to 12820 Cooper River Trail — a stunning 3,385 square foot home in Frisco offering four bedrooms and two and a half bathrooms across a spacious, modern two-story floor plan. Built in 2020, this home features an open-concept kitchen and living space designed for both everyday comfort and entertaining.
+        </p>
+        <p className="listingDescription">
+          The main-floor primary suite offers a private retreat, while the second floor features a game room, media room, and additional bedrooms — ideal for families of all sizes. A 3-car garage rounds out this exceptional Frisco offering, listed at $865,000.
+        </p>
+        <div className="highlightGrid">
+          {highlights.map((item) => <div key={item}>{item}</div>)}
+        </div>
+      </section>
+
+      <section className="listingSection alt">
+        <h2>Photo Gallery</h2>
+        <PropertyReel
+          images={cooperImages}
+          address="12820 Cooper River Trail"
+          city="Frisco, Texas 75035"
+          price="$865,000"
+          beds="4" baths="2.5" sqft="3,385" built="2020"
+          listingUrl="/listings/cooper"
+          roomLabels={['Exterior','Exterior','Entry','Living Room','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Suite','Primary Bath','Primary Bath','Game Room','Media Room','Bedroom','Bedroom','Bedroom','Backyard']}
+          slideTitles={['Stunning Two-Story Brick & Stone Elevation','Front Elevation & Curb Appeal','Bright Entry Foyer','Open Concept Living Room','Spacious Family Room with Natural Light','Living Room with Fireplace','Gourmet Kitchen with Large Island','Kitchen with Stainless Appliances','Custom Cabinetry & Backsplash','Dining Area Open to Kitchen','Main Floor Primary Suite','Primary Suite with Tray Ceiling','Primary Spa Bath with Dual Vanity','Walk-In Shower & Soaking Tub','Upstairs Game Room','Dedicated Media Room','Secondary Bedroom with Walk-In Closet','Additional Bedroom with Natural Light','Third Bedroom','Backyard & Covered Patio']}
+        />
+      </section>
+
+      <section className="listingSection">
+        <h2>Why This Home Stands Out</h2>
+        <div className="standoutGrid">
+          {standouts.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
+        </div>
+      </section>
+
+      <section className="tourCTA">
+        <p className="eyebrow">Private Tour</p>
+        <h2>Schedule Your Showing Today</h2>
+        <p>Contact Harish Patel to tour 12820 Cooper River Trail or request full pricing and availability details.</p>
+        <div className="tourActions">
+          <a className="btnGold" href="tel:9725520158">Call 972-552-0158</a>
+          <a className="btnOutline" href="sms:9725520158">Text Harish</a>
+          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank">Book Consultation</a>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in 12820 Cooper River Trail?</h2>
+        <p>Submit your information below and Harish will follow up with tour options and full property details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">100 N Central Expwy, Suite #913, Richardson, TX 75080</p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+      <FloatingSocialBar />
+      <FloatingButtons />
+    </div>
+  )
+}
+
+function ArrowPage() {
+  const arrowImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/arrow/arrow-${i + 1}.jpg`
+  )
+
+  const highlights = ['Built 2021','4 Bedrooms','3.5 Bathrooms','3,106 Sq Ft','Two-Story Layout','Primary Suite Downstairs','Open Concept Kitchen','Upstairs Game Room','Covered Patio','2-Car Garage','Aubrey Location','Move-In Ready']
+  const standouts = [
+    ['Spacious 3,106 Sq Ft Floor Plan', 'Four bedrooms and three and a half bathrooms provide generous space across a well-designed two-story layout.'],
+    ['Primary Suite on the Main Floor', 'Private main-level primary retreat with an ensuite bath and walk-in closet.'],
+    ['Upstairs Game Room', 'A dedicated game room provides flexible space for entertainment, a playroom, or additional living area.'],
+    ['2021 Modern Construction', 'Newer build featuring contemporary finishes, energy-efficient systems, and move-in ready condition.'],
+    ['Covered Patio', 'Enjoy outdoor living year-round with a covered patio, ideal for relaxing or entertaining guests.'],
+    ['Prime Aubrey Location', 'Located in Aubrey, TX with convenient access to Little Elm, Denton, and growing North Texas amenities.']
+  ]
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/arrow/arrow-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+          <p className="eyebrow">Residential Sale</p>
+          <h1>1312 Arrowwood Drive</h1>
+          <p>Aubrey, Texas 76227 • 2021 Build • Primary Down</p>
+          <p className="listingPrice">$549,999</p>
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>4</strong>Bedrooms</div>
+        <div><strong>3.5</strong>Bathrooms</div>
+        <div><strong>3,106</strong>Sq Ft</div>
+        <div><strong>2021</strong>Built</div>
+        <div><strong>2-Car</strong>Garage</div>
+        <div><strong>Aubrey</strong>Location</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Modern Living in Aubrey</h2>
+        <p className="listingDescription">
+          Welcome to 1312 Arrowwood Drive — a beautifully designed 3,106 square foot home in Aubrey offering four bedrooms and three and a half bathrooms across a spacious two-story floor plan. Built in 2021, this home features an open-concept kitchen and living area with modern finishes throughout.
+        </p>
+        <p className="listingDescription">
+          The main-floor primary suite offers a private retreat, while the second floor features a game room and additional bedrooms — perfect for families and entertaining. A covered patio and 2-car garage complete this exceptional Aubrey offering, listed at $549,999.
+        </p>
+        <div className="highlightGrid">
+          {highlights.map((item) => <div key={item}>{item}</div>)}
+        </div>
+      </section>
+
+      <section className="listingSection alt">
+        <h2>Photo Gallery</h2>
+        <PropertyReel
+          images={arrowImages}
+          address="1312 Arrowwood Drive"
+          city="Aubrey, Texas 76227"
+          price="$549,999"
+          beds="4" baths="3.5" sqft="3,106" built="2021"
+          listingUrl="/listings/arrow"
+          roomLabels={['Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Primary Bath','Game Room','Bedroom','Bedroom','Backyard']}
+          slideTitles={['Modern Two-Story Elevation','Bright Entry Foyer','Open Concept Living Room','Spacious Living Area with Natural Light','Kitchen with Large Island','Kitchen with Stainless Appliances','White Cabinetry & Tile Backsplash','Dining Area Open to Kitchen','Main Floor Primary Suite','Primary Bath with Dual Vanity','Walk-In Shower & Soaking Tub','Upstairs Game Room','Secondary Bedroom with Walk-In Closet','Additional Bedroom with Natural Light','Covered Patio & Backyard']}
+        />
+      </section>
+
+      <section className="listingSection">
+        <h2>Why This Home Stands Out</h2>
+        <div className="standoutGrid">
+          {standouts.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
+        </div>
+      </section>
+
+      <section className="tourCTA">
+        <p className="eyebrow">Private Tour</p>
+        <h2>Schedule Your Showing Today</h2>
+        <p>Contact Harish Patel to tour 1312 Arrowwood Drive or request full pricing and availability details.</p>
+        <div className="tourActions">
+          <a className="btnGold" href="tel:9725520158">Call 972-552-0158</a>
+          <a className="btnOutline" href="sms:9725520158">Text Harish</a>
+          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank">Book Consultation</a>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in 1312 Arrowwood Drive?</h2>
+        <p>Submit your information below and Harish will follow up with tour options and full property details.</p>
+        <ContactForm />
+      </section>
+
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">100 N Central Expwy, Suite #913, Richardson, TX 75080</p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
+      <FloatingSocialBar />
+      <FloatingButtons />
+    </div>
+  )
+}
+
+function WashingtonPage() {
+  const washingtonImages = Array.from(
+    { length: 15 },
+    (_, i) => `/listings/washington/washington-${i + 1}.jpg`
+  )
+
+  const highlights = ['3 Bedrooms','2 Bathrooms','1,700 Sq Ft','Built 2005','Open Concept Layout','Updated Kitchen','Attached Garage','Private Backyard','McKinney Location','Available for Lease','Move-In Ready','Great School District']
+  const standouts = [
+    ['Comfortable 1,700 Sq Ft Layout', 'Three bedrooms and two bathrooms offer a well-proportioned floor plan ideal for individuals, couples, or small families.'],
+    ['Open Concept Living', 'The kitchen and living areas flow together, creating a bright and functional space for everyday living and entertaining.'],
+    ['Private Backyard', 'Enjoy outdoor space with a private backyard, perfect for relaxing or entertaining.'],
+    ['Attached Garage', 'Convenient attached garage provides secure parking and additional storage space.'],
+    ['Prime McKinney Location', 'Located in McKinney, TX with easy access to shopping, dining, and top-rated schools.'],
+    ['Available for Lease', 'Move-in ready and available for lease at $2,999 per month — ideal for renters seeking a well-located North Texas home.']
+  ]
+
+  return (
+    <div>
+      <Header />
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/washington/washington-1.jpg') center/cover no-repeat"
+        }}
+      >
+        <div className="listingHeroContent">
+          <a href="/#listings" className="backLink">← Back to Listings</a>
+          <p className="eyebrow">Residential Lease</p>
+          <h1>9929 George Washington Dr</h1>
+          <p>McKinney, Texas 75070 • Move-In Ready</p>
+          <p className="listingPrice">$2,999 / Month</p>
+          <div className="buttons">
+            <a href="#contact" className="btnGold">Schedule Private Tour</a>
+            <a href="tel:9725520158" className="btnOutline">Call Harish</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="statsBar">
+        <div><strong>3</strong>Bedrooms</div>
+        <div><strong>2</strong>Bathrooms</div>
+        <div><strong>1,700</strong>Sq Ft</div>
+        <div><strong>2005</strong>Built</div>
+        <div><strong>McKinney</strong>Location</div>
+        <div><strong>Lease</strong>Home</div>
+      </section>
+
+      <section className="listingSection">
+        <h2>Comfortable Living in McKinney</h2>
+        <p className="listingDescription">
+          Welcome to 9929 George Washington Dr — a comfortable 1,700 square foot lease home in McKinney offering three bedrooms and two bathrooms in a functional, single-story layout. Built in 2005, this home features an open-concept living and kitchen area ideal for everyday living.
+        </p>
+        <p className="listingDescription">
+          Enjoy a private backyard, attached garage, and a convenient McKinney location close to shopping, dining, and top-rated schools. Available for lease at $2,999 per month.
+        </p>
+        <div className="highlightGrid">
+          {highlights.map((item) => <div key={item}>{item}</div>)}
+        </div>
+      </section>
+
+      <section className="listingSection alt">
+        <h2>Photo Gallery</h2>
+        <PropertyReel
+          images={washingtonImages}
+          address="9929 George Washington Dr"
+          city="McKinney, Texas 75070"
+          price="$2,999 / Month"
+          beds="3" baths="2" sqft="1,700" built="2005"
+          listingUrl="/listings/washington"
+          roomLabels={['Exterior','Entry','Living Room','Living Room','Kitchen','Kitchen','Kitchen','Dining','Primary Suite','Primary Bath','Bedroom','Bedroom','Bathroom','Hallway','Backyard']}
+          slideTitles={['Inviting Front Elevation','Bright Entry Foyer','Open Concept Living Room','Spacious Living Area with Natural Light','Updated Kitchen with Ample Cabinetry','Kitchen with Stainless Appliances','Kitchen Open to Living Area','Dining Area Open to Kitchen','Primary Bedroom Suite','Primary Bathroom','Secondary Bedroom','Third Bedroom','Full Secondary Bathroom','Hallway & Storage','Private Backyard']}
+        />
+      </section>
+
+      <section className="listingSection">
+        <h2>Why This Home Stands Out</h2>
+        <div className="standoutGrid">
+          {standouts.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
+        </div>
+      </section>
+
+      <section className="tourCTA">
+        <p className="eyebrow">Private Tour</p>
+        <h2>Schedule Your Showing Today</h2>
+        <p>Contact Harish Patel to tour 9929 George Washington Dr or request full lease details and availability.</p>
+        <div className="tourActions">
+          <a className="btnGold" href="tel:9725520158">Call 972-552-0158</a>
+          <a className="btnOutline" href="sms:9725520158">Text Harish</a>
+          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank">Book Consultation</a>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <p className="eyebrow">Contact Harish Patel</p>
+        <h2>Interested in 9929 George Washington Dr?</h2>
+        <p>Submit your information below and Harish will follow up with tour options and lease details.</p>
         <ContactForm />
       </section>
 
@@ -2219,6 +2789,26 @@ if (window.location.pathname.startsWith('/cities/') && cityPage) {
 
   if (window.location.pathname === '/listings/peters/peters') {
     return <PetersPage />
+  }
+
+  if (window.location.pathname === '/listings/Yarrow/Yarrow') {
+    return <YarrowPage />
+  }
+
+  if (window.location.pathname === '/listings/stillwater') {
+    return <StillwaterPage />
+  }
+
+  if (window.location.pathname === '/listings/cooper') {
+    return <CooperPage />
+  }
+
+  if (window.location.pathname === '/listings/arrow') {
+    return <ArrowPage />
+  }
+
+  if (window.location.pathname === '/listings/washington') {
+    return <WashingtonPage />
   }
 
 if (dynamicListing) {
