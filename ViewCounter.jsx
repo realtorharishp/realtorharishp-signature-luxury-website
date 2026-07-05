@@ -6,7 +6,6 @@ import React from 'react'
 // Uses CounterAPI's public V1 endpoint directly (no npm package, no account,
 // no API key) — the V2 SDK requires a pre-registered workspace, which is
 // why an earlier version of this component silently failed.
-//Made changes
 const COUNTER_NAMESPACE = 'rekonnection-real-estate'
 
 export default function ViewCounter({ slug }) {
