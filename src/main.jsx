@@ -2774,9 +2774,60 @@ function HomePage() {
   )
 }
 
+function MarketingStudio() {
+  return (
+    <div>
+      <Header />
+
+      <section className="listingPageHero">
+        <div className="listingHeroContent">
+          <p className="eyebrow">RKRS Internal Tool</p>
+          <h1>Luxury Marketing Studio</h1>
+          <p>Create reels, flyers, captions, email blasts, and listing pages from one place.</p>
+
+          <div className="buttons">
+            <a href="#new-listing" className="btnGold">+ New Listing</a>
+            <a href="/" className="btnOutline">Back to Website</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="new-listing" className="listingSection">
+        <h2>Generate Marketing Package</h2>
+
+        <div className="studioGrid">
+          {listings.slice(0, 8).map((listing) => (
+            <div className="studioCard" key={listing.slug}>
+              <img src={listing.image} alt={listing.title} />
+              <div>
+                <p className="eyebrow dark">{listing.status}</p>
+                <h3>{listing.title}</h3>
+                <p>{listing.city}</p>
+                <strong>{listing.price}</strong>
+
+                <div className="studioActions">
+                  <button>Generate Reel Script</button>
+                  <button>Generate Social Post</button>
+                  <button>Generate Email Blast</button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <FloatingButtons />
+    </div>
+  )
+}
+
+
 function App() {
   useGoogleAnalytics(GA4_MEASUREMENT_ID)
   const path = window.location.pathname
+  if (path === '/marketing-studio') {
+  return <MarketingStudio />
+}
   const dynamicListing = listings.find((listing) => listing.link === path)
   const citySlug = window.location.pathname.replace('/cities/', '')
   const cityPage = cities.find((city) => city.slug === citySlug)
