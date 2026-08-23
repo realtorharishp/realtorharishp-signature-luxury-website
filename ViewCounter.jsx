@@ -6,61 +6,41 @@ export default function ViewCounter({ slug }) {
   const [views, setViews] = React.useState(null)
 
   React.useEffect(() => {
-    if (!slug) {
-      setViews(null)
-      return
-    }
+    if (!slug) return
 
-    let cancelled = false
-    const controller = new AbortController()
+    const sessionKey = `viewed-${slug}`
+    const alreadyCounted = sessionStorage.getItem(sessionKey)
 
-    const loadViews = async () => {
-      try {
-        const sessionKey = `viewed-${slug}`
-        const alreadyCounted = sessionStorage.getItem(sessionKey)
-        const url = alreadyCounted
-          ? `https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${slug}/`
-          : `https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${slug}/up`
+    const url = alreadyCounted
+      ? `https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${slug}/`
+      : `https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${slug}/up`
 
-        const response = await fetch(url, { signal: controller.signal })
-
-        // Counter failures must never break a property page.
+    fetch(url)
+      .then((response) => {
         if (!response.ok) {
-          if (!cancelled) setViews(null)
-          return
+          throw new Error(`Counter API returned ${response.status}`)
         }
-
-        const data = await response.json()
+        return response.json()
+      })
+      .then((data) => {
         const count = Number(data?.count)
 
-        // Only render the counter when the API returned a valid number.
         if (!Number.isFinite(count)) {
-          if (!cancelled) setViews(null)
-          return
+          throw new Error('Invalid counter response')
         }
 
-        if (!cancelled) {
-          setViews(count)
-          if (!alreadyCounted) {
-            sessionStorage.setItem(sessionKey, '1')
-          }
-        }
-      } catch (error) {
-        if (error?.name !== 'AbortError' && !cancelled) {
-          setViews(null)
-        }
-      }
-    }
+        setViews(count)
 
-    loadViews()
-
-    return () => {
-      cancelled = true
-      controller.abort()
-    }
+        if (!alreadyCounted) {
+          sessionStorage.setItem(sessionKey, '1')
+        }
+      })
+      .catch((error) => {
+        console.warn('View counter unavailable:', error)
+        setViews(null)
+      })
   }, [slug])
 
-  // Hide the counter when unavailable instead of crashing the page.
   if (!Number.isFinite(views)) return null
 
   return (
