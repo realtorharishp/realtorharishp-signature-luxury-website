@@ -1,28 +1,28 @@
 export const listings = [
   {
     slug: '14839 Story Lane',
-    status: 'Residential Sale',
+    status: 'Residential Lease',
     title: '14839 Story Lane',
     city: 'Frisco, TX 75035',
-    price: '$839,999',
+    price: '$3899',
     image: '/listings/14839-story-lane/story-1.jpg',
     facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011'],
     link: '/listings/14839-story-lane'
   },
 
   {
-  slug: 'peters',
+  slug: 'corner',
   status: 'Residential Lease Or Sale',
-  title: '2201 Peters Colony Drive',
-  city: 'Little Elm, Texas 75036',
+  title: '754 Corner Post Path',
+  city: 'Celina, Texas 75009',
   price: '$572,999',
   image: '/listings/peters/peters-1.jpg',
   gallery: Array.from(
-    { length: 15 },
-    (_, i) => `/listings/peters/peters-${i + 1}.jpg`
+    { length: 25 },
+    (_, i) => `/listings/corner/corner-${i + 1}.jpg`
   ),
-  facts: ['4 Bed', '2.5 Bath', '3,108 Sq Ft', 'Built 2023'],
-  link: '/listings/peters/peters'
+  facts: ['4 Bed', '3 Bath', '3,008 Sq Ft', 'Built 2020'],
+  link: '/listings/corner/corner'
 },
   
  {
@@ -76,7 +76,7 @@ export const listings = [
   status: 'Residential Sale',
   title: '6451 Still Water Court',
   city: 'Midlothian, Texas 76065',
-  price: '$764,999',
+  price: '$729,999',
   image: '/listings/stillwater/stillwater-1.jpg',
   gallery: Array.from(
     { length: 15 },
@@ -92,7 +92,7 @@ export const listings = [
     status: 'Residential Sale',
     title: '9650 Amberwoods Lane',
     city: 'Frisco, TX',
-    price: '$549,999',
+    price: '$520,999',
     image: '/listings/9650-amberwoods-lane/amber-1.jpg',
     facts: ['3 Bed', '2.5 Bath', '2,593 Sq Ft', 'Built 2013'],
     link: '/listings/9650-amberwoods-lane'
