@@ -24,7 +24,7 @@ export const marketSections = [
           address: '6451 Still Waters Court',
           city: 'Midlothian, Texas 76065',
           price: '$729,999',
-          image: '/stillwater.jpg',
+          image: '/listings//stillwater/stillwater-1.jpg',
           status: 'Open House • Sat 29th Aug, 2026 between 1PM–4PM'
         }  
       ]
