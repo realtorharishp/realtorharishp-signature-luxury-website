@@ -352,17 +352,16 @@ function ListingPage() {
         <div className="listingHeroContent">
           <a href="/#listings" className="backLink">← Back to Listings</a>
           <p className="eyebrow">Featured Listing</p>
-          <h1>14839 Story Lane</h1>
-          <p>Frisco, TX 75035 • North Facing • 3 Car Garage • Highland Homes</p>
-          <p className="listingPrice">$923,631 • Seller Offering $15,000 Incentive</p>
-          <ViewCounter slug="story-lane" />
+          <h1>754 Corner Post Path</h1>
+          <p>Celina, TX 75009 • North Facing • 3 Car Garage • American Legend Homes</p>
+          <p className="listingPrice">$573,999 • Seller Offering $5,000 Incentive</p>
+          <ViewCounter slug="corner" />
           <div className="buttons">
             <a href="#private-tour" className="btnGold">Schedule Private Tour</a>
             <a href="tel:9725520158" className="btnOutline">Call Harish</a>
           </div>
         </div>
       </section>
-
       <section className="statsBar">
         <div><strong>4</strong>Bedrooms</div>
         <div><strong>3.5</strong>Bathrooms</div>
