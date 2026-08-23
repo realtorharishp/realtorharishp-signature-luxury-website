@@ -80,6 +80,7 @@ export const marketSections = [
           image: '/listings/douglas.jpg',
           status: 'Sold'
         },
+       
         {
           address: '9650 Amberwood Lane',
           city: 'Frisco, TX, 75035',
@@ -87,6 +88,7 @@ export const marketSections = [
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',
           status: 'Under Contract'
         },
+       
         {
           address: '6007 Alderton Drive',
           city: 'Mckinney, TX',
@@ -101,7 +103,7 @@ export const marketSections = [
           price: '$359,999',
           image: '/listings/oldstead/oldstead-1.jpg',
           status: 'Sold'
-        }
+        },
        
        {
           address: '4433 Ginger Road',
