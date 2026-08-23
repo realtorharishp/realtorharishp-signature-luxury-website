@@ -75,6 +75,7 @@ function ContactForm() {
         <option>Leasing</option>
         <option>Investing</option>
         <option>Commercial</option>
+        <option>754 Corner Post Path Private Tour</option>
         <option>14839 Story Lane Private Tour</option>
       </select>
       <textarea name="message" placeholder="Tell me about your real estate goals" required></textarea>
@@ -334,27 +335,47 @@ function MarketActivitySection() {
 }
 
 
-function ListingPage() {
-  const highlights = ['North Facing Lot','3 Car Garage','$5K Seller Incentive','Large Gourmet Kitchen','Hardwood Floors','Epoxy in Garage','Luxury Upgrades','60ft Ceiling Height Cabinets']
+function CornerPostPage() {
+  const cornerImages = Array.from(
+    { length: 25 },
+    (_, i) => `/listings/corner/corner-${i + 1}.jpg`
+  )
+
+  const highlights = [
+    'American Legend Home',
+    '3-Car Garage',
+    'Private Study / Office',
+    'Game Room',
+    'Media Room',
+    'Spacious Living Areas',
+    'Premium Celina Location',
+    'Available for Sale or Lease'
+  ]
+
   const standouts = [
-    ['Flexible $5K Incentive','Use the seller concession toward closing costs, rate buydown, price reduction, custom upgrades, or other buyer needs.'],
-    ['Move-In Ready Confidence','Pre-inspected prior to listing with major items remediated for peace of mind.'],
-    ['Luxury American Legend Homes Design','Stone elevation, hardwood floors, custom maple cabinetry, double ovens, and elegant architectural details.'],
-    ['Entertainer Floor Plan','Two bedrooms on the first floor plus upstairs game room and media room.'],
-    ['Large Backyard','Impressive 40-foot deep backyard with potential for future pool design.'],
-    ['Community Lifestyle','Mature trees, resort-style pool, scenic walking trails, and two elementary schools within the community.']
+    ['Featured Celina Opportunity', 'A well-appointed American Legend home in Celina with flexible living and entertaining spaces.'],
+    ['Work + Entertainment', 'Dedicated study/office plus game and media rooms give the floor plan excellent flexibility.'],
+    ['3-Car Garage', 'Extra garage capacity provides room for vehicles, storage, hobbies, or household equipment.'],
+    ['Private Tour Available', 'Contact Harish Patel for current sale, lease, showing, and incentive details.']
   ]
 
   return (
     <div>
       <Header />
-      <section className="listingPageHero">
+
+      <section
+        className="listingPageHero"
+        style={{
+          background:
+            "linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)), url('/listings/corner/corner-1.jpg') center/cover no-repeat"
+        }}
+      >
         <div className="listingHeroContent">
           <a href="/#listings" className="backLink">← Back to Listings</a>
           <p className="eyebrow">Featured Listing</p>
           <h1>754 Corner Post Path</h1>
-          <p>Celina, TX 75009 • North Facing • 3 Car Garage • American Legend Homes</p>
-          <p className="listingPrice">$573,999 • Seller Offering $5,000 Incentive</p>
+          <p>Celina, Texas 75009 • American Legend Home • 3-Car Garage</p>
+          <p className="listingPrice">$573,999</p>
           <ViewCounter slug="corner" />
           <div className="buttons">
             <a href="#private-tour" className="btnGold">Schedule Private Tour</a>
@@ -362,20 +383,24 @@ function ListingPage() {
           </div>
         </div>
       </section>
+
       <section className="statsBar">
-        <div><strong>4</strong>Bedrooms</div>
-        <div><strong>3.5</strong>Bathrooms</div>
-        <div><strong>3,593</strong>Sq Ft</div>
-        <div><strong>2011</strong>Built</div>
-        <div><strong>3</strong>Car Garage</div>
-        <div><strong>$15K</strong>Incentive</div>
+        <div><strong>4 Bed</strong></div>
+        <div><strong>3 Bath</strong></div>
+        <div><strong>3,008 Sq Ft</strong></div>
+        <div><strong>Built 2020</strong></div>
+        <div><strong>3-Car Garage</strong></div>
+        <div><strong>Game + Media + Office</strong></div>
       </section>
 
       <section className="listingSection">
-        <h2>Exceptional Value in Frisco</h2>
-        <p className="listingDescription">Experience incredible value with this stunning Highland Homes residence featuring a flexible $15,000 seller concession. This incentive can be used toward a mortgage rate buydown, price reduction, custom upgrades, or closing costs. The home makes a grand first impression with a beautiful stone elevation and a modern layout designed for both luxury and functionality.</p>
-        <p className="listingDescription">The gourmet kitchen is a chef’s dream with maple custom cabinets, double ovens, a dedicated planning desk, expansive storage, and 60ft ceiling-height cabinets. The highly desirable floor plan includes two bedrooms on the first floor while the upstairs features both a game room and media room, perfect for entertaining.</p>
-        <p className="listingDescription">Fresh paint, upgraded bathrooms, new energy-efficient windows, a new tankless water heater, lightning protection, custom shelved garage storage, and a pre-inspected condition make this home move-in ready with confidence.</p>
+        <h2>Featured Home in Celina</h2>
+        <p className="listingDescription">
+          Discover 754 Corner Post Path, a spacious American Legend home in Celina offering flexible living, work, and entertainment areas. The home includes a private study/office, game room, media room, and a 3-car garage.
+        </p>
+        <p className="listingDescription">
+          Offered at $573,999 and available for sale or lease. Contact Harish Patel for current availability, showing times, lease terms, and complete property details.
+        </p>
         <div className="highlightGrid">
           {highlights.map((item) => <div key={item}>{item}</div>)}
         </div>
@@ -384,106 +409,59 @@ function ListingPage() {
       <section className="listingSection alt">
         <h2>Photo Gallery</h2>
         <PropertyReel
-          images={storyImages}
-          address="14839 Story Lane"
-          city="Frisco, TX 75035"
-          price="$923,631"
-          beds="4" baths="3.5" sqft="3,593" built="2011"
-          listingUrl="/listings/14839-story-lane"
-          roomLabels={['Primary Bath','Primary Suite','Primary Suite','Bathroom','Bedroom','Office','Entry','Breakfast Nook','Kitchen','Kitchen','Kitchen','Family Room','Family Room','Family Room','Family Room','Formal Living','Staircase','Exterior','Exterior','Exterior']}
-          slideTitles={['Spa-Style Primary Bath with Soaking Tub','Primary Suite with Vaulted Ceiling','Spacious Primary Suite with Bay Windows','Updated Secondary Bathroom','Comfortable Secondary Bedroom','Private Office with French Doors','Grand Two-Story Entry Foyer','Sunlit Breakfast Nook with Built-In Desk','Gourmet Kitchen with Granite Island','Gas Cooktop & Travertine Backsplash','Open Kitchen Layout','Stone Corner Fireplace','Open Concept Living & Kitchen','Family Room with Natural Light','Spacious Family Living Area','Formal Living Room','Elegant Staircase with Iron Balusters','Stone & Brick Elevation','3-Car Garage & Curb Appeal','Beautiful Street Presence']}
+          images={cornerImages}
+          address="754 Corner Post Path"
+          city="Celina, Texas 75009"
+          price="$573,999"
+          beds="4"
+          baths="3"
+          sqft="3,008"
+          built="2020"
+          listingUrl="/listings/corner/corner"
         />
       </section>
 
       <section className="listingSection">
         <h2>Why This Home Stands Out</h2>
         <div className="standoutGrid">
-          {standouts.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p></div>)}
+          {standouts.map(([title, text]) => (
+            <div key={title}><h3>{title}</h3><p>{text}</p></div>
+          ))}
         </div>
       </section>
 
       <section id="private-tour" className="tourCTA">
         <p className="eyebrow">Private Tour</p>
-        <h2>Schedule Your Showing Today</h2>
-        <p>Contact Harish Patel to tour 14839 Story Lane or request more details about the $15,000 seller incentive.</p>
+        <h2>Tour 754 Corner Post Path</h2>
+        <p>Contact Harish Patel for current availability and showing options.</p>
         <div className="tourActions">
           <a className="btnGold" href="tel:9725520158">Call 972-552-0158</a>
           <a className="btnOutline" href="sms:9725520158">Text Harish</a>
-          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank">Book Consultation</a>
+          <a className="btnGold" href="https://calendly.com/realtor-harishp/30min" target="_blank" rel="noopener noreferrer">Book Consultation</a>
         </div>
       </section>
 
-      <section className="leadMagnet">
-  <h2>Get Free North Texas Home Updates</h2>
-
-  <p>
-    Receive new listings, market updates, investment opportunities,
-    and open house alerts directly from Harish Patel.
-  </p>
-
-  <form action="https://api.web3forms.com/submit" method="POST">
-    <input
-      type="hidden"
-      name="access_key"
-      value="YOUR_KEY"
-    />
-
-    <input
-      type="email"
-      name="email"
-      placeholder="Enter Your Email"
-      required
-    />
-
-    <button type="submit">
-      Subscribe
-    </button>
-  </form>
-</section>
       <section id="contact" className="contact">
         <p className="eyebrow">Contact Harish Patel</p>
-        <h2>Interested in 14839 Story Lane?</h2>
-        <p>Submit your information below and Harish will follow up with private tour options.</p>
+        <h2>Interested in 754 Corner Post Path?</h2>
+        <p>Submit your information below and Harish will follow up with property and tour details.</p>
         <ContactForm />
       </section>
 
-     <footer>
-      <img src="/rek-logo.png" alt="REKonnection Logo" />
+      <footer>
+        <img src="/rek-logo.png" alt="REKonnection Logo" />
+        <p>Harish Patel • Realtor® • 972-552-0158 • realtor.harishp@gmail.com</p>
+        <p className="footerAddress">100 N Central Expwy, Suite #913, Richardson, TX 75080</p>
+        <FooterLinks />
+        <SocialLinks />
+      </footer>
 
-     <p>
-        Harish Patel • Realtor® • 972-552-0158 •
-        realtor.harishp@gmail.com
-    </p>
-
-    <p className="footerAddress">
-    100 N Central Expwy, Suite #913, Richardson, TX 75080
-    </p>
-
-      <div style={{ marginTop: '16px' }}>
-      <a
-        href="/documents/information-about-brokerage-services.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: '#d4af37', marginRight: '18px' }}
-      >
-        Information About Brokerage Services
-      </a>
-
-    <a
-      href="/documents/consumer-protection-notice.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ color: '#d4af37' }}
-    >
-      Consumer Protection Notice
-    </a>
-  </div>
-</footer>
       <FloatingSocialBar />
       <FloatingButtons />
     </div>
   )
 }
+
 function AmberwoodsPage() {
   const amberImages = Array.from(
     { length: 15 },
@@ -2567,7 +2545,7 @@ function CityPage({ city }) {
       <article className="propertyCard" key={p.number}>
         <div className="imageWrap">
           <img src={p.image} alt={`${p.title}, ${p.city}`} />
-          <div className="numberBadge">{p.number}</div>
+          <div className="numberBadge">{index + 1}</div>
           <div className="statusBadge">{p.status}</div>
         </div>
 
@@ -2691,16 +2669,16 @@ function HomePage() {
       <FeaturedListingsCarousel />
       <section className="featuredListing">
         <div className="featuredListingInner">
-           <img
-            src="/listings/14839-story-lane/story-1.jpg"
-              alt="14839 Story Lane Frisco TX"
-            />
+          <img
+            src="/listings/corner/corner-1.jpg"
+            alt="754 Corner Post Path Celina TX"
+          />
           <div className="featuredCopy">
             <p className="eyebrow dark">Featured Listing</p>
-            <h2>14839 Story Lane, Frisco</h2>
-            <div className="incentiveBanner">Seller Offering $15,000 Incentive</div>
-            <p>North-facing Highland Homes residence with 4 bedrooms, 3.5 baths, 3-car garage, fresh paint, upgraded baths, hardwood floors, large kitchen, new tankless water heater, and a pre-inspected move-in ready condition.</p>
-            <a href="/listings/14839-story-lane" className="btnGold">View Full Details</a>
+            <h2>754 Corner Post Path, Celina</h2>
+            <div className="incentiveBanner">Offered at $573,999</div>
+            <p>American Legend home with a 3-car garage, private study/office, game room, media room, spacious living areas, and flexible sale or lease options.</p>
+            <a href="/listings/corner/corner" className="btnGold">View Full Details</a>
           </div>
         </div>
       </section>
@@ -2708,9 +2686,9 @@ function HomePage() {
       <section id="listings" className="section light">
         <p className="eyebrow dark">Featured Listings</p><h2>Premium North Texas Properties</h2><p className="sectionIntro">Explore residential sales, lease homes, commercial space, and investor-ready opportunities represented by Harish Patel.</p>
         <div className="propertyGrid">
-          {listings.map((p) => (
-            <article className="propertyCard" key={p.number}>
-              <div className="imageWrap"><img src={p.image} alt={`${p.title}, ${p.city}`} /><div className="numberBadge">{p.number}</div><div className="statusBadge">{p.status}</div></div>
+          {listings.map((p, index) => (
+            <article className="propertyCard" key={p.slug}>
+              <div className="imageWrap"><img src={p.image} alt={`${p.title}, ${p.city}`} /><div className="numberBadge">{index + 1}</div><div className="statusBadge">{p.status}</div></div>
               <div className="propertyBody"><p className="propertyPrice">{p.price}</p><h3>{p.title}</h3><p className="propertyCity">{p.city}</p><div className="facts">{p.facts.map((fact) => <span key={fact}>{fact}</span>)}</div><a className="propertyButton" href={p.link || '#contact'}>{p.link ? 'View Details' : 'Schedule Showing'}</a></div>
             </article>
           ))}
@@ -2834,8 +2812,8 @@ function App() {
 if (window.location.pathname.startsWith('/cities/') && cityPage) {
   return <CityPage city={cityPage} />
 }
-  if (window.location.pathname === '/listings/14839-story-lane') {
-    return <ListingPage />
+  if (window.location.pathname === '/listings/corner/corner') {
+    return <CornerPostPage />
   }
 
   if (window.location.pathname === '/listings/9650-amberwoods-lane') {
