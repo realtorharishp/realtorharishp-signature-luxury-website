@@ -21,10 +21,10 @@ export const marketSections = [
       
        
        {
-          address: '6451 Still Waters Court',
+          address: '6451 Still Water Court',
           city: 'Midlothian, Texas 76065',
           price: '$729,999',
-          image: '/listings//stillwater/stillwater-1.jpg',
+          image: '/listings/stillwater/stillwater-1.jpg',
           status: 'Open House • Sat 29th Aug, 2026 between 1PM–4PM'
         }  
       ]
@@ -68,7 +68,7 @@ export const marketSections = [
         {
           address: '6204 Emery Hill Drive',
           city: 'Mckinney, TX',
-          price: '$359.999',
+          price: '$359,999',
           image: '/listings/dotty/dotty-1.jpg',
           status: 'Sold'
         },
@@ -82,7 +82,7 @@ export const marketSections = [
         },
        
         {
-          address: '9650 Amberwood Lane',
+          address: '9650 Amberwoods Lane',
           city: 'Frisco, TX, 75035',
           price: '$520,999',
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',

@@ -1,101 +1,62 @@
 export const listings = [
   {
-    slug: '14839 Story Lane',
+    slug: 'corner',
+    status: 'Residential Lease Or Sale',
+    title: '754 Corner Post Path',
+    city: 'Celina, Texas 75009',
+    price: '$573,999',
+    image: '/listings/corner/corner-1.jpg',
+    gallery: Array.from(
+      { length: 25 },
+      (_, i) => `/listings/corner/corner-${i + 1}.jpg`
+    ),
+    facts: ['4 Bed', '3 Bath', '3,008 Sq Ft', 'Built 2020'],
+    link: '/listings/corner/corner'
+  },
+
+  {
+    slug: '14839-story-lane',
     status: 'Residential Lease',
     title: '14839 Story Lane',
     city: 'Frisco, TX 75035',
-    price: '$3899',
+    price: '$3,899 / Month',
     image: '/listings/14839-story-lane/story-1.jpg',
+    gallery: Array.from(
+      { length: 20 },
+      (_, i) => `/listings/14839-story-lane/story-${i + 1}.jpg`
+    ),
     facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011'],
     link: '/listings/14839-story-lane'
   },
 
   {
-  slug: 'corner',
-  status: 'Residential Lease Or Sale',
-  title: '754 Corner Post Path',
-  city: 'Celina, Texas 75009',
-  price: '$572,999',
-  image: '/listings/peters/peters-1.jpg',
-  gallery: Array.from(
-    { length: 25 },
-    (_, i) => `/listings/corner/corner-${i + 1}.jpg`
-  ),
-  facts: ['4 Bed', '3 Bath', '3,008 Sq Ft', 'Built 2020'],
-  link: '/listings/corner/corner'
-},
-  
- {
-  slug: 'Yarrow',
-  status: 'Residential Sale',
-  title: '625 Yarrow Street',
-  city: 'Little Elm, Texas 75068',
-  price: '$774,999',
-  image: '/listings/Yarrow/Yarrow-1.jpg',
-  gallery: Array.from(
-    { length: 15 },
-    (_, i) => `/listings/Yarrow/Yarrow-${i + 1}.jpg`
-  ),
-  facts: ['5 Bed', '4 Bath', '4,070 Sq Ft', 'Built 2018'],
-  link: '/listings/Yarrow/Yarrow'
-},
-  
- {
-  slug: 'dotty',
-  status: 'Residential Lease Or Sale',
-  title: '717 Dotty Drive',
-  city: 'Mckinney, Texas 75071',
-  price: '$3200',
-  image: '/listings/dotty/dotty-1.jpg',
-  gallery: Array.from(
-    { length: 15 },
-    (_, i) => `/listings/dotty/dotty-${i + 1}.jpg`
-  ),
-  facts: ['4 Bed', '2.5 Bath', '2,337 Sq Ft', 'Built 2026'],
-  link: '/listings/dotty/dotty'
-},
-
- {
-  slug: 'alderton',
-  status: 'Residential Lease Or Sale',
-  title: '6007 Alderton drive',
-  city: 'Mckinney, Texas 75071',
-  price: '$3200',
-  image: '/listings/alderton/alderton-1.jpg',
-  gallery: Array.from(
-    { length: 15 },
-    (_, i) => `/listings/alderton/alderton-${i + 1}.jpg`
-  ),
-  facts: ['4 Bed', '2.5 Bath', '2,337 Sq Ft', 'Built 2026'],
-  link: '/listings/alderton/alderton'
-},
-  
-
-  {
-  slug: 'stillwater',
-  status: 'Residential Sale',
-  title: '6451 Still Water Court',
-  city: 'Midlothian, Texas 76065',
-  price: '$729,999',
-  image: '/listings/stillwater/stillwater-1.jpg',
-  gallery: Array.from(
-    { length: 15 },
-    (_, i) => `/listings/stillwater/stillwater-${i + 1}.jpg`
-  ),
-  facts: ['4 Bed', '3.5 Bath', '3,159 Sq Ft', 'Built 2016'],
-  link: '/listings/stillwater'
-},
-
-
-  {
-    slug: '9650-amberwoods-lane',
+    slug: 'Yarrow',
     status: 'Residential Sale',
-    title: '9650 Amberwoods Lane',
-    city: 'Frisco, TX',
-    price: '$520,999',
-    image: '/listings/9650-amberwoods-lane/amber-1.jpg',
-    facts: ['3 Bed', '2.5 Bath', '2,593 Sq Ft', 'Built 2013'],
-    link: '/listings/9650-amberwoods-lane'
+    title: '625 Yarrow Street',
+    city: 'Little Elm, Texas 75068',
+    price: '$774,999',
+    image: '/listings/Yarrow/Yarrow-1.jpg',
+    gallery: Array.from(
+      { length: 15 },
+      (_, i) => `/listings/Yarrow/Yarrow-${i + 1}.jpg`
+    ),
+    facts: ['5 Bed', '4 Bath', '4,070 Sq Ft', 'Built 2018'],
+    link: '/listings/Yarrow/Yarrow'
+  },
+
+  {
+    slug: 'stillwater',
+    status: 'Residential Sale',
+    title: '6451 Still Water Court',
+    city: 'Midlothian, Texas 76065',
+    price: '$729,999',
+    image: '/listings/stillwater/stillwater-1.jpg',
+    gallery: Array.from(
+      { length: 15 },
+      (_, i) => `/listings/stillwater/stillwater-${i + 1}.jpg`
+    ),
+    facts: ['4 Bed', '3.5 Bath', '3,159 Sq Ft', 'Built 2016'],
+    link: '/listings/stillwater'
   },
 
   {
@@ -110,17 +71,16 @@ export const listings = [
   },
 
   {
-   slug: '400-stonebrook-303',
+    slug: '400-stonebrook-303',
     status: 'Commercial Property',
     title: '400 Stonebrook Pkwy #303',
     city: 'Frisco, TX',
     price: '$429,999',
     image: '/listings/400-stonebrook-303/stonebrook-1.jpg',
     facts: ['4 Offices', '1 Bath', '1,225 Sq Ft', 'Suite #303'],
-    link: '/listings/400-stonebrook-303'
+    link: '/listings/400-stonebrook'
   },
 
-  
   {
     slug: '2900-galveston',
     status: 'Residential Lease',
@@ -130,43 +90,6 @@ export const listings = [
     image: '/listings/2900-galveston/galveston-1.jpg',
     facts: ['3 Bed', '2.5 Bath', '1,870 Sq Ft', 'Built 2018'],
     link: '/listings/2900-galveston'
-  },
-
-  {
-   slug: '1009-village-wood-ct',
-    status: 'Residential Lease',
-    title: '1009 Village Wood Ct',
-    city: 'Arlington, TX',
-    price: '$2,850 / Month',
-    image: '/listings/1009-village-wood-ct/village-1.jpg',
-    facts: ['4 Bed', '2.5 Bath', '2,336 Sq Ft', 'Built 1987'],
-    link: '/listings/1009-village-wood-ct'
-  },
-
-  {
-  slug: 'cooper',
-  status: 'Residential Sale',
-  title: '12820 Cooper River Trail',
-  city: 'Frisco, Texas 75035',
-  price: '$865,000',
-  image: '/listings/cooper/cooper-1.jpg',
-  gallery: Array.from(
-    { length: 20 },
-    (_, i) => `/listings/cooper/cooper-${i + 1}.jpg`
-  ),
-  facts: ['4 Bed', '2.5 Bath', '3,385 Sq Ft', 'Built 2020'],
-  link: '/listings/cooper'
-},
-
-  {
-    slug: '615-hemmingway-lane',
-    status: 'Residential Lease',
-    title: '615 Hemmingway Lane',
-    city: 'McKinney, TX',
-    price: '$2,239 / Month',
-    image: '/listings/615-hemmingway-lane/hemmingway-1.jpg',
-    facts: ['4 Bed', '2 Bath', '1,605 Sq Ft', 'Built 2024'],
-    link: '/listings/615-hemmingway-lane'
   },
 
   {
@@ -190,48 +113,34 @@ export const listings = [
     facts: ['5 Bed', '3 Bath', '2,212 Sq Ft', 'Built 2024'],
     link: '/listings/1874-purtis-creek'
   },
-  {
-  slug: 'arrow',
-  status: 'Residential Sale',
-  title: '1312 Arrowwood Drive',
-  city: 'Aubrey, Texas 76227',
-  price: '$549,999',
-  image: '/listings/arrow/arrow-1.jpg',
-  gallery: Array.from(
-    { length: 15 },
-    (_, i) => `/listings/arrow/arrow-${i + 1}.jpg`
-  ),
-  facts: ['4 Bed', '3.5 Bath', '3,106 Sq Ft', 'Built 2021'],
-  link: '/listings/arrow'
-},
 
-   {
-   slug: '400-stonebrook-301',
+  {
+    slug: '400-stonebrook-301',
     status: 'Commercial Lease',
     title: '400 Stonebrook Pkwy #301',
     city: 'Frisco, TX',
     price: '$3,299',
     image: '/listings/400-stonebrook-301/stone-1.jpg',
-     gallery: Array.from(
-    { length: 15 },
-    (_, i) => `/listings/400-stonebrook-301/stone-${i + 1}.jpg`
-  ),
+    gallery: Array.from(
+      { length: 15 },
+      (_, i) => `/listings/400-stonebrook-301/stone-${i + 1}.jpg`
+    ),
     facts: ['4 Offices', '1 Bath', '1,225 Sq Ft', 'Suite #301'],
-    link: '/listings/400-stonebrook-301'
+    link: '/listings/400-stonebrook-pkwy'
   },
-  
+
   {
-  slug: 'washington',
-  status: 'Residential lease',
-  title: '9929 George Washington Dr',
-  city: 'Mckinney, Texas, 75070',
-  price: '$2,999',
-  image: '/listings/washington/washington-1.jpg',
-  gallery: Array.from(
-    { length: 15 },
-    (_, i) => `/listings/washington/washington-${i + 1}.jpg`
-  ),
-  facts: ['3 Bed', '2 Bath', '1700 Sq Ft', 'Built 2005'],
-  link: '/listings/washington'
-}
-  ]
+    slug: 'washington',
+    status: 'Residential Lease',
+    title: '9929 George Washington Dr',
+    city: 'McKinney, Texas 75070',
+    price: '$2,999 / Month',
+    image: '/listings/washington/washington-1.jpg',
+    gallery: Array.from(
+      { length: 15 },
+      (_, i) => `/listings/washington/washington-${i + 1}.jpg`
+    ),
+    facts: ['3 Bed', '2 Bath', '1,700 Sq Ft', 'Built 2005'],
+    link: '/listings/washington'
+  }
+]
