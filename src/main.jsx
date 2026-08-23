@@ -335,11 +335,11 @@ function MarketActivitySection() {
 
 
 function ListingPage() {
-  const highlights = ['North Facing Lot','3 Car Garage','$15K Seller Incentive','Large Gourmet Kitchen','Hardwood Floors','New Tankless Water Heater','Pre-Inspected Home','Lightning Protection System','Shelfed Garage Storage','Fresh Paint','Upgraded Bathrooms','60ft Ceiling Height Cabinets']
+  const highlights = ['North Facing Lot','3 Car Garage','$5K Seller Incentive','Large Gourmet Kitchen','Hardwood Floors','Epoxy in Garage','Luxury Upgrades','60ft Ceiling Height Cabinets']
   const standouts = [
-    ['Flexible $15K Incentive','Use the seller concession toward closing costs, rate buydown, price reduction, custom upgrades, or other buyer needs.'],
+    ['Flexible $5K Incentive','Use the seller concession toward closing costs, rate buydown, price reduction, custom upgrades, or other buyer needs.'],
     ['Move-In Ready Confidence','Pre-inspected prior to listing with major items remediated for peace of mind.'],
-    ['Luxury Highland Homes Design','Stone elevation, hardwood floors, custom maple cabinetry, double ovens, and elegant architectural details.'],
+    ['Luxury American Legend Homes Design','Stone elevation, hardwood floors, custom maple cabinetry, double ovens, and elegant architectural details.'],
     ['Entertainer Floor Plan','Two bedrooms on the first floor plus upstairs game room and media room.'],
     ['Large Backyard','Impressive 40-foot deep backyard with potential for future pool design.'],
     ['Community Lifestyle','Mature trees, resort-style pool, scenic walking trails, and two elementary schools within the community.']
