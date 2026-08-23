@@ -86,7 +86,7 @@ export const marketSections = [
           city: 'Frisco, TX, 75035',
           price: '$520,999',
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',
-          status: 'Under Contract'
+          status: 'Sold'
         },
        
         {
