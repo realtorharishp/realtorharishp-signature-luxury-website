@@ -1,5 +1,15 @@
 export const listings = [
   {
+    slug: 'bird-creek',
+    status: 'Premium Residential Sale',
+    title: '725 Bird Creek Drive',
+    city: 'Little Elm, Texas 75068',
+    price: '$339,999',
+    image: '/premium-listings/bird-creek-front.png',
+    facts: ['3 Bed', '2 Bath', '2,025 Sq Ft', 'Built 2017'],
+    link: '/listings/bird-creek/'
+  },
+  {
     slug: 'corner',
     status: 'Residential Lease Or Sale',
     title: '754 Corner Post Path',
@@ -13,7 +23,6 @@ export const listings = [
     facts: ['4 Bed', '3 Bath', '3,008 Sq Ft', 'Built 2020'],
     link: '/listings/corner/corner'
   },
-
   {
     slug: '14839-story-lane',
     status: 'Residential Lease',
@@ -28,7 +37,6 @@ export const listings = [
     facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011'],
     link: '/listings/14839-story-lane'
   },
-
   {
     slug: 'Yarrow',
     status: 'Residential Sale',
@@ -43,7 +51,6 @@ export const listings = [
     facts: ['5 Bed', '4 Bath', '4,070 Sq Ft', 'Built 2018'],
     link: '/listings/Yarrow/Yarrow'
   },
-
   {
     slug: 'stillwater',
     status: 'Residential Sale',
@@ -58,7 +65,6 @@ export const listings = [
     facts: ['4 Bed', '3.5 Bath', '3,159 Sq Ft', 'Built 2016'],
     link: '/listings/stillwater'
   },
-
   {
     slug: '2935-shetland-drive',
     status: 'Residential Sale',
@@ -69,7 +75,6 @@ export const listings = [
     facts: ['3 Bed', '2 Bath', '1,792 Sq Ft', 'Built 2023'],
     link: '/listings/2935-shetland-drive'
   },
-
   {
     slug: '400-stonebrook-303',
     status: 'Commercial Property',
@@ -80,7 +85,6 @@ export const listings = [
     facts: ['4 Offices', '1 Bath', '1,225 Sq Ft', 'Suite #303'],
     link: '/listings/400-stonebrook'
   },
-
   {
     slug: '2900-galveston',
     status: 'Residential Lease',
@@ -91,7 +95,6 @@ export const listings = [
     facts: ['3 Bed', '2.5 Bath', '1,870 Sq Ft', 'Built 2018'],
     link: '/listings/2900-galveston'
   },
-
   {
     slug: '4414-silverweed-lane',
     status: 'Investor Opportunity',
@@ -102,7 +105,6 @@ export const listings = [
     facts: ['3 Bed', '2.5 Bath', '1,862 Sq Ft', 'Built 2024'],
     link: '/listings/4414-silverweed-lane'
   },
-
   {
     slug: '1874-purtis-creek',
     status: 'Residential Lease',
@@ -113,7 +115,6 @@ export const listings = [
     facts: ['5 Bed', '3 Bath', '2,212 Sq Ft', 'Built 2024'],
     link: '/listings/1874-purtis-creek'
   },
-
   {
     slug: '400-stonebrook-301',
     status: 'Commercial Lease',
@@ -128,7 +129,6 @@ export const listings = [
     facts: ['4 Offices', '1 Bath', '1,225 Sq Ft', 'Suite #301'],
     link: '/listings/400-stonebrook-pkwy'
   },
-
   {
     slug: 'washington',
     status: 'Residential Lease',
