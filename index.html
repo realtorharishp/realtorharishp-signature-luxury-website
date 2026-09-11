@@ -44,5 +44,19 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const addComingSoonMenu = () => {
+        const nav = document.querySelector('.navbar nav');
+        if (!nav || nav.querySelector('[data-coming-soon]')) return;
+        const link = document.createElement('a');
+        link.href = '/1600-swan-st/';
+        link.textContent = 'Coming Soon';
+        link.setAttribute('data-coming-soon', 'true');
+        nav.appendChild(link);
+      };
+      const observer = new MutationObserver(addComingSoonMenu);
+      observer.observe(document.body, { childList: true, subtree: true });
+      addComingSoonMenu();
+    </script>
   </body>
 </html>
