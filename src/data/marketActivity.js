@@ -6,9 +6,9 @@ export const marketSections = [
       {
           address: '625 Yarrow Street',
           city: 'Little Elm, Texas 75068',
-          price: '$744,599',
+          price: '$3599',
           image: '/listings/Yarrow/Yarrow-1.jpg',
-          status: 'Open House • Sunday 6th Sept, 2026 between 1PM–4PM'
+          status: 'Available'
         },   
        
        {
@@ -16,7 +16,7 @@ export const marketSections = [
           city: 'Midlothian, Texas 76065',
           price: '$729,999',
           image: '/listings/stillwater/stillwater-1.jpg',
-          status: 'Open House • Sat 29th Aug, 2026 between 1PM–4PM'
+          status: 'Available'
         }  
       ]
   },
@@ -61,7 +61,7 @@ export const marketSections = [
           city: 'Plano, TX',
           price: '$1,350,100',
           image: '/listings/5544-Riverton-CT.png',
-          status: 'Under Contract'
+          status: 'Closed'
         },
 
          {
@@ -85,7 +85,7 @@ export const marketSections = [
           city: 'Prosper, TX',
           price: '$1,041,000',
           image: '/listings/douglas.jpg',
-          status: 'Sold'
+          status: 'Closed'
         },
        
         {
@@ -93,7 +93,7 @@ export const marketSections = [
           city: 'Frisco, TX, 75035',
           price: '$520,999',
           image: '/listings/9650-amberwoods-lane/amber-1.jpg',
-          status: 'Sold'
+          status: 'Closed'
         },
        
         {
@@ -101,7 +101,7 @@ export const marketSections = [
           city: 'Mckinney, TX',
           price: '$363,000',
           image: '/listings/alderton/alderton-1.jpg',
-          status: 'Sold'
+          status: 'Closed'
         },
 
       {
@@ -109,7 +109,7 @@ export const marketSections = [
           city: 'Mckinney, TX',
           price: '$359,999',
           image: '/listings/oldstead/oldstead-1.jpg',
-          status: 'Sold'
+          status: 'Closed'
         },
        
        {
@@ -117,14 +117,14 @@ export const marketSections = [
           city: 'Prosper, TX',
           price: '$670,000',
           image: '/listings/ginger.jpg',
-          status: 'Sold'
+          status: 'Closed'
         },
        {
           address: '1324 Rockwell Drive',
           city: 'Little Elm, TX, 75068',
           price: '$2,530',
           image: '/listings/1324-rockwell/rockwell.jpg',
-          status: 'Sold'
+          status: 'Closed'
         }
        
       ]
