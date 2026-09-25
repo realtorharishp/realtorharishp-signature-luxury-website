@@ -60,7 +60,7 @@ export const marketSections = [
           address: '5544 Riverton CT',
           city: 'Plano, TX',
           price: '$1,350,100',
-          image: '/listings/riverton.png',
+          image: '/listings/5544-Riverton-CT.png',
           status: 'Under Contract'
         },
 
