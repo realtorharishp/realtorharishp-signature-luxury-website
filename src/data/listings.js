@@ -11,7 +11,7 @@ export const listings = [
   },
   {
     slug: 'corner',
-    status: 'Residential Lease Or Sale',
+    status: 'Under Contract',
     title: '754 Corner Post Path',
     city: 'Celina, Texas 75009',
     price: '$573,999',
@@ -25,7 +25,7 @@ export const listings = [
   },
   {
     slug: '14839-story-lane',
-    status: 'Residential Lease',
+    status: 'Closed',
     title: '14839 Story Lane',
     city: 'Frisco, TX 75035',
     price: '$3,899 / Month',
@@ -39,10 +39,10 @@ export const listings = [
   },
   {
     slug: 'Yarrow',
-    status: 'Residential Sale',
+    status: 'Residential Lease',
     title: '625 Yarrow Street',
     city: 'Little Elm, Texas 75068',
-    price: '$774,999',
+    price: '$3595',
     image: '/listings/Yarrow/Yarrow-1.jpg',
     gallery: Array.from(
       { length: 15 },
@@ -65,16 +65,7 @@ export const listings = [
     facts: ['4 Bed', '3.5 Bath', '3,159 Sq Ft', 'Built 2016'],
     link: '/listings/stillwater'
   },
-  {
-    slug: '2935-shetland-drive',
-    status: 'Residential Sale',
-    title: '2935 Shetland Drive',
-    city: 'Aubrey, TX',
-    price: '$318,000',
-    image: '/listings/2935-shetland-drive/shetland-1.jpg',
-    facts: ['3 Bed', '2 Bath', '1,792 Sq Ft', 'Built 2023'],
-    link: '/listings/2935-shetland-drive'
-  },
+  
   {
     slug: '400-stonebrook-303',
     status: 'Commercial Property',
