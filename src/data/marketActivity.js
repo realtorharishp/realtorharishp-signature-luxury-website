@@ -9,16 +9,7 @@ export const marketSections = [
           price: '$744,599',
           image: '/listings/Yarrow/Yarrow-1.jpg',
           status: 'Open House • Sunday 6th Sept, 2026 between 1PM–4PM'
-        }, 
-
-        {
-          address: '754 Corner Post Path',
-          city: 'Celina, TX, 75009',
-          price: '$573,999',
-          image: '/listings/corner/corner-1.jpg',
-          status: 'Open House • Sat 5th Sept, 2026 between 1:00PM–4:00PM'
-        },
-      
+        },   
        
        {
           address: '6451 Still Water Court',
@@ -34,12 +25,13 @@ export const marketSections = [
     title: 'Under Contract',
     items: [
         
-        {
-          address: '2661 Archgate CT',
-          city: 'Prosper, TX',
-          price: '$1,300,100',
-          image: '/listings/archgate.jpg',
-          status: 'Under Contract'
+        
+       {
+          address: '754 Corner Post Path',
+          city: 'Celina, TX, 75009',
+          price: '$549,999',
+          image: '/listings/corner/corner-1.jpg',
+          status: 'Pending'
         }
       
       
@@ -54,7 +46,22 @@ export const marketSections = [
           city: 'Mckinney, TX',
           price: '$605,000',
           image: '/listings/fort-buckner.jpg',
-          status: 'Leased'
+          status: 'Closed'
+        },
+       {
+          address: '2661 Archgate CT',
+          city: 'Prosper, TX',
+          price: '$1,300,100',
+          image: '/listings/archgate.jpg',
+          status: 'Closed'
+        },
+
+       {
+          address: '5544 Riverton CT',
+          city: 'Plano, TX',
+          price: '$1,350,100',
+          image: '/listings/riverton.png',
+          status: 'Under Contract'
         },
 
          {
