@@ -23,20 +23,7 @@ export const listings = [
     facts: ['4 Bed', '3 Bath', '3,008 Sq Ft', 'Built 2020'],
     link: '/listings/corner/corner'
   },
-  {
-    slug: '14839-story-lane',
-    status: 'Closed',
-    title: '14839 Story Lane',
-    city: 'Frisco, TX 75035',
-    price: '$3,899 / Month',
-    image: '/listings/14839-story-lane/story-1.jpg',
-    gallery: Array.from(
-      { length: 20 },
-      (_, i) => `/listings/14839-story-lane/story-${i + 1}.jpg`
-    ),
-    facts: ['4 Bed', '3.5 Bath', '3,593 Sq Ft', 'Built 2011'],
-    link: '/listings/14839-story-lane'
-  },
+  
   {
     slug: 'Yarrow',
     status: 'Residential Lease',
@@ -56,7 +43,7 @@ export const listings = [
     status: 'Residential Sale',
     title: '6451 Still Water Court',
     city: 'Midlothian, Texas 76065',
-    price: '$729,999',
+    price: '$714,999',
     image: '/listings/stillwater/stillwater-1.jpg',
     gallery: Array.from(
       { length: 15 },
@@ -76,16 +63,7 @@ export const listings = [
     facts: ['4 Offices', '1 Bath', '1,225 Sq Ft', 'Suite #303'],
     link: '/listings/400-stonebrook'
   },
-  {
-    slug: '2900-galveston',
-    status: 'Residential Lease',
-    title: '2900 Galveston Street',
-    city: 'Plano, TX',
-    price: '$2,799 / Month',
-    image: '/listings/2900-galveston/galveston-1.jpg',
-    facts: ['3 Bed', '2.5 Bath', '1,870 Sq Ft', 'Built 2018'],
-    link: '/listings/2900-galveston'
-  },
+  
   {
     slug: '4414-silverweed-lane',
     status: 'Investor Opportunity',
@@ -96,16 +74,7 @@ export const listings = [
     facts: ['3 Bed', '2.5 Bath', '1,862 Sq Ft', 'Built 2024'],
     link: '/listings/4414-silverweed-lane'
   },
-  {
-    slug: '1874-purtis-creek',
-    status: 'Residential Lease',
-    title: '1874 Purtis Creek',
-    city: 'Forney, TX',
-    price: '$3,099 / Month',
-    image: '/listings/1874-purtis-creek/purtis-1.jpg',
-    facts: ['5 Bed', '3 Bath', '2,212 Sq Ft', 'Built 2024'],
-    link: '/listings/1874-purtis-creek'
-  },
+ 
   {
     slug: '400-stonebrook-301',
     status: 'Commercial Lease',
