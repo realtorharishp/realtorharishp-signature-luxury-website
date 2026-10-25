@@ -4,20 +4,20 @@ export const marketSections = [
     items: [
        
       {
-          address: '625 Yarrow Street',
-          city: 'Little Elm, Texas 75068',
-          price: '$3599',
-          image: '/listings/Yarrow/Yarrow-1.jpg',
-          status: 'Available'
-        },   
-       
-       {
-          address: '6451 Still Water Court',
-          city: 'Midlothian, Texas 76065',
-          price: '$729,999',
-          image: '/listings/stillwater/stillwater-1.jpg',
-          status: 'Available'
-        }  
+    slug: 'washington',
+    status: 'LEASED',
+    title: '9929 George Washington Dr',
+    city: 'McKinney, Texas 75070',
+    price: '$2,999 / Month',
+    image: '/listings/washington/washington-1.jpg',
+    gallery: Array.from(
+      { length: 15 },
+      (_, i) => `/listings/washington/washington-${i + 1}.jpg`
+    ),
+    facts: ['3 Bed', '2 Bath', '1,700 Sq Ft', 'Built 2005'],
+    link: '/listings/washington'
+  }
+     
       ]
   },
 
@@ -25,14 +25,15 @@ export const marketSections = [
     title: 'Under Contract',
     items: [
         
-        
-       {
-          address: '754 Corner Post Path',
-          city: 'Celina, TX, 75009',
-          price: '$549,999',
-          image: '/listings/corner/corner-1.jpg',
-          status: 'Pending'
-        }
+ {
+          address: '625 Yarrow Street',
+          city: 'Little Elm, Texas 75068',
+          price: '$3599',
+          image: '/listings/Yarrow/Yarrow-1.jpg',
+          status: 'Available'
+        },   
+       
+       
       
       
       ]
@@ -41,7 +42,24 @@ export const marketSections = [
   {
     title: 'Recently Closed',
      items: [
-        {
+        
+       {
+          address: '6451 Still Water Court',
+          city: 'Midlothian, Texas 76065',
+          price: '$729,999',
+          image: '/listings/stillwater/stillwater-1.jpg',
+          status: 'Available'
+        } , 
+      
+       {
+          address: '754 Corner Post Path',
+          city: 'Celina, TX, 75009',
+          price: '$549,999',
+          image: '/listings/corner/corner-1.jpg',
+          status: 'Pending'
+        },
+       
+       {
           address: '5109 Fort Bucker Drive',
           city: 'Mckinney, TX',
           price: '$605,000',
