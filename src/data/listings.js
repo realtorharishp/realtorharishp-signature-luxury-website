@@ -14,7 +14,7 @@ export const listings = [
     status: 'SOLD',
     title: '754 Corner Post Path',
     city: 'Celina, Texas 75009',
-    price: '$573,999',
+    price: '$549,999',
     image: '/listings/corner/corner-1.jpg',
     gallery: Array.from(
       { length: 25 },
@@ -29,7 +29,7 @@ export const listings = [
     status: 'LEASED',
     title: '625 Yarrow Street',
     city: 'Little Elm, Texas 75068',
-    price: '$3595',
+    price: '$3,595',
     image: '/listings/Yarrow/Yarrow-1.jpg',
     gallery: Array.from(
       { length: 15 },
@@ -94,7 +94,7 @@ export const listings = [
     status: 'LEASED',
     title: '9929 George Washington Dr',
     city: 'McKinney, Texas 75070',
-    price: '$2,999 / Month',
+    price: '$2,299 / Month',
     image: '/listings/washington/washington-1.jpg',
     gallery: Array.from(
       { length: 15 },
