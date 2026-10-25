@@ -40,7 +40,7 @@ export const listings = [
   },
   {
     slug: 'stillwater',
-    status: 'LEASED,
+    status: 'LEASED',
     title: '6451 Still Water Court',
     city: 'Midlothian, Texas 76065',
     price: '$3,699',
