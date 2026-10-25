@@ -3,19 +3,14 @@ export const marketSections = [
     title: 'Upcoming Open Houses',
     items: [
        
-  {
-    slug: 'washington',
-    status: 'PENDING',
-    title: '9929 George Washington Dr',
-    city: 'McKinney, Texas 75070',
-    price: '$2,999 / Month',
-    image: '/listings/washington/washington-1.jpg',
-    gallery: Array.from(
-      { length: 15 },
-      (_, i) => `/listings/washington/washington-${i + 1}.jpg`
-    ),
-    facts: ['3 Bed', '2 Bath', '1,700 Sq Ft', 'Built 2005'],
-    link: '/listings/washington'
+  slug: 'bird-creek',
+    status: 'Premium Residential Sale',
+    title: '725 Bird Creek Drive',
+    city: 'Little Elm, Texas 75068',
+    price: '$313,999',
+    image: '/premium-listings/bird-creek-front.png',
+    facts: ['3 Bed', '2 Bath', '2,025 Sq Ft', 'Built 2017'],
+    link: '/listings/bird-creek/'
   }
      
       ]
