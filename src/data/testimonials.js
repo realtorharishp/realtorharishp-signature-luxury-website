@@ -54,8 +54,24 @@ export const testimonials = [
   },
 
   {
-    name: 'Seller Clients',
+    name: 'Rajesh Srinivasan',
     review:
-      'Harish created a strong marketing strategy for our home and guided us through pricing, showings, negotiations, and closing with excellent communication throughout the process.'
+      ' Had an opportunity to work with Mr Patel. through out the engagement he was responsive, knows the market pulse and always updating usbwithvtue trend. his ideas were creative and helpful.'
+  },
+  {
+    name: 'Raja PoReddy',
+    review:
+      'Harish is the best agent out there, whether it’s buying or selling, he knows what he is doing. Can guide you as per market trends and he is one of those agents who knows how to predict the market and how to position his client. Would 100% recommend to anyone. He is one of those top agents in our area.'
+  },
+  {
+    name: 'Nishant Gupta',
+    review:
+      'I had a fantastic experience working with Harish Patel to rent out my property. From start to finish, Harish demonstrated complete professionalism, market expertise, and dedication. He handled everything seamlessly—from pricing and listing the property to carefully screening prospective tenants. Thanks to his proactive communication and clear guidance, I felt completely confident having him represent my property. If you are looking for a reliable, hard-working, and knowledgeable real estate professional, I highly recommend Harish Patel!.'
+  },
+  {
+    name: 'Venkat Panrutti',
+    review:
+      ' Harish is a great agent to work with. I had a house sitting in market for long time and Harish was able to get it sold in just a couple of months. Let alone being sold, I did not even have any offers on the house during the time it was listed until Harish took over. I would recommend anyone go to Harish with confidence and he can get it done. One critical thing I liked was a completely transparency in the process and straight talks with no fluff. It was great working with you Harish. Thank you so much..'
   }
+  
 ]
