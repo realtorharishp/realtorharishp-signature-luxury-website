@@ -1,20 +1,19 @@
 export const marketSections = [
   {
-    title: 'Upcoming Open Houses',
-    items: [
-       
-  slug: 'bird-creek',
-    status: 'Premium Residential Sale',
-    title: '725 Bird Creek Drive',
-    city: 'Little Elm, Texas 75068',
-    price: '$313,999',
-    image: '/premium-listings/bird-creek-front.png',
-    facts: ['3 Bed', '2 Bath', '2,025 Sq Ft', 'Built 2017'],
-    link: '/listings/bird-creek/'
-  }
-     
-      ]
-  },
+  title: 'Upcoming Open Houses',
+  items: [
+    {
+      slug: 'bird-creek',
+      status: 'Premium Residential Sale',
+      title: '725 Bird Creek Drive',
+      city: 'Little Elm, Texas 75068',
+      price: '$313,999',
+      image: '/premium-listings/bird-creek-front.png',
+      facts: ['3 Bed', '2 Bath', '2,025 Sq Ft', 'Built 2017'],
+      link: '/listings/bird-creek/'
+    }
+  ]
+},
 
   {
     title: 'Under Contract',
