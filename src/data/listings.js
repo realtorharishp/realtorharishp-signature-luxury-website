@@ -4,14 +4,14 @@ export const listings = [
     status: 'Premium Residential Sale',
     title: '725 Bird Creek Drive',
     city: 'Little Elm, Texas 75068',
-    price: '$339,999',
+    price: '$313,999',
     image: '/premium-listings/bird-creek-front.png',
     facts: ['3 Bed', '2 Bath', '2,025 Sq Ft', 'Built 2017'],
     link: '/listings/bird-creek/'
   },
   {
     slug: 'corner',
-    status: 'Under Contract',
+    status: 'SOLD',
     title: '754 Corner Post Path',
     city: 'Celina, Texas 75009',
     price: '$573,999',
@@ -26,7 +26,7 @@ export const listings = [
   
   {
     slug: 'Yarrow',
-    status: 'Residential Lease',
+    status: 'LEASED',
     title: '625 Yarrow Street',
     city: 'Little Elm, Texas 75068',
     price: '$3595',
@@ -40,10 +40,10 @@ export const listings = [
   },
   {
     slug: 'stillwater',
-    status: 'Residential Sale',
+    status: 'LEASED,
     title: '6451 Still Water Court',
     city: 'Midlothian, Texas 76065',
-    price: '$714,999',
+    price: '$3,699',
     image: '/listings/stillwater/stillwater-1.jpg',
     gallery: Array.from(
       { length: 15 },
@@ -91,7 +91,7 @@ export const listings = [
   },
   {
     slug: 'washington',
-    status: 'Residential Lease',
+    status: 'LEASED',
     title: '9929 George Washington Dr',
     city: 'McKinney, Texas 75070',
     price: '$2,999 / Month',
